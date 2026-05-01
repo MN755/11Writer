@@ -9,6 +9,7 @@ This document is the strategic reference for project direction. It should be rea
 
 - [spatial-intelligence-loop.md](repo-root/app/docs/spatial-intelligence-loop.md)
 - [fusion-layer-architecture.md](repo-root/app/docs/fusion-layer-architecture.md)
+- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
 - [safety-boundaries.md](repo-root/app/docs/safety-boundaries.md)
 - [roadmap.md](repo-root/app/docs/roadmap.md)
 - [runtime-interface-requirements.md](repo-root/app/docs/runtime-interface-requirements.md)
