@@ -117,8 +117,8 @@ Manager memory:
 - Save broad layout/design changes for UI Integration in Phase 3.
 - Future UI Integration task should define shared primitives for source-health rows, evidence cards, caveats, review queues, and export readiness.
 - Phase 3 should reduce persistent controlled lanes and shift ownership from source families to UI/workflow slices.
-- Recommended persistent Phase 3 controlled roster is documented in [phase3-agent-management-plan.md](repo-root/app/docs/phase3-agent-management-plan.md).
-- The concrete Code - OSS reference-backed Phase 3 shell/theme/component target is documented in [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md).
+- Recommended persistent Phase 3 controlled roster is documented in [phase3-agent-management-plan.md](phase3-agent-management-plan.md).
+- The concrete Code - OSS reference-backed Phase 3 shell/theme/component target is documented in [phase3-code-oss-workbench-spec.md](phase3-code-oss-workbench-spec.md).
 - shared UI parts should be mandatory in Phase 3:
   - same text-box needs should use the same textbox component
   - same card/badge/caveat/empty-state needs should use the same shared parts

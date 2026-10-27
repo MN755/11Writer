@@ -10,8 +10,8 @@ Purpose:
 
 Scope:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md)
-- [source-onboarding-contract.md](repo-root/app/docs/source-onboarding-contract.md)
+- [source-assignment-board.md](source-assignment-board.md)
+- [source-onboarding-contract.md](source-onboarding-contract.md)
 - repo evidence in `app/server`, `app/client`, and `app/docs`
 
 Important rules:
@@ -24,9 +24,9 @@ Important rules:
 
 Source discovery note:
 
-- [source-discovery-platform-plan.md](repo-root/app/docs/source-discovery-platform-plan.md:1) makes 7Po8-style source discovery a core 11Writer platform capability.
-- [source-discovery-agent-framework.md](repo-root/app/docs/source-discovery-agent-framework.md:1) defines the bounded discovery-job, candidate-state, and no-hidden-crawler rules for implementation lanes.
-- [source-discovery-reputation-governance-packet.md](repo-root/app/docs/source-discovery-reputation-governance-packet.md:1) is the compact policy boundary for candidate states, reputation observations, claim outcomes, and shared source-memory routing.
+- [source-discovery-platform-plan.md](source-discovery-platform-plan.md:1) makes 7Po8-style source discovery a core 11Writer platform capability.
+- [source-discovery-agent-framework.md](source-discovery-agent-framework.md:1) defines the bounded discovery-job, candidate-state, and no-hidden-crawler rules for implementation lanes.
+- [source-discovery-reputation-governance-packet.md](source-discovery-reputation-governance-packet.md:1) is the compact policy boundary for candidate states, reputation observations, claim outcomes, and shared source-memory routing.
 - This status report should classify discovered sources as candidates or backlog items until implementation and validation evidence exists.
 - Repeated discovery, relevance scoring, or source count does not make a source authoritative or workflow-validated.
 - Learned source reputation should be based on claim outcomes, correction behavior, source health, corroboration, and static/live source class handling.
@@ -83,14 +83,14 @@ Source discovery note:
 | `ga-recent-earthquakes` | `/api/events/ga-earthquakes/recent` | `app/server/tests/test_ga_recent_earthquakes.py` | `app/docs/environmental-events-ga-recent-earthquakes.md` | `app/server/data/ga_recent_earthquakes_fixture.kml` | no dedicated client hook identified in this audit | `implemented-not-fully-validated` | Backend-first regional-authority KML earthquake slice is explicit and contract-tested, but no workflow validation or stable frontend consumer record is explicit yet |
 | `emsc-seismicportal-realtime` | `/api/events/emsc-seismicportal/recent` | `app/server/tests/test_emsc_seismicportal_realtime.py` | `app/docs/environmental-events-emsc-seismicportal-realtime.md` | `app/server/data/emsc_seismicportal_realtime_fixture.json` | no dedicated client hook identified in this audit | `implemented-not-fully-validated` | Backend-first buffered event-context slice is explicit and contract-tested, but no executed live-websocket path or workflow validation is recorded yet |
 | `orfeus-eida-federator` | `/api/context/seismic/orfeus-eida` | `app/server/tests/test_orfeus_eida_context.py` | `app/docs/environmental-events-orfeus-eida.md` | `app/server/data/orfeus_eida_station_fixture.txt` | no dedicated client hook identified in this audit | `implemented-not-fully-validated` | Backend-first bounded seismic station-metadata slice is explicit and contract-tested, but it intentionally stays on public federated station metadata only and has no workflow validation or stable frontend consumer record yet |
-| `noaa-coops-tides-currents` | `/api/marine/context/noaa-coops` | `app/server/tests/test_marine_contracts.py` | `app/docs/source-acceleration-phase2-briefs.md` | fixture-backed context in `app/server/tests/smoke_fixture_app.py` | `useMarineNoaaCoopsContextQuery` | `workflow-validated` | Workflow validation is explicit in [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md:1), and contract hardening now explicitly covers `health=empty`, explicit fixture `sourceMode` on empty responses, `health=disabled` for disabled behavior, source-level caveats, and request validation errors; still not fully validated or live validated |
+| `noaa-coops-tides-currents` | `/api/marine/context/noaa-coops` | `app/server/tests/test_marine_contracts.py` | `app/docs/source-acceleration-phase2-briefs.md` | fixture-backed context in `app/server/tests/smoke_fixture_app.py` | `useMarineNoaaCoopsContextQuery` | `workflow-validated` | Workflow validation is explicit in [marine-workflow-validation.md](marine-workflow-validation.md:1), and contract hardening now explicitly covers `health=empty`, explicit fixture `sourceMode` on empty responses, `health=disabled` for disabled behavior, source-level caveats, and request validation errors; still not fully validated or live validated |
 | `usgs-geomagnetism` | `/api/context/geomagnetism/usgs` | `app/server/tests/test_usgs_geomagnetism.py` | `app/docs/environmental-events-usgs-geomagnetism.md` | `app/server/data/usgs_geomagnetism_fixture.json` | `useUsgsGeomagnetismContextQuery` | `implemented-not-fully-validated` | Backend-first slice is explicit and contract-tested, but no workflow validation or stable frontend consumer record is explicit yet |
 | `ourairports-reference` | `/api/aerospace/reference/ourairports` | `app/server/tests/test_ourairports_reference_contracts.py` | `app/docs/aerospace-ourairports-reference.md` | `app/server/data/ourairports_reference_fixture/airports.csv`, `app/server/data/ourairports_reference_fixture/runways.csv` | `useOurAirportsReferenceQuery` | `implemented-not-fully-validated` | Backend-first bounded airport/runway reference slice is explicit and contract-tested, and a selected-target/export consumer exists, but browser smoke is still blocked locally and no workflow validation is recorded yet |
 | `noaa-aviation-weather-center-data-api` | `/api/aviation-weather/airport-context` | `app/server/tests/test_aviation_weather_contracts.py` | `app/docs/source-acceleration-phase2-briefs.md` | mocked contract payloads, no dedicated `app/server/data` fixture identified in this audit | `useAviationWeatherContextQuery` | `implemented-not-fully-validated` | No explicit workflow validation record |
 | `faa-nas-airport-status` | `/api/aerospace/airports/{airport_code}/faa-nas-status` | `app/server/tests/test_faa_nas_status_contracts.py` | `app/docs/source-acceleration-phase2-briefs.md` | `app/server/data/faa_nas_airport_status_fixture.xml` | `useFaaNasAirportStatusQuery` | `implemented-not-fully-validated` | No explicit workflow validation record |
-| `noaa-ndbc-realtime` | `/api/marine/context/ndbc` | `app/server/tests/test_marine_contracts.py` | `app/docs/source-acceleration-phase2-briefs.md` | fixture-backed context in `app/server/tests/smoke_fixture_app.py` | `useMarineNdbcContextQuery` | `workflow-validated` | Workflow validation is explicit in [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md:1), and contract hardening now explicitly covers `health=empty`, explicit fixture `sourceMode` on empty responses, `health=disabled` for disabled behavior, source-level caveats, and request validation errors; still not fully validated or live validated |
+| `noaa-ndbc-realtime` | `/api/marine/context/ndbc` | `app/server/tests/test_marine_contracts.py` | `app/docs/source-acceleration-phase2-briefs.md` | fixture-backed context in `app/server/tests/smoke_fixture_app.py` | `useMarineNdbcContextQuery` | `workflow-validated` | Workflow validation is explicit in [marine-workflow-validation.md](marine-workflow-validation.md:1), and contract hardening now explicitly covers `health=empty`, explicit fixture `sourceMode` on empty responses, `health=disabled` for disabled behavior, source-level caveats, and request validation errors; still not fully validated or live validated |
 | `navtex-context` | `/api/marine/context/navtex` | `app/server/tests/test_marine_navtex.py`, `app/server/tests/test_marine_contracts.py` | `app/docs/marine-module.md` | fixture-backed context in `app/server/tests/smoke_fixture_app.py` | `marineNavtexContext` | `implemented-not-fully-validated` | Backend-first NAVTEX advisory/context slice is explicit and contract-tested, with helper regression, build/lint, export metadata, and marine smoke evidence recorded, but no explicit source-row workflow-validation promotion is recorded yet |
-| `scottish-water-overflows` | `/api/marine/context/scottish-water-overflows` | `app/server/tests/test_marine_contracts.py` | `app/docs/source-acceleration-phase2-global-briefs.md` | fixture-backed context in `app/server/tests/smoke_fixture_app.py` | `useMarineScottishWaterOverflowsQuery` | `workflow-validated` | Workflow validation is explicit in [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md:1), and contract hardening now explicitly covers `health=empty`, explicit fixture `sourceMode` on empty responses, `health=disabled` for disabled behavior, source-level caveats, and request validation errors; still contextual only and not fully validated or live validated |
+| `scottish-water-overflows` | `/api/marine/context/scottish-water-overflows` | `app/server/tests/test_marine_contracts.py` | `app/docs/source-acceleration-phase2-global-briefs.md` | fixture-backed context in `app/server/tests/smoke_fixture_app.py` | `useMarineScottishWaterOverflowsQuery` | `workflow-validated` | Workflow validation is explicit in [marine-workflow-validation.md](marine-workflow-validation.md:1), and contract hardening now explicitly covers `health=empty`, explicit fixture `sourceMode` on empty responses, `health=disabled` for disabled behavior, source-level caveats, and request validation errors; still contextual only and not fully validated or live validated |
 | `finland-digitraffic` | `/api/features/finland-road-weather/stations` and `/api/features/finland-road-weather/stations/{station_id}` | `app/server/tests/test_finland_digitraffic.py` | `app/docs/source-acceleration-phase2-international-briefs.md` | `app/server/data/digitraffic_weather_stations_fixture.json`, `app/server/data/digitraffic_weather_station_data_fixture.json` | no dedicated client hook identified in this audit | `implemented-not-fully-validated` | Backend route, detail route, endpoint health, and freshness interpretation are explicit, but no stable frontend consumer or workflow validation record is explicit yet |
 | `netherlands-rws-waterinfo` | `/api/marine/context/netherlands-rws-waterinfo` | `app/server/tests/test_netherlands_rws_waterinfo.py`, `app/server/tests/test_marine_contracts.py` | `app/docs/source-endpoint-verification-netherlands-rws-waterinfo.md` | fixture-backed marine context payloads in marine backend data flow | no client hook yet identified | `implemented-not-fully-validated` | Backend-first WaterWebservices slice is explicit and contract-tested, and Marine AI progress now also records a bounded helper/export follow-on, but no explicit workflow-validation record is recorded yet |
 | `france-vigicrues-hydrometry` | `/api/marine/context/vigicrues-hydrometry` | `app/server/tests/test_vigicrues_hydrometry.py`, `app/server/tests/test_marine_contracts.py` | `app/docs/source-acceleration-phase2-batch4-briefs.md` | fixture-backed hydrometry payloads in `app/server/tests` and marine backend data flow | no dedicated client hook identified in this audit | `implemented-not-fully-validated` | Backend-first source slice is explicit and contract-tested, and Marine AI progress now also records completed hydrology/corridor export follow-through plus passing marine smoke/build evidence; no explicit source-row workflow-validation record is recorded yet |
@@ -1730,8 +1730,8 @@ Source discovery note:
 - Docs present?: yes
 - Existing evidence:
   - strengthened `app/server/tests/test_marine_contracts.py`
-  - explicit backend contract guarantees in [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md:1)
-  - explicit workflow evidence in [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md:1)
+  - explicit backend contract guarantees in [marine-context-source-contract-matrix.md](marine-context-source-contract-matrix.md:1)
+  - explicit workflow evidence in [marine-workflow-validation.md](marine-workflow-validation.md:1)
   - CO-OPS observations preserve `observed` evidence basis semantics
 - Known validation commands reported:
   - `python -m pytest app/server/tests/test_marine_contracts.py -q`
@@ -1892,8 +1892,8 @@ Source discovery note:
 - Docs present?: yes
 - Existing evidence:
   - strengthened `app/server/tests/test_marine_contracts.py`
-  - explicit backend contract guarantees in [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md:1)
-  - explicit workflow evidence in [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md:1)
+  - explicit backend contract guarantees in [marine-context-source-contract-matrix.md](marine-context-source-contract-matrix.md:1)
+  - explicit workflow evidence in [marine-workflow-validation.md](marine-workflow-validation.md:1)
   - NDBC observations preserve `observed` evidence basis semantics
 - Known validation commands reported:
   - `python -m pytest app/server/tests/test_marine_contracts.py -q`
@@ -1986,8 +1986,8 @@ Source discovery note:
 - Docs present?: yes
 - Existing evidence:
   - strengthened `app/server/tests/test_marine_contracts.py`
-  - explicit backend contract guarantees in [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md:1)
-  - explicit workflow evidence in [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md:1)
+  - explicit backend contract guarantees in [marine-context-source-contract-matrix.md](marine-context-source-contract-matrix.md:1)
+  - explicit workflow evidence in [marine-workflow-validation.md](marine-workflow-validation.md:1)
   - Scottish Water overflow events preserve `source-reported` evidence basis semantics
 - Known validation commands reported:
   - `python -m pytest app/server/tests/test_marine_contracts.py -q`
@@ -2169,7 +2169,7 @@ Evidence basis:
 - `cmd /c npm.cmd run build`
 - `cmd /c npm.cmd run lint`
 - `python app/server/tests/run_playwright_smoke.py marine`
-- explicit workflow/export coverage recorded in [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md:1)
+- explicit workflow/export coverage recorded in [marine-workflow-validation.md](marine-workflow-validation.md:1)
 - marine contract hardening now explicitly covers empty, disabled, caveat, evidence-basis, request-validation behavior, and timestamp-backed `stale` semantics
 - marine backend evidence now also records honest `unavailable` handling across the active context families and honest `degraded` handling only where partial-metadata evidence exists
 
@@ -2316,7 +2316,7 @@ Recommended workflow-level follow-on:
 
 ## Board Correction Notes
 
-No mandatory correction to [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md:1) is required from this report.
+No mandatory correction to [source-assignment-board.md](source-assignment-board.md:1) is required from this report.
 
 Recommended caution:
 

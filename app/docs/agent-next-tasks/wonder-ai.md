@@ -6,7 +6,7 @@ Recent Manager/Workflow Updates:
 - The user explicitly asked for all active AIs to finish what they are doing and document what they did for the incoming Phase 3 chats.
 - You remain peer-level and user-directed; this finish-up packet exists because the user requested cross-agent handoff discipline.
 - The user also noted that your active lane is a doc polish/audit effort.
-- Phase 3 planning now has a dedicated handoff directory at [app/docs/phase3-handoffs/README.md](repo-root/app/docs/phase3-handoffs/README.md).
+- Phase 3 planning now has a dedicated handoff directory at [app/docs/phase3-handoffs/README.md](../phase3-handoffs/README.md).
 
 Current state:
 - Your active work should stay bounded to the doc polish/audit and any already-open user-directed slice you are finishing.
@@ -20,7 +20,7 @@ Do first:
 Tasks:
 1. Finish only the current user-directed doc polish/audit or already-open user-directed slice.
 2. Do not branch into a new feature wave just because Phase 3 is approaching.
-3. Update [app/docs/phase3-handoffs/wonder-ai.md](repo-root/app/docs/phase3-handoffs/wonder-ai.md) with:
+3. Update [app/docs/phase3-handoffs/wonder-ai.md](../phase3-handoffs/wonder-ai.md) with:
    - `Scope completed`
    - `Current state`
    - `Files and surfaces to know`

@@ -8,8 +8,8 @@ Purpose:
 - prevent casual changes to evidence basis, caveats, empty behavior, or disabled-mode semantics
 
 Related docs:
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- [marine-context-source-contract-matrix.md](marine-context-source-contract-matrix.md)
+- [marine-workflow-validation.md](marine-workflow-validation.md)
 
 ## Fixture Principles
 
@@ -611,7 +611,7 @@ What this guide does not claim:
 
 If a fixture behavior changes:
 - update backend contract tests first
-- update [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+- update [marine-context-source-contract-matrix.md](marine-context-source-contract-matrix.md)
 - update this reference guide in the same change
 
 ## Validation

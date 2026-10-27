@@ -11,7 +11,7 @@ What changed:
   - GEBCO static bathymetry slice is implemented
   - NAVTEX, hydrology, infrastructure, and export/reporting surfaces are already coherent enough to hand off
 - wrote the Phase 3 Marine AI handoff packet at:
-  - [marine-ai.md](repo-root/app/docs/phase3-handoffs/marine-ai.md)
+  - [marine-ai.md](../phase3-handoffs/marine-ai.md)
 - documented for incoming Phase 3 work:
   - scope completed
   - current marine state
@@ -27,8 +27,8 @@ What changed:
   - no-inference and no-intent guardrails
 
 Files touched:
-- [marine-ai.md](repo-root/app/docs/phase3-handoffs/marine-ai.md)
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marine-ai.md](../phase3-handoffs/marine-ai.md)
+- [marine-ai.md](marine-ai.md)
 
 Validation:
 - no new code-path validation rerun
@@ -83,25 +83,25 @@ What changed:
 - updated marine docs to record the exact GEBCO contract, fixture coverage, smoke/export status, and static-context guardrails
 
 Files touched:
-- [settings.py](repo-root/app/server/src/config/settings.py)
-- [api.py](repo-root/app/server/src/types/api.py)
-- [marine_context_service.py](repo-root/app/server/src/services/marine_context_service.py)
-- [marine_service.py](repo-root/app/server/src/services/marine_service.py)
-- [marine.py](repo-root/app/server/src/routes/marine.py)
-- [test_marine_gebco.py](repo-root/app/server/tests/test_marine_gebco.py)
-- [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py)
-- [api.ts](repo-root/app/client/src/types/api.ts)
-- [queries.ts](repo-root/app/client/src/lib/queries.ts)
-- [marineGebcoBathymetryContext.ts](repo-root/app/client/src/features/marine/marineGebcoBathymetryContext.ts)
-- [MarineAnomalySection.tsx](repo-root/app/client/src/features/marine/MarineAnomalySection.tsx)
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
-- [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-- [marine-module.md](repo-root/app/docs/marine-module.md)
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
-- [marine-context-fixture-reference.md](repo-root/app/docs/marine-context-fixture-reference.md)
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [settings.py](../../server/src/config/settings.py)
+- [api.py](../../server/src/types/api.py)
+- [marine_context_service.py](../../server/src/services/marine_context_service.py)
+- [marine_service.py](../../server/src/services/marine_service.py)
+- [marine.py](../../server/src/routes/marine.py)
+- [test_marine_gebco.py](../../server/tests/test_marine_gebco.py)
+- [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py)
+- [api.ts](../../client/src/types/api.ts)
+- [queries.ts](../../client/src/lib/queries.ts)
+- [marineGebcoBathymetryContext.ts](../../client/src/features/marine/marineGebcoBathymetryContext.ts)
+- [MarineAnomalySection.tsx](../../client/src/features/marine/MarineAnomalySection.tsx)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
+- [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+- [marine-module.md](../marine-module.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
+- [marine-context-fixture-reference.md](../marine-context-fixture-reference.md)
+- [marine-ai.md](marine-ai.md)
 
 Validation:
 - passed:
@@ -115,7 +115,7 @@ Validation:
 - blocked outside marine:
   - from `app/client`: `cmd /c npm.cmd run lint`
   - current repo-wide blocker:
-    - [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx:2686)
+    - [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx:2686)
     - `react-hooks/exhaustive-deps` missing dependencies `noaaNowCoastLayerCatalogQuery.data` and `nwsAlertsRecentQuery.data`
 
 Blockers or caveats:
@@ -158,28 +158,28 @@ What changed:
 - no bounded GEBCO/static follow-on was added in this assignment; the wave stayed centered on NAVTEX only
 
 Files touched:
-- [settings.py](repo-root/app/server/src/config/settings.py)
-- [api.py](repo-root/app/server/src/types/api.py)
-- [marine_context_service.py](repo-root/app/server/src/services/marine_context_service.py)
-- [marine_service.py](repo-root/app/server/src/services/marine_service.py)
-- [marine.py](repo-root/app/server/src/routes/marine.py)
-- [test_marine_navtex.py](repo-root/app/server/tests/test_marine_navtex.py)
-- [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py)
-- [api.ts](repo-root/app/client/src/types/api.ts)
-- [queries.ts](repo-root/app/client/src/lib/queries.ts)
-- [marineNavtexContext.ts](repo-root/app/client/src/features/marine/marineNavtexContext.ts)
-- [MarineAnomalySection.tsx](repo-root/app/client/src/features/marine/MarineAnomalySection.tsx)
-- [marineContextSourceSummary.ts](repo-root/app/client/src/features/marine/marineContextSourceSummary.ts)
-- [marineContextFusionSummary.ts](repo-root/app/client/src/features/marine/marineContextFusionSummary.ts)
-- [marineContextIssueExportBundle.ts](repo-root/app/client/src/features/marine/marineContextIssueExportBundle.ts)
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
-- [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-- [marine-module.md](repo-root/app/docs/marine-module.md)
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
-- [marine-context-fixture-reference.md](repo-root/app/docs/marine-context-fixture-reference.md)
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [settings.py](../../server/src/config/settings.py)
+- [api.py](../../server/src/types/api.py)
+- [marine_context_service.py](../../server/src/services/marine_context_service.py)
+- [marine_service.py](../../server/src/services/marine_service.py)
+- [marine.py](../../server/src/routes/marine.py)
+- [test_marine_navtex.py](../../server/tests/test_marine_navtex.py)
+- [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py)
+- [api.ts](../../client/src/types/api.ts)
+- [queries.ts](../../client/src/lib/queries.ts)
+- [marineNavtexContext.ts](../../client/src/features/marine/marineNavtexContext.ts)
+- [MarineAnomalySection.tsx](../../client/src/features/marine/MarineAnomalySection.tsx)
+- [marineContextSourceSummary.ts](../../client/src/features/marine/marineContextSourceSummary.ts)
+- [marineContextFusionSummary.ts](../../client/src/features/marine/marineContextFusionSummary.ts)
+- [marineContextIssueExportBundle.ts](../../client/src/features/marine/marineContextIssueExportBundle.ts)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
+- [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+- [marine-module.md](../marine-module.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
+- [marine-context-fixture-reference.md](../marine-context-fixture-reference.md)
+- [marine-ai.md](marine-ai.md)
 
 Validation:
 - passed:
@@ -208,7 +208,7 @@ Task:
 - build a bounded marineQuestionBriefingPacket on top of the current marine reporting stack
 
 What changed:
-- added [marineQuestionBriefingPacket.ts](repo-root/app/client/src/features/marine/marineQuestionBriefingPacket.ts) as a pure bounded export/reporting helper over the existing marine reporting stack
+- added [marineQuestionBriefingPacket.ts](../../client/src/features/marine/marineQuestionBriefingPacket.ts) as a pure bounded export/reporting helper over the existing marine reporting stack
 - the new packet builds on:
   - `marineFusionSnapshotInput`
   - `marineReportBriefPackage`
@@ -227,33 +227,33 @@ What changed:
   - `observe`, `orient`, `prioritize`, and `explain`
   - explicit does-not-prove lines
 - added Node-resolution shims for the new helper:
-  - [marineQuestionBriefingPacket](repo-root/app/client/src/features/marine/marineQuestionBriefingPacket)
-  - [marineQuestionBriefingPacket.js](repo-root/app/client/src/features/marine/marineQuestionBriefingPacket.js)
-- extended [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.questionBriefingPacket` is exported and one compact question-briefing line is appended to the existing marine display/export lines
-- extended [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
+  - [marineQuestionBriefingPacket](../../client/src/features/marine/marineQuestionBriefingPacket)
+  - [marineQuestionBriefingPacket.js](../../client/src/features/marine/marineQuestionBriefingPacket.js)
+- extended [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.questionBriefingPacket` is exported and one compact question-briefing line is appended to the existing marine display/export lines
+- extended [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
   - question-family posture
   - source-row/source-health carry-through
   - corridor/chokepoint and hydrology posture carry-through
   - workflow-evidence/export-coherence carry-through
   - no-impact/no-closure/no-wrongdoing/no-action guardrails
   - carry-through through `buildMarineEvidenceSummary(...)`
-- extended [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.questionBriefingPacket` metadata block, including question posture, source rows, workflow-evidence wording, and explicit no-closure guardrails
+- extended [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.questionBriefingPacket` metadata block, including question posture, source rows, workflow-evidence wording, and explicit no-closure guardrails
 - updated marine docs and validation notes so the new packet is documented as export-covered, regression-covered, and smoke metadata-covered without promoting any source beyond its evidence:
-  - [marine-module.md](repo-root/app/docs/marine-module.md)
-  - [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-  - [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+  - [marine-module.md](../marine-module.md)
+  - [marine-workflow-validation.md](../marine-workflow-validation.md)
+  - [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
 Files touched:
-- [marineQuestionBriefingPacket.ts](repo-root/app/client/src/features/marine/marineQuestionBriefingPacket.ts)
-- [marineQuestionBriefingPacket](repo-root/app/client/src/features/marine/marineQuestionBriefingPacket)
-- [marineQuestionBriefingPacket.js](repo-root/app/client/src/features/marine/marineQuestionBriefingPacket.js)
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
-- [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-- [marine-module.md](repo-root/app/docs/marine-module.md)
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marineQuestionBriefingPacket.ts](../../client/src/features/marine/marineQuestionBriefingPacket.ts)
+- [marineQuestionBriefingPacket](../../client/src/features/marine/marineQuestionBriefingPacket)
+- [marineQuestionBriefingPacket.js](../../client/src/features/marine/marineQuestionBriefingPacket.js)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
+- [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+- [marine-module.md](../marine-module.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
+- [marine-ai.md](marine-ai.md)
 
 Validation:
 - `python -m pytest app/server/tests/test_netherlands_rws_waterinfo.py app/server/tests/test_marine_contracts.py app/server/tests/test_vigicrues_hydrometry.py app/server/tests/test_ireland_opw_waterlevel.py -q` -> pass
@@ -286,7 +286,7 @@ Task:
 - build a bounded marineSourceRowWorkflowClosurePacket on top of the current marine reporting stack
 
 What changed:
-- added [marineSourceRowWorkflowClosurePacket.ts](repo-root/app/client/src/features/marine/marineSourceRowWorkflowClosurePacket.ts) as a pure bounded export/reporting helper over the existing marine reporting stack
+- added [marineSourceRowWorkflowClosurePacket.ts](../../client/src/features/marine/marineSourceRowWorkflowClosurePacket.ts) as a pure bounded export/reporting helper over the existing marine reporting stack
 - the new packet builds on:
   - `marineFusionSnapshotInput`
   - `marineReportBriefPackage`
@@ -304,10 +304,10 @@ What changed:
   - `observe`, `orient`, `prioritize`, and `explain`
   - explicit does-not-prove lines
 - added Node-resolution shims for the new helper:
-  - [marineSourceRowWorkflowClosurePacket](repo-root/app/client/src/features/marine/marineSourceRowWorkflowClosurePacket)
-  - [marineSourceRowWorkflowClosurePacket.js](repo-root/app/client/src/features/marine/marineSourceRowWorkflowClosurePacket.js)
-- extended [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.sourceRowWorkflowClosurePacket` is exported and one compact source-row workflow/export closure line is appended to the existing marine display/export lines
-- extended [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
+  - [marineSourceRowWorkflowClosurePacket](../../client/src/features/marine/marineSourceRowWorkflowClosurePacket)
+  - [marineSourceRowWorkflowClosurePacket.js](../../client/src/features/marine/marineSourceRowWorkflowClosurePacket.js)
+- extended [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.sourceRowWorkflowClosurePacket` is exported and one compact source-row workflow/export closure line is appended to the existing marine display/export lines
+- extended [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
   - source-row closure posture
   - source-row carry-through
   - export-coherence posture carry-through
@@ -316,23 +316,23 @@ What changed:
   - workflow-evidence carry-through
   - no-impact/no-closure/no-action/no-wrongdoing guardrails
   - carry-through through `buildMarineEvidenceSummary(...)`
-- extended [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.sourceRowWorkflowClosurePacket` metadata block, including source rows, posture, export-coherence wording, workflow-evidence wording, and explicit no-closure guardrails
+- extended [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.sourceRowWorkflowClosurePacket` metadata block, including source rows, posture, export-coherence wording, workflow-evidence wording, and explicit no-closure guardrails
 - updated marine docs and validation notes so the new packet is documented as export-covered, regression-covered, and smoke metadata-covered without promoting any source beyond its evidence:
-  - [marine-module.md](repo-root/app/docs/marine-module.md)
-  - [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-  - [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+  - [marine-module.md](../marine-module.md)
+  - [marine-workflow-validation.md](../marine-workflow-validation.md)
+  - [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
 Files touched:
-- [marineSourceRowWorkflowClosurePacket.ts](repo-root/app/client/src/features/marine/marineSourceRowWorkflowClosurePacket.ts)
-- [marineSourceRowWorkflowClosurePacket](repo-root/app/client/src/features/marine/marineSourceRowWorkflowClosurePacket)
-- [marineSourceRowWorkflowClosurePacket.js](repo-root/app/client/src/features/marine/marineSourceRowWorkflowClosurePacket.js)
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
-- [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-- [marine-module.md](repo-root/app/docs/marine-module.md)
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marineSourceRowWorkflowClosurePacket.ts](../../client/src/features/marine/marineSourceRowWorkflowClosurePacket.ts)
+- [marineSourceRowWorkflowClosurePacket](../../client/src/features/marine/marineSourceRowWorkflowClosurePacket)
+- [marineSourceRowWorkflowClosurePacket.js](../../client/src/features/marine/marineSourceRowWorkflowClosurePacket.js)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
+- [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+- [marine-module.md](../marine-module.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
+- [marine-ai.md](marine-ai.md)
 
 Validation:
 - `python -m pytest app/server/tests/test_netherlands_rws_waterinfo.py app/server/tests/test_marine_contracts.py app/server/tests/test_vigicrues_hydrometry.py app/server/tests/test_ireland_opw_waterlevel.py -q` -> pass
@@ -365,7 +365,7 @@ Task:
 - build a bounded marineCurrentAwarenessDigest on top of the current marine reporting stack
 
 What changed:
-- added [marineCurrentAwarenessDigest.ts](repo-root/app/client/src/features/marine/marineCurrentAwarenessDigest.ts) as a pure bounded export/reporting helper over the existing marine reporting stack
+- added [marineCurrentAwarenessDigest.ts](../../client/src/features/marine/marineCurrentAwarenessDigest.ts) as a pure bounded export/reporting helper over the existing marine reporting stack
 - the new digest builds on:
   - `marineFusionSnapshotInput`
   - `marineReportBriefPackage`
@@ -382,33 +382,33 @@ What changed:
   - `observe`, `orient`, `prioritize`, and `explain`
   - explicit does-not-prove lines
 - added Node-resolution shims for the new helper:
-  - [marineCurrentAwarenessDigest](repo-root/app/client/src/features/marine/marineCurrentAwarenessDigest)
-  - [marineCurrentAwarenessDigest.js](repo-root/app/client/src/features/marine/marineCurrentAwarenessDigest.js)
-- extended [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.currentAwarenessDigest` is exported and one compact current-awareness line is appended to the existing marine display/export lines
-- extended [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
+  - [marineCurrentAwarenessDigest](../../client/src/features/marine/marineCurrentAwarenessDigest)
+  - [marineCurrentAwarenessDigest.js](../../client/src/features/marine/marineCurrentAwarenessDigest.js)
+- extended [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.currentAwarenessDigest` is exported and one compact current-awareness line is appended to the existing marine display/export lines
+- extended [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
   - current-awareness posture
   - corridor/chokepoint carry-through
   - hydrology comparison carry-through
   - workflow-evidence carry-through
   - no-impact/no-closure/no-action/no-wrongdoing guardrails
   - carry-through through `buildMarineEvidenceSummary(...)`
-- extended [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.currentAwarenessDigest` metadata block, including source rows, posture, observe lines, workflow-evidence wording, and explicit no-closure guardrails
+- extended [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.currentAwarenessDigest` metadata block, including source rows, posture, observe lines, workflow-evidence wording, and explicit no-closure guardrails
 - updated marine docs and validation notes so the new digest is documented as export-covered, regression-covered, and smoke metadata-covered without promoting any source beyond its evidence:
-  - [marine-module.md](repo-root/app/docs/marine-module.md)
-  - [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-  - [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+  - [marine-module.md](../marine-module.md)
+  - [marine-workflow-validation.md](../marine-workflow-validation.md)
+  - [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
 Files touched:
-- [marineCurrentAwarenessDigest.ts](repo-root/app/client/src/features/marine/marineCurrentAwarenessDigest.ts)
-- [marineCurrentAwarenessDigest](repo-root/app/client/src/features/marine/marineCurrentAwarenessDigest)
-- [marineCurrentAwarenessDigest.js](repo-root/app/client/src/features/marine/marineCurrentAwarenessDigest.js)
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
-- [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-- [marine-module.md](repo-root/app/docs/marine-module.md)
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marineCurrentAwarenessDigest.ts](../../client/src/features/marine/marineCurrentAwarenessDigest.ts)
+- [marineCurrentAwarenessDigest](../../client/src/features/marine/marineCurrentAwarenessDigest)
+- [marineCurrentAwarenessDigest.js](../../client/src/features/marine/marineCurrentAwarenessDigest.js)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
+- [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+- [marine-module.md](../marine-module.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
+- [marine-ai.md](marine-ai.md)
 
 Validation:
 - `python -m pytest app/server/tests/test_netherlands_rws_waterinfo.py app/server/tests/test_marine_contracts.py app/server/tests/test_vigicrues_hydrometry.py app/server/tests/test_ireland_opw_waterlevel.py -q` -> pass
@@ -440,7 +440,7 @@ Task:
 - build a bounded marineHydrologyRegionalComparisonPackage on top of the current marine reporting stack
 
 What changed:
-- added [marineHydrologyRegionalComparisonPackage.ts](repo-root/app/client/src/features/marine/marineHydrologyRegionalComparisonPackage.ts) as a pure bounded hydrology comparison helper over the existing marine reporting stack
+- added [marineHydrologyRegionalComparisonPackage.ts](../../client/src/features/marine/marineHydrologyRegionalComparisonPackage.ts) as a pure bounded hydrology comparison helper over the existing marine reporting stack
 - the new package builds on:
   - `marineFusionSnapshotInput`
   - `marineReportBriefPackage`
@@ -455,10 +455,10 @@ What changed:
   - `observe`, `orient`, `prioritize`, and `explain`
   - explicit does-not-prove lines
 - added Node-resolution shims for the new helper:
-  - [marineHydrologyRegionalComparisonPackage](repo-root/app/client/src/features/marine/marineHydrologyRegionalComparisonPackage)
-  - [marineHydrologyRegionalComparisonPackage.js](repo-root/app/client/src/features/marine/marineHydrologyRegionalComparisonPackage.js)
-- extended [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.hydrologyRegionalComparisonPackage` is exported and one compact hydrology-comparison line is appended to the existing marine display/export lines
-- extended [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
+  - [marineHydrologyRegionalComparisonPackage](../../client/src/features/marine/marineHydrologyRegionalComparisonPackage)
+  - [marineHydrologyRegionalComparisonPackage.js](../../client/src/features/marine/marineHydrologyRegionalComparisonPackage.js)
+- extended [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.hydrologyRegionalComparisonPackage` is exported and one compact hydrology-comparison line is appended to the existing marine display/export lines
+- extended [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
   - hydrology comparison posture
   - hydrology row count
   - Vigicrues workflow-evidence wording
@@ -466,23 +466,23 @@ What changed:
   - OPW workflow-evidence wording
   - no-impact/no-closure/no-action guardrails
   - carry-through through `buildMarineEvidenceSummary(...)`
-- extended [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.hydrologyRegionalComparisonPackage` metadata block, including hydrology rows, workflow-evidence wording, and the explicit no-impact guardrail
+- extended [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.hydrologyRegionalComparisonPackage` metadata block, including hydrology rows, workflow-evidence wording, and the explicit no-impact guardrail
 - updated marine docs and validation notes so the hydrology comparison artifact is documented as export-covered, regression-covered, and smoke metadata-covered without promoting any source beyond its evidence:
-  - [marine-module.md](repo-root/app/docs/marine-module.md)
-  - [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-  - [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+  - [marine-module.md](../marine-module.md)
+  - [marine-workflow-validation.md](../marine-workflow-validation.md)
+  - [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
 Files touched:
-- [marineHydrologyRegionalComparisonPackage.ts](repo-root/app/client/src/features/marine/marineHydrologyRegionalComparisonPackage.ts)
-- [marineHydrologyRegionalComparisonPackage](repo-root/app/client/src/features/marine/marineHydrologyRegionalComparisonPackage)
-- [marineHydrologyRegionalComparisonPackage.js](repo-root/app/client/src/features/marine/marineHydrologyRegionalComparisonPackage.js)
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
-- [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-- [marine-module.md](repo-root/app/docs/marine-module.md)
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marineHydrologyRegionalComparisonPackage.ts](../../client/src/features/marine/marineHydrologyRegionalComparisonPackage.ts)
+- [marineHydrologyRegionalComparisonPackage](../../client/src/features/marine/marineHydrologyRegionalComparisonPackage)
+- [marineHydrologyRegionalComparisonPackage.js](../../client/src/features/marine/marineHydrologyRegionalComparisonPackage.js)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
+- [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+- [marine-module.md](../marine-module.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
+- [marine-ai.md](marine-ai.md)
 
 Validation:
 - `python -m pytest app/server/tests/test_netherlands_rws_waterinfo.py app/server/tests/test_marine_contracts.py app/server/tests/test_vigicrues_hydrometry.py app/server/tests/test_ireland_opw_waterlevel.py -q` -> pass
@@ -512,7 +512,7 @@ Task:
 - build a bounded marineCorridorSituationPackage on top of the current marine reporting stack
 
 What changed:
-- added [marineCorridorSituationPackage.ts](repo-root/app/client/src/features/marine/marineCorridorSituationPackage.ts) as a pure bounded corridor-focused reporting helper over the existing marine stack
+- added [marineCorridorSituationPackage.ts](../../client/src/features/marine/marineCorridorSituationPackage.ts) as a pure bounded corridor-focused reporting helper over the existing marine stack
 - the new package builds on:
   - `marineFusionSnapshotInput`
   - `marineReportBriefPackage`
@@ -528,32 +528,32 @@ What changed:
   - `observe`, `orient`, `prioritize`, and `explain`
   - explicit does-not-prove lines
 - added Node-resolution shims for the new helper:
-  - [marineCorridorSituationPackage](repo-root/app/client/src/features/marine/marineCorridorSituationPackage)
-  - [marineCorridorSituationPackage.js](repo-root/app/client/src/features/marine/marineCorridorSituationPackage.js)
-- extended [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.corridorSituationPackage` is exported and one compact corridor-situation line is appended to the existing marine display/export lines
-- extended [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
+  - [marineCorridorSituationPackage](../../client/src/features/marine/marineCorridorSituationPackage)
+  - [marineCorridorSituationPackage.js](../../client/src/features/marine/marineCorridorSituationPackage.js)
+- extended [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.corridorSituationPackage` is exported and one compact corridor-situation line is appended to the existing marine display/export lines
+- extended [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
   - corridor-situation posture
   - selected-corridor observe wording
   - Vigicrues and Waterinfo workflow-evidence wording
   - no-closure/no-wrongdoing/no-action guardrails
   - carry-through through `buildMarineEvidenceSummary(...)`
-- extended [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.corridorSituationPackage` metadata block, including section lines, corridor posture, Vigicrues/Waterinfo workflow-evidence wording, and the explicit no-closure guardrail
+- extended [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.corridorSituationPackage` metadata block, including section lines, corridor posture, Vigicrues/Waterinfo workflow-evidence wording, and the explicit no-closure guardrail
 - updated marine docs and validation notes so the corridor-focused reporting artifact is documented as export-covered, regression-covered, and smoke metadata-covered without promoting any source beyond its evidence:
-  - [marine-module.md](repo-root/app/docs/marine-module.md)
-  - [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-  - [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+  - [marine-module.md](../marine-module.md)
+  - [marine-workflow-validation.md](../marine-workflow-validation.md)
+  - [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
 Files touched:
-- [marineCorridorSituationPackage.ts](repo-root/app/client/src/features/marine/marineCorridorSituationPackage.ts)
-- [marineCorridorSituationPackage](repo-root/app/client/src/features/marine/marineCorridorSituationPackage)
-- [marineCorridorSituationPackage.js](repo-root/app/client/src/features/marine/marineCorridorSituationPackage.js)
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
-- [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-- [marine-module.md](repo-root/app/docs/marine-module.md)
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marineCorridorSituationPackage.ts](../../client/src/features/marine/marineCorridorSituationPackage.ts)
+- [marineCorridorSituationPackage](../../client/src/features/marine/marineCorridorSituationPackage)
+- [marineCorridorSituationPackage.js](../../client/src/features/marine/marineCorridorSituationPackage.js)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
+- [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+- [marine-module.md](../marine-module.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
+- [marine-ai.md](marine-ai.md)
 
 Validation:
 - `python -m pytest app/server/tests/test_netherlands_rws_waterinfo.py app/server/tests/test_marine_contracts.py app/server/tests/test_vigicrues_hydrometry.py app/server/tests/test_ireland_opw_waterlevel.py -q` -> pass
@@ -584,43 +584,43 @@ Task:
 - build a bounded marineReportBriefPackage on top of marineFusionSnapshotInput and tighten workflow-evidence wording for Vigicrues and Waterinfo
 
 What changed:
-- added [marineReportBriefPackage.ts](repo-root/app/client/src/features/marine/marineReportBriefPackage.ts) as a pure marine export/reporting helper that converts the existing `marineFusionSnapshotInput` into stable report-ready sections:
+- added [marineReportBriefPackage.ts](../../client/src/features/marine/marineReportBriefPackage.ts) as a pure marine export/reporting helper that converts the existing `marineFusionSnapshotInput` into stable report-ready sections:
   - `observe`
   - `orient`
   - `prioritize`
   - `explain`
 - the new package preserves replay/gap posture, source rows, hydrology posture, corridor/chokepoint posture, attention/review counts, caveats, and does-not-prove lines without creating a new UI panel or a new severity model
 - added Node-resolution shims for the new helper:
-  - [marineReportBriefPackage](repo-root/app/client/src/features/marine/marineReportBriefPackage)
-  - [marineReportBriefPackage.js](repo-root/app/client/src/features/marine/marineReportBriefPackage.js)
+  - [marineReportBriefPackage](../../client/src/features/marine/marineReportBriefPackage)
+  - [marineReportBriefPackage.js](../../client/src/features/marine/marineReportBriefPackage.js)
 - tightened explicit workflow-evidence wording for the two hydrology sources called out in the assignment:
   - Vigicrues now has a dedicated `vigicruesWorkflowEvidenceLine` in the report brief
   - Waterinfo now has a dedicated `waterinfoWorkflowEvidenceLine` in the report brief
   - both lines confirm export-path/source-health/evidence-basis presence only and do not promote either source into behavioral, crisis, or impact evidence
-- extended [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.reportBriefPackage` is exported and one compact report-brief line is added to the existing marine display/export lines
-- extended [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
+- extended [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.reportBriefPackage` is exported and one compact report-brief line is added to the existing marine display/export lines
+- extended [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
   - `observe / orient / prioritize / explain` section presence
   - Vigicrues workflow-evidence wording
   - Waterinfo workflow-evidence wording
   - no-intent/no-wrongdoing/no-action guardrails
   - carry-through through `buildMarineEvidenceSummary(...)`
-- extended [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.reportBriefPackage` metadata block, including section lines plus Vigicrues and Waterinfo workflow-evidence wording
+- extended [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.reportBriefPackage` metadata block, including section lines plus Vigicrues and Waterinfo workflow-evidence wording
 - updated marine docs and validation notes so the new report-brief package and the explicit Vigicrues/Waterinfo workflow-evidence wording are now documented as export-covered, regression-covered, and smoke metadata-covered:
-  - [marine-module.md](repo-root/app/docs/marine-module.md)
-  - [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-  - [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+  - [marine-module.md](../marine-module.md)
+  - [marine-workflow-validation.md](../marine-workflow-validation.md)
+  - [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
 Files touched:
-- [marineReportBriefPackage.ts](repo-root/app/client/src/features/marine/marineReportBriefPackage.ts)
-- [marineReportBriefPackage](repo-root/app/client/src/features/marine/marineReportBriefPackage)
-- [marineReportBriefPackage.js](repo-root/app/client/src/features/marine/marineReportBriefPackage.js)
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
-- [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-- [marine-module.md](repo-root/app/docs/marine-module.md)
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marineReportBriefPackage.ts](../../client/src/features/marine/marineReportBriefPackage.ts)
+- [marineReportBriefPackage](../../client/src/features/marine/marineReportBriefPackage)
+- [marineReportBriefPackage.js](../../client/src/features/marine/marineReportBriefPackage.js)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
+- [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+- [marine-module.md](../marine-module.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
+- [marine-ai.md](marine-ai.md)
 
 Validation:
 - `python -m pytest app/server/tests/test_netherlands_rws_waterinfo.py app/server/tests/test_marine_contracts.py app/server/tests/test_vigicrues_hydrometry.py app/server/tests/test_ireland_opw_waterlevel.py -q` -> pass
@@ -660,7 +660,7 @@ Task:
 
 What changed:
 
-- added [marineFusionSnapshotInput.ts](repo-root/app/client/src/features/marine/marineFusionSnapshotInput.ts) as a pure marine export/reporting helper that composes:
+- added [marineFusionSnapshotInput.ts](../../client/src/features/marine/marineFusionSnapshotInput.ts) as a pure marine export/reporting helper that composes:
 
   - replay posture from focused replay evidence and focused interpretation trust
 
@@ -674,13 +674,13 @@ What changed:
 
 - added Node-resolution shims for the new helper:
 
-  - [marineFusionSnapshotInput](repo-root/app/client/src/features/marine/marineFusionSnapshotInput)
+  - [marineFusionSnapshotInput](../../client/src/features/marine/marineFusionSnapshotInput)
 
-  - [marineFusionSnapshotInput.js](repo-root/app/client/src/features/marine/marineFusionSnapshotInput.js)
+  - [marineFusionSnapshotInput.js](../../client/src/features/marine/marineFusionSnapshotInput.js)
 
-- extended [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.fusionSnapshotInput` is exported and one compact fusion-snapshot line is added to the existing marine display/export lines
+- extended [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts) so `marineAnomalySummary.fusionSnapshotInput` is exported and one compact fusion-snapshot line is added to the existing marine display/export lines
 
-- extended [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
+- extended [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs) so the real marine export path now regression-checks:
 
   - fusion snapshot input source-row counts
 
@@ -692,39 +692,39 @@ What changed:
 
   - top-level evidence-summary line carry-through
 
-- extended [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.fusionSnapshotInput` metadata block, including source rows, Vigicrues hydrology posture, corridor posture, and guardrail lines
+- extended [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so marine smoke now checks the `marineAnomalySummary.fusionSnapshotInput` metadata block, including source rows, Vigicrues hydrology posture, corridor posture, and guardrail lines
 
 - updated marine docs to record the new export-only package and its smoke/regression coverage:
 
-  - [marine-module.md](repo-root/app/docs/marine-module.md)
+  - [marine-module.md](../marine-module.md)
 
-  - [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+  - [marine-workflow-validation.md](../marine-workflow-validation.md)
 
-  - [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+  - [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
 
 
 Files touched:
 
-- [marineFusionSnapshotInput.ts](repo-root/app/client/src/features/marine/marineFusionSnapshotInput.ts)
+- [marineFusionSnapshotInput.ts](../../client/src/features/marine/marineFusionSnapshotInput.ts)
 
-- [marineFusionSnapshotInput](repo-root/app/client/src/features/marine/marineFusionSnapshotInput)
+- [marineFusionSnapshotInput](../../client/src/features/marine/marineFusionSnapshotInput)
 
-- [marineFusionSnapshotInput.js](repo-root/app/client/src/features/marine/marineFusionSnapshotInput.js)
+- [marineFusionSnapshotInput.js](../../client/src/features/marine/marineFusionSnapshotInput.js)
 
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
 
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
 
-- [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
+- [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
 
-- [marine-module.md](repo-root/app/docs/marine-module.md)
+- [marine-module.md](../marine-module.md)
 
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
 
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marine-ai.md](marine-ai.md)
 
 
 
@@ -786,7 +786,7 @@ What changed:
 
 - inspected the existing Vigicrues backend slice, hydrology source-health workflow/report, corridor review package, export metadata wiring, and smoke/regression path before changing semantics
 
-- extended [marineHydrologySourceHealthReport.ts](repo-root/app/client/src/features/marine/marineHydrologySourceHealthReport.ts) so Vigicrues is now preserved explicitly inside the hydrology export package through:
+- extended [marineHydrologySourceHealthReport.ts](../../client/src/features/marine/marineHydrologySourceHealthReport.ts) so Vigicrues is now preserved explicitly inside the hydrology export package through:
 
   - `vigicruesRow`
 
@@ -794,7 +794,7 @@ What changed:
 
   - top-source export lines that now force a Vigicrues posture line when the row is present
 
-- extended [marineCorridorReviewPackage.ts](repo-root/app/client/src/features/marine/marineCorridorReviewPackage.ts) so corridor export metadata now preserves:
+- extended [marineCorridorReviewPackage.ts](../../client/src/features/marine/marineCorridorReviewPackage.ts) so corridor export metadata now preserves:
 
   - `vigicruesRow`
 
@@ -804,9 +804,9 @@ What changed:
 
 - strengthened corridor package fallback behavior so it can still emit a bounded corridor review package when corridor/chokepoint signal exists but the narrower chokepoint helper package is absent; it derives review-safe counts and caveats from existing chokepoint summary, focused replay evidence, and source rows only
 
-- extended [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts) so both packages export the new Vigicrues-specific metadata fields through `marineAnomalySummary`
+- extended [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts) so both packages export the new Vigicrues-specific metadata fields through `marineAnomalySummary`
 
-- extended [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs) so the Vigicrues follow-through is now regression-checked across:
+- extended [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs) so the Vigicrues follow-through is now regression-checked across:
 
   - broad posture with loaded Vigicrues
 
@@ -818,7 +818,7 @@ What changed:
 
   - drift through the real `buildMarineEvidenceSummary(...)` export path
 
-- extended [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so marine smoke now checks Vigicrues-integrated posture inside:
+- extended [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so marine smoke now checks Vigicrues-integrated posture inside:
 
   - `marineAnomalySummary.hydrologySourceHealthReport`
 
@@ -832,23 +832,23 @@ What changed:
 
 Files touched:
 
-- [marineHydrologySourceHealthReport.ts](repo-root/app/client/src/features/marine/marineHydrologySourceHealthReport.ts)
+- [marineHydrologySourceHealthReport.ts](../../client/src/features/marine/marineHydrologySourceHealthReport.ts)
 
-- [marineCorridorReviewPackage.ts](repo-root/app/client/src/features/marine/marineCorridorReviewPackage.ts)
+- [marineCorridorReviewPackage.ts](../../client/src/features/marine/marineCorridorReviewPackage.ts)
 
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
 
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
 
-- [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
+- [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
 
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
 
-- [marine-module.md](repo-root/app/docs/marine-module.md)
+- [marine-module.md](../marine-module.md)
 
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marine-ai.md](marine-ai.md)
 
 
 
@@ -912,13 +912,13 @@ What changed:
 
 - confirmed the previously reported Marine-owned lint/import issue does not reproduce in the current tree; `cmd /c npm.cmd run lint` was green before and after this assignment
 
-- added the pure helper [marineCorridorReviewPackage.ts](repo-root/app/client/src/features/marine/marineCorridorReviewPackage.ts)
+- added the pure helper [marineCorridorReviewPackage.ts](../../client/src/features/marine/marineCorridorReviewPackage.ts)
 
 - added the Node-resolution shims for that helper:
 
-  - [marineCorridorReviewPackage](repo-root/app/client/src/features/marine/marineCorridorReviewPackage)
+  - [marineCorridorReviewPackage](../../client/src/features/marine/marineCorridorReviewPackage)
 
-  - [marineCorridorReviewPackage.js](repo-root/app/client/src/features/marine/marineCorridorReviewPackage.js)
+  - [marineCorridorReviewPackage.js](../../client/src/features/marine/marineCorridorReviewPackage.js)
 
 - the new package composes existing marine metadata from:
 
@@ -956,11 +956,11 @@ What changed:
 
   - compact source rows containing source id, mode, health, evidence basis, nearby count, active count, and caveat
 
-- wired `marineAnomalySummary.corridorReviewPackage` into [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts) and appended its top export line to the compact marine snapshot summary
+- wired `marineAnomalySummary.corridorReviewPackage` into [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts) and appended its top export line to the compact marine snapshot summary
 
 - kept the helper UI-light and export-only; no new large marine panel was added
 
-- extended [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs) so the corridor package is regression-checked for:
+- extended [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs) so the corridor package is regression-checked for:
 
   - normal posture
 
@@ -976,7 +976,7 @@ What changed:
 
   - explicit no-escort / no-wrongdoing / no-action-need guardrails
 
-- extended [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) with metadata-only assertions for `marineAnomalySummary.corridorReviewPackage`
+- extended [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) with metadata-only assertions for `marineAnomalySummary.corridorReviewPackage`
 
 - updated marine docs and contract notes so the new corridor review package is documented as export-covered, regression-covered, and marine-smoke metadata-covered
 
@@ -984,25 +984,25 @@ What changed:
 
 Files touched:
 
-- [marineCorridorReviewPackage.ts](repo-root/app/client/src/features/marine/marineCorridorReviewPackage.ts)
+- [marineCorridorReviewPackage.ts](../../client/src/features/marine/marineCorridorReviewPackage.ts)
 
-- [marineCorridorReviewPackage](repo-root/app/client/src/features/marine/marineCorridorReviewPackage)
+- [marineCorridorReviewPackage](../../client/src/features/marine/marineCorridorReviewPackage)
 
-- [marineCorridorReviewPackage.js](repo-root/app/client/src/features/marine/marineCorridorReviewPackage.js)
+- [marineCorridorReviewPackage.js](../../client/src/features/marine/marineCorridorReviewPackage.js)
 
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
 
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
 
-- [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
+- [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
 
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
 
-- [marine-module.md](repo-root/app/docs/marine-module.md)
+- [marine-module.md](../marine-module.md)
 
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marine-ai.md](marine-ai.md)
 
 
 
@@ -1064,7 +1064,7 @@ What changed:
 
 - reproduced the reported Marine-owned lint path and confirmed it does not currently reproduce; `cmd /c npm.cmd run lint` stayed green before and after the change
 
-- added the pure helper [marineHydrologySourceHealthReport.ts](repo-root/app/client/src/features/marine/marineHydrologySourceHealthReport.ts)
+- added the pure helper [marineHydrologySourceHealthReport.ts](../../client/src/features/marine/marineHydrologySourceHealthReport.ts)
 
 - the new helper consumes `marineHydrologySourceHealthWorkflow` and emits a bounded review/export package with:
 
@@ -1102,15 +1102,15 @@ What changed:
 
   - family grouping
 
-- wired `marineAnomalySummary.hydrologySourceHealthReport` into [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts) and appended its top export line to the compact marine snapshot summary
+- wired `marineAnomalySummary.hydrologySourceHealthReport` into [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts) and appended its top export line to the compact marine snapshot summary
 
 - added the repoâs existing Node-resolution shim pattern for the new helper:
 
-  - [marineHydrologySourceHealthReport](repo-root/app/client/src/features/marine/marineHydrologySourceHealthReport)
+  - [marineHydrologySourceHealthReport](../../client/src/features/marine/marineHydrologySourceHealthReport)
 
-  - [marineHydrologySourceHealthReport.js](repo-root/app/client/src/features/marine/marineHydrologySourceHealthReport.js)
+  - [marineHydrologySourceHealthReport.js](../../client/src/features/marine/marineHydrologySourceHealthReport.js)
 
-- extended [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs) so the new report path is regression-checked for:
+- extended [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs) so the new report path is regression-checked for:
 
   - broad posture
 
@@ -1126,7 +1126,7 @@ What changed:
 
   - preserved no-intent / no-wrongdoing guardrails
 
-- extended [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) with metadata-only assertions for `marineAnomalySummary.hydrologySourceHealthReport`
+- extended [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) with metadata-only assertions for `marineAnomalySummary.hydrologySourceHealthReport`
 
 - updated marine docs and contract notes so the new report block is documented as export-covered and regression-covered
 
@@ -1134,25 +1134,25 @@ What changed:
 
 Files touched:
 
-- [marineHydrologySourceHealthReport.ts](repo-root/app/client/src/features/marine/marineHydrologySourceHealthReport.ts)
+- [marineHydrologySourceHealthReport.ts](../../client/src/features/marine/marineHydrologySourceHealthReport.ts)
 
-- [marineHydrologySourceHealthReport](repo-root/app/client/src/features/marine/marineHydrologySourceHealthReport)
+- [marineHydrologySourceHealthReport](../../client/src/features/marine/marineHydrologySourceHealthReport)
 
-- [marineHydrologySourceHealthReport.js](repo-root/app/client/src/features/marine/marineHydrologySourceHealthReport.js)
+- [marineHydrologySourceHealthReport.js](../../client/src/features/marine/marineHydrologySourceHealthReport.js)
 
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
 
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
 
-- [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
+- [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
 
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
 
-- [marine-module.md](repo-root/app/docs/marine-module.md)
+- [marine-module.md](../marine-module.md)
 
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marine-ai.md](marine-ai.md)
 
 
 
@@ -1166,7 +1166,7 @@ Validation:
 
 - `cmd /c npm.cmd run lint` -> pass
 
-- `cmd /c npm.cmd run build` -> blocked outside marine by [dataAiSourceIntelligence.ts](repo-root/app/client/src/features/inspector/dataAiSourceIntelligence.ts) type errors at lines 307 and 311
+- `cmd /c npm.cmd run build` -> blocked outside marine by [dataAiSourceIntelligence.ts](../../client/src/features/inspector/dataAiSourceIntelligence.ts) type errors at lines 307 and 311
 
 - `python app/server/tests/run_playwright_smoke.py marine` -> not trustworthy in current repo state; it failed expecting `hydrologySourceHealthReport` because the shared frontend build is blocked outside marine and the served bundle is stale
 
@@ -1229,7 +1229,7 @@ What changed:
 - determined the prior `2026-05-04 21:06 America/Chicago` final report was not present as a standalone entry and its narrow smoke-prep/export-consumer scope was absorbed into this completed assignment rather than backfilled as a fabricated separate report
 
 
-- added the pure helper [marineHydrologySourceHealthWorkflow.ts](repo-root/app/client/src/features/marine/marineHydrologySourceHealthWorkflow.ts)
+- added the pure helper [marineHydrologySourceHealthWorkflow.ts](../../client/src/features/marine/marineHydrologySourceHealthWorkflow.ts)
 
 
 - the new workflow package consumes existing `sourceHealthExportCoherence` output and preserves, per source, only bounded export-safe fields:
@@ -1265,7 +1265,7 @@ What changed:
   - `ocean-met` comparison family: NOAA CO-OPS, NOAA NDBC
 
 
-- extended [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts) to export:
+- extended [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts) to export:
 
 
   - `marineAnomalySummary.sourceHealthExportCoherence`
@@ -1274,7 +1274,7 @@ What changed:
   - `marineAnomalySummary.hydrologySourceHealthWorkflow`
 
 
-- extended [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs) so the new workflow package is regression-checked for:
+- extended [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs) so the new workflow package is regression-checked for:
 
 
   - broad vs limited source mixes
@@ -1292,10 +1292,10 @@ What changed:
 - added bounded marine smoke-prep/browser-path validation by:
 
 
-  - adding the missing deterministic Waterinfo endpoint to [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py)
+  - adding the missing deterministic Waterinfo endpoint to [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py)
 
 
-  - extending [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) to confirm snapshot metadata for `sourceHealthExportCoherence` and `hydrologySourceHealthWorkflow`
+  - extending [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) to confirm snapshot metadata for `sourceHealthExportCoherence` and `hydrologySourceHealthWorkflow`
 
 
 - updated marine docs so the validation truth now states the new metadata package is export-covered, helper-regression-covered, and smoke metadata-covered
@@ -1307,37 +1307,37 @@ What changed:
 Files touched:
 
 
-- [marineHydrologySourceHealthWorkflow.ts](repo-root/app/client/src/features/marine/marineHydrologySourceHealthWorkflow.ts)
+- [marineHydrologySourceHealthWorkflow.ts](../../client/src/features/marine/marineHydrologySourceHealthWorkflow.ts)
 
 
-- [marineHydrologySourceHealthWorkflow](repo-root/app/client/src/features/marine/marineHydrologySourceHealthWorkflow)
+- [marineHydrologySourceHealthWorkflow](../../client/src/features/marine/marineHydrologySourceHealthWorkflow)
 
 
-- [marineHydrologySourceHealthWorkflow.js](repo-root/app/client/src/features/marine/marineHydrologySourceHealthWorkflow.js)
+- [marineHydrologySourceHealthWorkflow.js](../../client/src/features/marine/marineHydrologySourceHealthWorkflow.js)
 
 
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
 
 
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
 
 
-- [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
+- [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
 
 
-- [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py)
+- [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py)
 
 
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
 
 
-- [marine-module.md](repo-root/app/docs/marine-module.md)
+- [marine-module.md](../marine-module.md)
 
 
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
 
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marine-ai.md](marine-ai.md)
 
 
 
@@ -1433,7 +1433,7 @@ What changed:
 - replaced the stale `2026-05-02 12:27 America/Chicago` progress stub with the real completed Waterinfo consumer report
 
 
-- added the pure helper [marineSourceHealthExportCoherence.ts](repo-root/app/client/src/features/marine/marineSourceHealthExportCoherence.ts)
+- added the pure helper [marineSourceHealthExportCoherence.ts](../../client/src/features/marine/marineSourceHealthExportCoherence.ts)
 
 
 - the new helper summarizes, per source, only current export-safe metadata:
@@ -1460,10 +1460,10 @@ What changed:
   - caveat
 
 
-- extended [marineNoaaContext.ts](repo-root/app/client/src/features/marine/marineNoaaContext.ts) and [marineNdbcContext.ts](repo-root/app/client/src/features/marine/marineNdbcContext.ts) so their summaries expose top observed timestamps when current metadata supports it
+- extended [marineNoaaContext.ts](../../client/src/features/marine/marineNoaaContext.ts) and [marineNdbcContext.ts](../../client/src/features/marine/marineNdbcContext.ts) so their summaries expose top observed timestamps when current metadata supports it
 
 
-- wired `marineAnomalySummary.sourceHealthExportCoherence` into [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts) without adding a new UI surface
+- wired `marineAnomalySummary.sourceHealthExportCoherence` into [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts) without adding a new UI surface
 
 
 - added deterministic helper-regression coverage for broad vs limited source-health/export posture, timestamp-posture preservation, and metadata drift checks
@@ -1478,37 +1478,37 @@ What changed:
 Files touched:
 
 
-- [marineNoaaContext.ts](repo-root/app/client/src/features/marine/marineNoaaContext.ts)
+- [marineNoaaContext.ts](../../client/src/features/marine/marineNoaaContext.ts)
 
 
-- [marineNdbcContext.ts](repo-root/app/client/src/features/marine/marineNdbcContext.ts)
+- [marineNdbcContext.ts](../../client/src/features/marine/marineNdbcContext.ts)
 
 
-- [marineSourceHealthExportCoherence.ts](repo-root/app/client/src/features/marine/marineSourceHealthExportCoherence.ts)
+- [marineSourceHealthExportCoherence.ts](../../client/src/features/marine/marineSourceHealthExportCoherence.ts)
 
 
-- [marineSourceHealthExportCoherence](repo-root/app/client/src/features/marine/marineSourceHealthExportCoherence)
+- [marineSourceHealthExportCoherence](../../client/src/features/marine/marineSourceHealthExportCoherence)
 
 
-- [marineSourceHealthExportCoherence.js](repo-root/app/client/src/features/marine/marineSourceHealthExportCoherence.js)
+- [marineSourceHealthExportCoherence.js](../../client/src/features/marine/marineSourceHealthExportCoherence.js)
 
 
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
 
 
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
 
 
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
 
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
 
 
-- [marine-module.md](repo-root/app/docs/marine-module.md)
+- [marine-module.md](../marine-module.md)
 
 
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marine-ai.md](marine-ai.md)
 
 
 
@@ -1598,25 +1598,25 @@ Task:
 What changed:
 
 
-- added client API coverage for the backend Waterinfo contract in [api.ts](repo-root/app/client/src/types/api.ts)
+- added client API coverage for the backend Waterinfo contract in [api.ts](../../client/src/types/api.ts)
 
 
-- added `useMarineNetherlandsRwsWaterinfoContextQuery(...)` in [queries.ts](repo-root/app/client/src/lib/queries.ts)
+- added `useMarineNetherlandsRwsWaterinfoContextQuery(...)` in [queries.ts](../../client/src/lib/queries.ts)
 
 
-- added the marine-local helper [marineNetherlandsRwsWaterinfoContext.ts](repo-root/app/client/src/features/marine/marineNetherlandsRwsWaterinfoContext.ts)
+- added the marine-local helper [marineNetherlandsRwsWaterinfoContext.ts](../../client/src/features/marine/marineNetherlandsRwsWaterinfoContext.ts)
 
 
-- wired a compact `Netherlands RWS Waterinfo` card into [MarineAnomalySection.tsx](repo-root/app/client/src/features/marine/MarineAnomalySection.tsx)
+- wired a compact `Netherlands RWS Waterinfo` card into [MarineAnomalySection.tsx](../../client/src/features/marine/MarineAnomalySection.tsx)
 
 
-- extended [marineHydrologyContext.ts](repo-root/app/client/src/features/marine/marineHydrologyContext.ts) so Waterinfo joins the existing hydrology composition without changing source semantics
+- extended [marineHydrologyContext.ts](../../client/src/features/marine/marineHydrologyContext.ts) so Waterinfo joins the existing hydrology composition without changing source semantics
 
 
-- extended [marineContextSourceSummary.ts](repo-root/app/client/src/features/marine/marineContextSourceSummary.ts) so Waterinfo appears as `hydrology` / `observed` in the source registry
+- extended [marineContextSourceSummary.ts](../../client/src/features/marine/marineContextSourceSummary.ts) so Waterinfo appears as `hydrology` / `observed` in the source registry
 
 
-- added `marineAnomalySummary.netherlandsRwsWaterinfoContext` in [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
+- added `marineAnomalySummary.netherlandsRwsWaterinfoContext` in [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
 
 
 - extended deterministic helper regression coverage and marine docs for the Waterinfo consumer/export path
@@ -1628,37 +1628,37 @@ What changed:
 Files touched:
 
 
-- [api.ts](repo-root/app/client/src/types/api.ts)
+- [api.ts](../../client/src/types/api.ts)
 
 
-- [queries.ts](repo-root/app/client/src/lib/queries.ts)
+- [queries.ts](../../client/src/lib/queries.ts)
 
 
-- [marineNetherlandsRwsWaterinfoContext.ts](repo-root/app/client/src/features/marine/marineNetherlandsRwsWaterinfoContext.ts)
+- [marineNetherlandsRwsWaterinfoContext.ts](../../client/src/features/marine/marineNetherlandsRwsWaterinfoContext.ts)
 
 
-- [marineHydrologyContext.ts](repo-root/app/client/src/features/marine/marineHydrologyContext.ts)
+- [marineHydrologyContext.ts](../../client/src/features/marine/marineHydrologyContext.ts)
 
 
-- [marineContextSourceSummary.ts](repo-root/app/client/src/features/marine/marineContextSourceSummary.ts)
+- [marineContextSourceSummary.ts](../../client/src/features/marine/marineContextSourceSummary.ts)
 
 
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
 
 
-- [MarineAnomalySection.tsx](repo-root/app/client/src/features/marine/MarineAnomalySection.tsx)
+- [MarineAnomalySection.tsx](../../client/src/features/marine/MarineAnomalySection.tsx)
 
 
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
 
 
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
 
 
-- [marine-module.md](repo-root/app/docs/marine-module.md)
+- [marine-module.md](../marine-module.md)
 
 
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
 
 
@@ -1853,49 +1853,49 @@ What changed:
 Files touched:
 
 
-- [settings.py](repo-root/app/server/src/config/settings.py)
+- [settings.py](../../server/src/config/settings.py)
 
 
-- [api.py](repo-root/app/server/src/types/api.py)
+- [api.py](../../server/src/types/api.py)
 
 
-- [marine_context_service.py](repo-root/app/server/src/services/marine_context_service.py)
+- [marine_context_service.py](../../server/src/services/marine_context_service.py)
 
 
-- [marine_service.py](repo-root/app/server/src/services/marine_service.py)
+- [marine_service.py](../../server/src/services/marine_service.py)
 
 
-- [marine.py](repo-root/app/server/src/routes/marine.py)
+- [marine.py](../../server/src/routes/marine.py)
 
 
-- [test_netherlands_rws_waterinfo.py](repo-root/app/server/tests/test_netherlands_rws_waterinfo.py)
+- [test_netherlands_rws_waterinfo.py](../../server/tests/test_netherlands_rws_waterinfo.py)
 
 
-- [test_marine_contracts.py](repo-root/app/server/tests/test_marine_contracts.py)
+- [test_marine_contracts.py](../../server/tests/test_marine_contracts.py)
 
 
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
+- [marine-context-source-contract-matrix.md](../marine-context-source-contract-matrix.md)
 
 
-- [marine-context-fixture-reference.md](repo-root/app/docs/marine-context-fixture-reference.md)
+- [marine-context-fixture-reference.md](../marine-context-fixture-reference.md)
 
 
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
 
 
-- [marine-module.md](repo-root/app/docs/marine-module.md)
+- [marine-module.md](../marine-module.md)
 
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md)
+- [source-assignment-board.md](../source-assignment-board.md)
 
 
-- [source-endpoint-verification-netherlands-rws-waterinfo.md](repo-root/app/docs/source-endpoint-verification-netherlands-rws-waterinfo.md)
+- [source-endpoint-verification-netherlands-rws-waterinfo.md](../source-endpoint-verification-netherlands-rws-waterinfo.md)
 
 
-- [source-quick-assign-packets-may-2026.md](repo-root/app/docs/source-quick-assign-packets-may-2026.md)
+- [source-quick-assign-packets-may-2026.md](../source-quick-assign-packets-may-2026.md)
 
 
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marine-ai.md](marine-ai.md)
 
 
 
@@ -1976,7 +1976,7 @@ Task:
 What changed:
 
 
-- updated [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
+- updated [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
 
 
   - added deterministic scope-transition coverage for:
@@ -2042,13 +2042,13 @@ What changed:
     - radius changes update current/previous scope metadata while preserving anomaly scores, source ids, source health, and evidence bases
 
 
-- updated [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- updated [marine-workflow-validation.md](../marine-workflow-validation.md)
 
 
   - documented deterministic anchor/radius/fallback transition coverage and export alignment expectations
 
 
-- updated [marine-module.md](repo-root/app/docs/marine-module.md)
+- updated [marine-module.md](../marine-module.md)
 
 
   - documented scope-transition coherence requirements for:
@@ -2078,16 +2078,16 @@ What changed:
 Files touched:
 
 
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
 
 
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
 
 
-- [marine-module.md](repo-root/app/docs/marine-module.md)
+- [marine-module.md](../marine-module.md)
 
 
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marine-ai.md](marine-ai.md)
 
 
 
@@ -2168,7 +2168,7 @@ Task:
 What changed:
 
 
-- updated [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
+- updated [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
 
 
   - added a deterministic broad/all-sources review context
@@ -2225,13 +2225,13 @@ What changed:
     - no-intent/no-wrongdoing/no-severity/no-impact guardrails across the full export package
 
 
-- updated [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- updated [marine-workflow-validation.md](../marine-workflow-validation.md)
 
 
   - documented source-toggle/preset-switch transition coherence expectations and deterministic helper-regression coverage
 
 
-- updated [marine-module.md](repo-root/app/docs/marine-module.md)
+- updated [marine-module.md](../marine-module.md)
 
 
   - documented that preset/source-toggle transitions must remain aligned across environmental context, source summary, issue queue, issue export bundle, fusion, timeline, and focused interpretation metadata
@@ -2243,16 +2243,16 @@ What changed:
 Files touched:
 
 
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
 
 
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
 
 
-- [marine-module.md](repo-root/app/docs/marine-module.md)
+- [marine-module.md](../marine-module.md)
 
 
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marine-ai.md](marine-ai.md)
 
 
 
@@ -2330,7 +2330,7 @@ Task:
 What changed:
 
 
-- updated [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
+- updated [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
 
 
   - extended `marineAnomalySummary.focusedEvidenceInterpretation` metadata with:
@@ -2348,7 +2348,7 @@ What changed:
   - this makes export metadata preserve the actual visible interpretation-card selection for each marine mode, not just counts
 
 
-- updated [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
+- updated [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
 
 
   - added deterministic mode-switch regression coverage for:
@@ -2393,13 +2393,13 @@ What changed:
   - preserves no-severity/no-impact/no-vessel-intent/no-wrongdoing/no-evasion/no-escort/no-threat/no-action guardrails in each mode
 
 
-- updated [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- updated [marine-workflow-validation.md](../marine-workflow-validation.md)
 
 
   - documented focused interpretation mode-switch coherence coverage in helper regression and export metadata expectations
 
 
-- updated [marine-module.md](repo-root/app/docs/marine-module.md)
+- updated [marine-module.md](../marine-module.md)
 
 
   - documented the new `focusedEvidenceInterpretation` visible-card metadata fields and mode-switch coherence behavior
@@ -2411,19 +2411,19 @@ What changed:
 Files touched:
 
 
-- [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
+- [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
 
 
-- [marineContextHelperRegression.mjs](repo-root/app/client/scripts/marineContextHelperRegression.mjs)
+- [marineContextHelperRegression.mjs](../../client/scripts/marineContextHelperRegression.mjs)
 
 
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
+- [marine-workflow-validation.md](../marine-workflow-validation.md)
 
 
-- [marine-module.md](repo-root/app/docs/marine-module.md)
+- [marine-module.md](../marine-module.md)
 
 
-- [marine-ai.md](repo-root/app/docs/agent-progress/marine-ai.md)
+- [marine-ai.md](marine-ai.md)
 
 
 

@@ -10,8 +10,8 @@ Purpose:
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the source-status truth.
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md) remains the validation-traceability truth.
+- [source-assignment-board.md](source-assignment-board.md) remains the source-status truth.
+- [source-validation-status.md](source-validation-status.md) remains the validation-traceability truth.
 - Atlas validation and candidate docs are routing context only, not implementation or workflow-validation proof.
 - The implemented Data AI waves already cover:
   - the five-feed starter bundle
@@ -431,7 +431,7 @@ Current hold/defer examples:
 
 ## Related Docs
 
-- [data-ai-rss-source-candidates-batch3.md](repo-root/app/docs/data-ai-rss-source-candidates-batch3.md)
-- [data-ai-feed-rollout-ladder.md](repo-root/app/docs/data-ai-feed-rollout-ladder.md)
-- [source-quick-assign-packets-data-ai-rss.md](repo-root/app/docs/source-quick-assign-packets-data-ai-rss.md)
-- [source-routing-priority-memo.md](repo-root/app/docs/source-routing-priority-memo.md)
+- [data-ai-rss-source-candidates-batch3.md](data-ai-rss-source-candidates-batch3.md)
+- [data-ai-feed-rollout-ladder.md](data-ai-feed-rollout-ladder.md)
+- [source-quick-assign-packets-data-ai-rss.md](source-quick-assign-packets-data-ai-rss.md)
+- [source-routing-priority-memo.md](source-routing-priority-memo.md)

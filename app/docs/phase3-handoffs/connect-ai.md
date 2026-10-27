@@ -44,39 +44,39 @@
 ## Files and surfaces to know
 
 - Coordination and release surfaces:
-  - [active-agent-worktree.md](repo-root/app/docs/active-agent-worktree.md)
-  - [release-readiness.md](repo-root/app/docs/release-readiness.md)
-  - [validation-matrix.md](repo-root/app/docs/validation-matrix.md)
-  - [commit-groups.current.md](repo-root/app/docs/commit-groups.current.md)
+  - [active-agent-worktree.md](../active-agent-worktree.md)
+  - [release-readiness.md](../release-readiness.md)
+  - [validation-matrix.md](../validation-matrix.md)
+  - [commit-groups.current.md](../commit-groups.current.md)
 - Shared governance / compatibility surfaces:
-  - [source-fusion-reporting-input-inventory.md](repo-root/app/docs/source-fusion-reporting-input-inventory.md)
-  - [reporting-loop-package-contract.md](repo-root/app/docs/reporting-loop-package-contract.md)
-  - [source-onboarding-contract.md](repo-root/app/docs/source-onboarding-contract.md)
+  - [source-fusion-reporting-input-inventory.md](../source-fusion-reporting-input-inventory.md)
+  - [reporting-loop-package-contract.md](../reporting-loop-package-contract.md)
+  - [source-onboarding-contract.md](../source-onboarding-contract.md)
 - Ownership and advisory tooling:
-  - [list_changed_files_by_owner.py](repo-root/scripts/list_changed_files_by_owner.py)
-  - [release_dry_run.py](repo-root/scripts/release_dry_run.py)
-  - [validation_snapshot.py](repo-root/scripts/validation_snapshot.py)
-  - [alerts_ledger.py](repo-root/scripts/alerts_ledger.py)
+  - [list_changed_files_by_owner.py](../../../scripts/list_changed_files_by_owner.py)
+  - [release_dry_run.py](../../../scripts/release_dry_run.py)
+  - [validation_snapshot.py](../../../scripts/validation_snapshot.py)
+  - [alerts_ledger.py](../../../scripts/alerts_ledger.py)
 - Current high-collision shared files:
-  - [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  - [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  - [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  - [queries.ts](repo-root/app/client/src/lib/queries.ts)
-  - [api.ts](repo-root/app/client/src/types/api.ts)
-  - [settings.py](repo-root/app/server/src/config/settings.py)
-  - [api.py](repo-root/app/server/src/types/api.py)
-  - [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py)
+  - [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  - [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  - [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  - [queries.ts](../../client/src/lib/queries.ts)
+  - [api.ts](../../client/src/types/api.ts)
+  - [settings.py](../../server/src/config/settings.py)
+  - [api.py](../../server/src/types/api.py)
+  - [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py)
 - Still intentionally broad/shared runtime surfaces:
-  - [source_discovery.py](repo-root/app/server/src/routes/source_discovery.py)
-  - [source_discovery_service.py](repo-root/app/server/src/services/source_discovery_service.py)
-  - [runtime_scheduler_service.py](repo-root/app/server/src/services/runtime_scheduler_service.py)
-  - [content_extraction.py](repo-root/app/server/src/services/content_extraction.py)
-  - [media_evidence_service.py](repo-root/app/server/src/services/media_evidence_service.py)
-  - [status_service.py](repo-root/app/server/src/services/status_service.py)
-  - [db.py](repo-root/app/server/src/source_discovery/db.py)
-  - [models.py](repo-root/app/server/src/source_discovery/models.py)
-  - [source_discovery.py](repo-root/app/server/src/types/source_discovery.py)
-  - [test_source_discovery_memory.py](repo-root/app/server/tests/test_source_discovery_memory.py)
+  - [source_discovery.py](../../server/src/routes/source_discovery.py)
+  - [source_discovery_service.py](../../server/src/services/source_discovery_service.py)
+  - [runtime_scheduler_service.py](../../server/src/services/runtime_scheduler_service.py)
+  - [content_extraction.py](../../server/src/services/content_extraction.py)
+  - [media_evidence_service.py](../../server/src/services/media_evidence_service.py)
+  - [status_service.py](../../server/src/services/status_service.py)
+  - [db.py](../../server/src/source_discovery/db.py)
+  - [models.py](../../server/src/source_discovery/models.py)
+  - [source_discovery.py](../../server/src/types/source_discovery.py)
+  - [test_source_discovery_memory.py](../../server/tests/test_source_discovery_memory.py)
 
 ## Validation already run
 
@@ -111,19 +111,19 @@
 ## What the next AI should do first
 
 - Read, in order:
-  - [connect-ai.md](repo-root/app/docs/agent-next-tasks/connect-ai.md)
-  - [active-agent-worktree.md](repo-root/app/docs/active-agent-worktree.md)
-  - [release-readiness.md](repo-root/app/docs/release-readiness.md)
-  - [validation-matrix.md](repo-root/app/docs/validation-matrix.md)
-  - [commit-groups.current.md](repo-root/app/docs/commit-groups.current.md)
+  - [connect-ai.md](../agent-next-tasks/connect-ai.md)
+  - [active-agent-worktree.md](../active-agent-worktree.md)
+  - [release-readiness.md](../release-readiness.md)
+  - [validation-matrix.md](../validation-matrix.md)
+  - [commit-groups.current.md](../commit-groups.current.md)
   - this handoff file
 - Re-run the narrowest honest current-state posture before editing:
   - `git status --short --branch`
   - `python scripts/list_changed_files_by_owner.py --summary`
   - `python scripts/alerts_ledger.py --json`
 - Only rerun compile/lint/build if the new assignment touches shared executable surfaces.
-- If the assignment touches source intake, read [source-onboarding-contract.md](repo-root/app/docs/source-onboarding-contract.md) first.
-- If it touches cross-lane reporting packages, read [reporting-loop-package-contract.md](repo-root/app/docs/reporting-loop-package-contract.md) and [source-fusion-reporting-input-inventory.md](repo-root/app/docs/source-fusion-reporting-input-inventory.md) first.
+- If the assignment touches source intake, read [source-onboarding-contract.md](../source-onboarding-contract.md) first.
+- If it touches cross-lane reporting packages, read [reporting-loop-package-contract.md](../reporting-loop-package-contract.md) and [source-fusion-reporting-input-inventory.md](../source-fusion-reporting-input-inventory.md) first.
 
 ## What not to break
 

@@ -9,7 +9,7 @@ Assignment version read:
 - direct user assignment in this thread on `2026-05-06 America/Chicago`
 
 What changed:
-- added the Phase 3 reporting source-of-truth contract in [phase3-reporting-workbench-contract.md](repo-root/app/docs/phase3-reporting-workbench-contract.md)
+- added the Phase 3 reporting source-of-truth contract in [phase3-reporting-workbench-contract.md](../phase3-reporting-workbench-contract.md)
 - defined:
   - report mode shape inside the workbench
   - export/readiness surface contract
@@ -18,7 +18,7 @@ What changed:
   - domain report adapter seam for Data AI, Marine, Aerospace, Geospatial, Webcam source ops, and Imagery
   - short migration order for current report-related helpers and packets
 - updated Phase 3 index docs so the reporting contract is part of the documented memory layer
-- added a Phase 3 handoff-quality summary for incoming Reporting AI work in [phase3-handoffs/reporting-ai.md](repo-root/app/docs/phase3-handoffs/reporting-ai.md)
+- added a Phase 3 handoff-quality summary for incoming Reporting AI work in [phase3-handoffs/reporting-ai.md](../phase3-handoffs/reporting-ai.md)
 
 Files touched:
 - `app/docs/phase3-reporting-workbench-contract.md`

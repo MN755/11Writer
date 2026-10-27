@@ -13,7 +13,7 @@ It turns many source-specific public feeds, fixture-backed workflows, and local 
 - source health
 - evidence basis
 
-The fusion layer exists to support the [Spatial Intelligence Loop](repo-root/app/docs/spatial-intelligence-loop.md):
+The fusion layer exists to support the [Spatial Intelligence Loop](spatial-intelligence-loop.md):
 
 - Observe
 - Orient
@@ -880,8 +880,8 @@ Snapshot and export layers should preserve:
 
 The fusion layer must be read together with:
 
-- [safety-boundaries.md](repo-root/app/docs/safety-boundaries.md)
-- [spatial-intelligence-loop.md](repo-root/app/docs/spatial-intelligence-loop.md)
+- [safety-boundaries.md](safety-boundaries.md)
+- [spatial-intelligence-loop.md](spatial-intelligence-loop.md)
 
 The fusion layer supports:
 

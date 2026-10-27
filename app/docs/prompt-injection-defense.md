@@ -129,11 +129,11 @@ Environmental, marine, and aerospace advisories:
 
 This policy supplements:
 
-- [safety-boundaries.md](repo-root/app/docs/safety-boundaries.md)
-- [repo-workflow.md](repo-root/app/docs/repo-workflow.md)
-- [rss-feeds.md](repo-root/app/docs/rss-feeds.md)
-- [data-ai-onboarding.md](repo-root/app/docs/data-ai-onboarding.md)
-- [browser-use-agent-guidelines.md](repo-root/app/docs/browser-use-agent-guidelines.md)
+- [safety-boundaries.md](safety-boundaries.md)
+- [repo-workflow.md](repo-workflow.md)
+- [rss-feeds.md](rss-feeds.md)
+- [data-ai-onboarding.md](data-ai-onboarding.md)
+- [browser-use-agent-guidelines.md](browser-use-agent-guidelines.md)
 
 Change notes:
 

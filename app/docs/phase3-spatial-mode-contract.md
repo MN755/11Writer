@@ -10,43 +10,43 @@ Purpose:
 - leave a clean migration path for `Workspace AI` and `Platform AI`
 
 Read with:
-- [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md)
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
-- [ui-integration.md](repo-root/app/docs/ui-integration.md)
-- [phase3-handoffs/geospatial-ai.md](repo-root/app/docs/phase3-handoffs/geospatial-ai.md)
-- [phase3-handoffs/aerospace-ai.md](repo-root/app/docs/phase3-handoffs/aerospace-ai.md)
-- [phase3-handoffs/marine-ai.md](repo-root/app/docs/phase3-handoffs/marine-ai.md)
-- [phase3-handoffs/features-webcam-ai.md](repo-root/app/docs/phase3-handoffs/features-webcam-ai.md)
+- [phase3-code-oss-workbench-spec.md](phase3-code-oss-workbench-spec.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
+- [ui-integration.md](ui-integration.md)
+- [phase3-handoffs/geospatial-ai.md](phase3-handoffs/geospatial-ai.md)
+- [phase3-handoffs/aerospace-ai.md](phase3-handoffs/aerospace-ai.md)
+- [phase3-handoffs/marine-ai.md](phase3-handoffs/marine-ai.md)
+- [phase3-handoffs/features-webcam-ai.md](phase3-handoffs/features-webcam-ai.md)
 
 ## Current shell read
 
 Current shell facts from the live client:
 
 - `AppShell` still behaves like the product's primary map app, not like one mode inside a larger workbench:
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx:2901)
+  [AppShell.tsx](../client/src/features/app-shell/AppShell.tsx:2901)
 - `LayerPanel` is carrying unrelated concerns at once:
   investigation filters, imagery mode, environmental summaries, layer toggles, source health, webcam ops, ATC links, and saved views:
-  [LayerPanel.tsx](repo-root/app/client/src/features/layers/LayerPanel.tsx:166)
-  [LayerPanel.tsx](repo-root/app/client/src/features/layers/LayerPanel.tsx:315)
-  [LayerPanel.tsx](repo-root/app/client/src/features/layers/LayerPanel.tsx:358)
-  [LayerPanel.tsx](repo-root/app/client/src/features/layers/LayerPanel.tsx:1557)
-  [LayerPanel.tsx](repo-root/app/client/src/features/layers/LayerPanel.tsx:1593)
-  [LayerPanel.tsx](repo-root/app/client/src/features/layers/LayerPanel.tsx:1612)
-  [LayerPanel.tsx](repo-root/app/client/src/features/layers/LayerPanel.tsx:1614)
+  [LayerPanel.tsx](../client/src/features/layers/LayerPanel.tsx:166)
+  [LayerPanel.tsx](../client/src/features/layers/LayerPanel.tsx:315)
+  [LayerPanel.tsx](../client/src/features/layers/LayerPanel.tsx:358)
+  [LayerPanel.tsx](../client/src/features/layers/LayerPanel.tsx:1557)
+  [LayerPanel.tsx](../client/src/features/layers/LayerPanel.tsx:1593)
+  [LayerPanel.tsx](../client/src/features/layers/LayerPanel.tsx:1612)
+  [LayerPanel.tsx](../client/src/features/layers/LayerPanel.tsx:1614)
 - `InspectorPanel` is acting as one giant mixed-domain detail surface with aerospace, environmental, webcam, and marine content in one file:
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx:987)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx:3258)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx:3410)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx:3672)
+  [InspectorPanel.tsx](../client/src/features/inspector/InspectorPanel.tsx:987)
+  [InspectorPanel.tsx](../client/src/features/inspector/InspectorPanel.tsx:3258)
+  [InspectorPanel.tsx](../client/src/features/inspector/InspectorPanel.tsx:3410)
+  [InspectorPanel.tsx](../client/src/features/inspector/InspectorPanel.tsx:3672)
 - selection state is too thin for a Phase 3 spatial contract:
   it has `selectedEntity`, `selectedEntityId`, and `selectedWebcamClusterId`, but no first-class selection provenance, geometry precision, compare state, or inspector packet:
-  [store.ts](repo-root/app/client/src/lib/store.ts:218)
-  [store.ts](repo-root/app/client/src/lib/store.ts:242)
+  [store.ts](../client/src/lib/store.ts:218)
+  [store.ts](../client/src/lib/store.ts:242)
 - empty-map clicks clear selection directly in Cesium event handling, which is too low-level for future compare/focus behavior:
-  [scene.ts](repo-root/app/client/src/lib/scene.ts:56)
-  [scene.ts](repo-root/app/client/src/lib/scene.ts:67)
+  [scene.ts](../client/src/lib/scene.ts:56)
+  [scene.ts](../client/src/lib/scene.ts:67)
 - shared view state currently serializes filters, enabled layers, one selected id, imagery mode, and camera position, but not workbench mode, panel state, compare state, or spatial focus state:
-  [viewState.ts](repo-root/app/client/src/lib/viewState.ts:3)
+  [viewState.ts](../client/src/lib/viewState.ts:3)
 
 ## Spatial mode contract
 

@@ -126,7 +126,7 @@ This USGS implementation is the first reusable pattern:
 
 Future NOAA/GDELT-style sources should follow this shape without changing marine/aerospace/webcam/reference ownership.
 
-The shared multi-source overview is documented in [environmental-events.md](repo-root/app/docs/environmental-events.md).
+The shared multi-source overview is documented in [environmental-events.md](environmental-events.md).
 
 ### Practical checklist for next no-auth source
 

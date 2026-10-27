@@ -4,7 +4,7 @@ This checklist is scoped to the aerospace / aircraft-satellite subsystem only.
 It covers validation of contextual source slices, selected-target metadata, export shaping, and evidence caveats.
 It does not validate marine, webcam, reference-subsystem internals, or broader geospatial event workflows.
 
-Read [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md) alongside this checklist.
+Read [aerospace-workflow-evidence-ledger.md](aerospace-workflow-evidence-ledger.md) alongside this checklist.
 That ledger is the aerospace-specific source of truth for distinguishing:
 implemented helper surfaces,
 machine metadata preservation,

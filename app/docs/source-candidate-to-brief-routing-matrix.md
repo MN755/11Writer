@@ -18,11 +18,11 @@ Status rule:
 
 Related docs:
 
-- [osint-framework-intake-routing-memo.md](repo-root/app/docs/osint-framework-intake-routing-memo.md)
-- [source-discovery-reputation-governance-packet.md](repo-root/app/docs/source-discovery-reputation-governance-packet.md)
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md)
-- [source-prompt-index.md](repo-root/app/docs/source-prompt-index.md)
-- [webcam-global-camera-candidate-batch-2026-05.md](repo-root/app/docs/webcam-global-camera-candidate-batch-2026-05.md)
+- [osint-framework-intake-routing-memo.md](osint-framework-intake-routing-memo.md)
+- [source-discovery-reputation-governance-packet.md](source-discovery-reputation-governance-packet.md)
+- [source-assignment-board.md](source-assignment-board.md)
+- [source-prompt-index.md](source-prompt-index.md)
+- [webcam-global-camera-candidate-batch-2026-05.md](webcam-global-camera-candidate-batch-2026-05.md)
 
 ## Routing Matrix
 

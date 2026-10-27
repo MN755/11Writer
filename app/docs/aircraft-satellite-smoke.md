@@ -21,7 +21,7 @@ This checklist is scoped to the aircraft/satellite OSINT workspace only. It expl
 
 ## Current validation outcome
 
-Read [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md) with this section.
+Read [aerospace-workflow-evidence-ledger.md](aerospace-workflow-evidence-ledger.md) with this section.
 This smoke checklist records prepared assertion coverage and local runner behavior.
 The ledger is where aerospace distinguishes prepared smoke from executed workflow evidence.
 

@@ -72,8 +72,8 @@ Evidence and caveats:
 - a currently empty live RSS feed is treated as an `empty` source-health state, not as a source failure
 
 Related Ireland weather/reference context:
-- [environmental-events-met-eireann-forecast.md](repo-root/app/docs/environmental-events-met-eireann-forecast.md)
-- [environmental-events-ireland-wfd-catchments.md](repo-root/app/docs/environmental-events-ireland-wfd-catchments.md)
+- [environmental-events-met-eireann-forecast.md](environmental-events-met-eireann-forecast.md)
+- [environmental-events-ireland-wfd-catchments.md](environmental-events-ireland-wfd-catchments.md)
 - warnings, forecasts, and WFD catchments are intentionally kept as separate advisory, forecast, and reference semantics
 
 Validation:

@@ -11,9 +11,9 @@ Use this doc when you want:
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the status truth.
-- These packets are intentionally shorter than [source-acceleration-phase2-batch6-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch6-briefs.md).
-- [source-consolidated-noauth-registry.md](repo-root/app/docs/source-consolidated-noauth-registry.md) is backlog context only and does not promote implementation or validation status by itself.
+- [source-assignment-board.md](source-assignment-board.md) remains the status truth.
+- These packets are intentionally shorter than [source-acceleration-phase2-batch6-briefs.md](source-acceleration-phase2-batch6-briefs.md).
+- [source-consolidated-noauth-registry.md](source-consolidated-noauth-registry.md) is backlog context only and does not promote implementation or validation status by itself.
 - Runtime notes below must preserve one shared backend/core and must not imply companion-web exposure, remote binding, or broad CORS changes.
 
 ## Recommended Immediate Assignment Order
@@ -65,7 +65,7 @@ Status note:
   - do not widen into a general Austrian weather platform
   - do not flatten source-native warning semantics into a fake global severity score
 - Validation commands:
-  - use the pinned endpoint and checks in [source-acceleration-phase2-batch6-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch6-briefs.md)
+  - use the pinned endpoint and checks in [source-acceleration-phase2-batch6-briefs.md](source-acceleration-phase2-batch6-briefs.md)
 - Paste-ready prompt:
 
 ```text
@@ -135,7 +135,7 @@ Do not:
   - do not convert advisory status into hard flight-impact claims
   - do not merge multiple VAAC feeds into one fake severity vocabulary in the first patch
 - Validation commands:
-  - use the pinned endpoint and checks in [source-acceleration-phase2-batch6-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch6-briefs.md)
+  - use the pinned endpoint and checks in [source-acceleration-phase2-batch6-briefs.md](source-acceleration-phase2-batch6-briefs.md)
 - Paste-ready prompt:
 
 ```text
@@ -205,7 +205,7 @@ Do not:
   - do not mix warning/advisory semantics with observed-weather semantics without explicit labeling
   - do not broaden into multiple CWA product families in the first patch
 - Validation commands:
-  - use the pinned endpoint and checks in [source-acceleration-phase2-batch6-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch6-briefs.md)
+  - use the pinned endpoint and checks in [source-acceleration-phase2-batch6-briefs.md](source-acceleration-phase2-batch6-briefs.md)
 - Paste-ready prompt:
 
 ```text
@@ -275,7 +275,7 @@ Do not:
   - do not merge all GTFS-realtime feed families in the first patch
   - do not invent outage or rider-impact claims beyond source records
 - Validation commands:
-  - use the pinned endpoint and checks in [source-acceleration-phase2-batch6-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch6-briefs.md)
+  - use the pinned endpoint and checks in [source-acceleration-phase2-batch6-briefs.md](source-acceleration-phase2-batch6-briefs.md)
 - Paste-ready prompt:
 
 ```text
@@ -347,7 +347,7 @@ Do not:
   - do not widen into bulk regional grids
   - do not infer downstream energy, weather, or infrastructure impacts from one query
 - Validation commands:
-  - use the pinned endpoint and checks in [source-acceleration-phase2-batch6-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch6-briefs.md)
+  - use the pinned endpoint and checks in [source-acceleration-phase2-batch6-briefs.md](source-acceleration-phase2-batch6-briefs.md)
 - Paste-ready prompt:
 
 ```text

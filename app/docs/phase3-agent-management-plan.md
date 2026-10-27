@@ -40,13 +40,13 @@ Reason:
 - the product truth should live in repo docs, code, tests, and validation artifacts rather than in long-lived lane chat history
 - UI work will create many shared high-collision edits, so fresh scoped chats are preferable to dragging source-wave baggage forward
 - `Connect AI` is the exception because its integration and validation role remains important across the Phase 2 to Phase 3 transition
-- an official local Code - OSS reference snapshot is already available at [third_party/code-oss-reference/README.md](repo-root/third_party/code-oss-reference/README.md)
+- an official local Code - OSS reference snapshot is already available at [third_party/code-oss-reference/README.md](../../third_party/code-oss-reference/README.md)
 
 Important note:
 - the outgoing Phase 2 domain/source lanes are now handoff history, not the active operating center
-- the canonical handoff memory layer is [phase3-handoffs/README.md](repo-root/app/docs/phase3-handoffs/README.md)
+- the canonical handoff memory layer is [phase3-handoffs/README.md](phase3-handoffs/README.md)
 - `Wonder AI` and `Atlas AI` are peer/user-directed and are not part of the archived manager-controlled lane set
-- the concrete UI extraction/build target is documented in [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md)
+- the concrete UI extraction/build target is documented in [phase3-code-oss-workbench-spec.md](phase3-code-oss-workbench-spec.md)
 
 ## Phase 3 Principle
 
@@ -263,7 +263,7 @@ Required Phase 3 memory docs:
 - validation matrix
 
 Canonical governance packet:
-- [phase3-governance-sequencing-packet.md](repo-root/app/docs/phase3-governance-sequencing-packet.md)
+- [phase3-governance-sequencing-packet.md](phase3-governance-sequencing-packet.md)
 
 ### 2. Fewer simultaneous active lanes
 
@@ -404,6 +404,6 @@ At active Phase 3:
 
 Do not use temporary fresh workers in Phase 3.
 
-For the actual workbench/theme/component target, use [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md).
+For the actual workbench/theme/component target, use [phase3-code-oss-workbench-spec.md](phase3-code-oss-workbench-spec.md).
 
-For canonical sequencing, slice-status truth, acceptance criteria, and one-off UI deviation handling, use [phase3-governance-sequencing-packet.md](repo-root/app/docs/phase3-governance-sequencing-packet.md).
+For canonical sequencing, slice-status truth, acceptance criteria, and one-off UI deviation handling, use [phase3-governance-sequencing-packet.md](phase3-governance-sequencing-packet.md).

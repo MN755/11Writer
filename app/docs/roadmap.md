@@ -12,14 +12,14 @@ The fusion layer is the product.
 
 This roadmap is the short project map. The full strategic direction lives in:
 
-- [strategic-roadmap.md](repo-root/app/docs/strategic-roadmap.md)
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
-- [spatial-intelligence-loop.md](repo-root/app/docs/spatial-intelligence-loop.md)
-- [fusion-layer-architecture.md](repo-root/app/docs/fusion-layer-architecture.md)
-- [safety-boundaries.md](repo-root/app/docs/safety-boundaries.md)
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-- [source-discovery-public-web-workflow.md](repo-root/app/docs/source-discovery-public-web-workflow.md)
-- [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md)
+- [strategic-roadmap.md](strategic-roadmap.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
+- [spatial-intelligence-loop.md](spatial-intelligence-loop.md)
+- [fusion-layer-architecture.md](fusion-layer-architecture.md)
+- [safety-boundaries.md](safety-boundaries.md)
+- [source-validation-status.md](source-validation-status.md)
+- [source-discovery-public-web-workflow.md](source-discovery-public-web-workflow.md)
+- [phase3-code-oss-workbench-spec.md](phase3-code-oss-workbench-spec.md)
 
 ## Current State Snapshot
 
@@ -101,7 +101,7 @@ Avoid:
 Goal:
 
 - make the platform feel like one product
-- consolidate workflows around the single `Situation Workspace` model in [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
+- consolidate workflows around the single `Situation Workspace` model in [unified-user-workflows.md](unified-user-workflows.md)
 - consolidate inspector, layer, and context presentation patterns
 - build a common situation view from already-fusion-compatible domain outputs
 - reduce duplicated UI logic and badge/card/caveat drift

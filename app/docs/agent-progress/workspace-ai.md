@@ -10,7 +10,7 @@ What changed:
 - added `features/workbench/` shell components so the shell frame has an explicit owner instead of living directly inside `AppShell.tsx`
 - rewired `AppShell.tsx` through `WorkbenchShell` and `WorkbenchActivityRail` while keeping current map-mode payloads intact
 - converted `TopBar.tsx` and `HudBar.tsx` into shell-zone payloads by adding explicit active-mode context
-- documented the durable shell contract, migration path, and high-collision ownership list in [workbench-shell-contract.md](repo-root/app/docs/workbench-shell-contract.md)
+- documented the durable shell contract, migration path, and high-collision ownership list in [workbench-shell-contract.md](../workbench-shell-contract.md)
 - linked the new contract from the main Phase 3 workbench spec
 
 Files touched:

@@ -10,16 +10,16 @@ Purpose:
 - leave a clean integration path for `Workspace AI`, `Platform AI`, and `Connect AI`
 
 Read with:
-- [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md)
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
-- [reporting-loop-package-contract.md](repo-root/app/docs/reporting-loop-package-contract.md)
-- [source-fusion-reporting-input-inventory.md](repo-root/app/docs/source-fusion-reporting-input-inventory.md)
-- [phase3-handoffs/data-ai.md](repo-root/app/docs/phase3-handoffs/data-ai.md)
-- [phase3-handoffs/geospatial-ai.md](repo-root/app/docs/phase3-handoffs/geospatial-ai.md)
-- [phase3-handoffs/marine-ai.md](repo-root/app/docs/phase3-handoffs/marine-ai.md)
-- [phase3-handoffs/aerospace-ai.md](repo-root/app/docs/phase3-handoffs/aerospace-ai.md)
-- [phase3-handoffs/features-webcam-ai.md](repo-root/app/docs/phase3-handoffs/features-webcam-ai.md)
-- [phase3-handoffs/connect-ai.md](repo-root/app/docs/phase3-handoffs/connect-ai.md)
+- [phase3-code-oss-workbench-spec.md](phase3-code-oss-workbench-spec.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
+- [reporting-loop-package-contract.md](reporting-loop-package-contract.md)
+- [source-fusion-reporting-input-inventory.md](source-fusion-reporting-input-inventory.md)
+- [phase3-handoffs/data-ai.md](phase3-handoffs/data-ai.md)
+- [phase3-handoffs/geospatial-ai.md](phase3-handoffs/geospatial-ai.md)
+- [phase3-handoffs/marine-ai.md](phase3-handoffs/marine-ai.md)
+- [phase3-handoffs/aerospace-ai.md](phase3-handoffs/aerospace-ai.md)
+- [phase3-handoffs/features-webcam-ai.md](phase3-handoffs/features-webcam-ai.md)
+- [phase3-handoffs/connect-ai.md](phase3-handoffs/connect-ai.md)
 
 ## 1. Bottom line
 
@@ -315,16 +315,16 @@ Rules:
 Phase 3 should treat these as source materials for adapters:
 
 - `Data AI`
-  - [dataAiSourceIntelligence.ts](repo-root/app/client/src/features/inspector/dataAiSourceIntelligence.ts)
+  - [dataAiSourceIntelligence.ts](../client/src/features/inspector/dataAiSourceIntelligence.ts)
   - adapter should map source intelligence, fusion snapshot, report brief, review/export coherence, topic-safe export, and question briefing into one report session
 - `Marine`
-  - [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
+  - [marineEvidenceSummary.ts](../client/src/features/marine/marineEvidenceSummary.ts)
   - adapter should treat `fusionSnapshotInput`, `reportBriefPackage`, `currentAwarenessDigest`, `sourceRowWorkflowClosurePacket`, `questionBriefingPacket`, and source-health packages as inputs, not independent desk surfaces
 - `Aerospace`
-  - [aerospaceFusionSnapshotInput.ts](repo-root/app/client/src/features/inspector/aerospaceFusionSnapshotInput.ts)
-  - [aerospaceReportBriefPackage.ts](repo-root/app/client/src/features/inspector/aerospaceReportBriefPackage.ts)
-  - [aerospaceReportingHandoffContract.ts](repo-root/app/client/src/features/inspector/aerospaceReportingHandoffContract.ts)
-  - [aerospaceQuestionBriefingPacket.ts](repo-root/app/client/src/features/inspector/aerospaceQuestionBriefingPacket.ts)
+  - [aerospaceFusionSnapshotInput.ts](../client/src/features/inspector/aerospaceFusionSnapshotInput.ts)
+  - [aerospaceReportBriefPackage.ts](../client/src/features/inspector/aerospaceReportBriefPackage.ts)
+  - [aerospaceReportingHandoffContract.ts](../client/src/features/inspector/aerospaceReportingHandoffContract.ts)
+  - [aerospaceQuestionBriefingPacket.ts](../client/src/features/inspector/aerospaceQuestionBriefingPacket.ts)
   - adapter should reduce footer duplication and unify lineage/readiness without weakening distinctions
 - `Geospatial / environmental`
   - current backend fusion/question outputs should feed the shared report session through typed frontend query consumers
@@ -334,7 +334,7 @@ Phase 3 should treat these as source materials for adapters:
   - do not promote candidate lifecycle summaries into situation truth
 - `Imagery`
   - imagery stays a context/evidence modifier inside reports
-  - [ImageryContextPanel.tsx](repo-root/app/client/src/features/imagery/ImageryContextPanel.tsx) shows the right caveat posture and should be adapted, not replaced by an image-pretty card
+  - [ImageryContextPanel.tsx](../client/src/features/imagery/ImageryContextPanel.tsx) shows the right caveat posture and should be adapted, not replaced by an image-pretty card
 
 ## 7. Common situation/report surfaces
 
@@ -392,7 +392,7 @@ They should share the same evidence grammar and readiness treatment.
 - typed adapter inputs
 - query wiring for report sessions
 - persistence for selected report mode, selected question, and export preview state
-- reduction of domain-to-panel coupling inside [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
+- reduction of domain-to-panel coupling inside [InspectorPanel.tsx](../client/src/features/inspector/InspectorPanel.tsx)
 
 `Platform AI` should not rewrite domain caveat meaning.
 
@@ -408,7 +408,7 @@ They should share the same evidence grammar and readiness treatment.
 1. Freeze the contract in docs and treat it as the Phase 3 reporting source of truth.
 2. Add shared report-facing view models and adapters without changing domain semantics.
 3. Build shared evidence/readiness primitives on top of the existing primitive family.
-4. Extract a report-session composer out of [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx) so reporting is no longer lane-local JSX.
+4. Extract a report-session composer out of [InspectorPanel.tsx](../client/src/features/inspector/InspectorPanel.tsx) so reporting is no longer lane-local JSX.
 5. Route existing domain helpers into the composer in this order:
    - Data AI
    - Marine

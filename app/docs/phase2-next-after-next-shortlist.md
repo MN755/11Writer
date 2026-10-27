@@ -35,7 +35,7 @@ Current routing note:
 1. `user-priority-follow-on-shortlist`
    - Owner: `data`, `geospatial`, or `gather` depending on the chosen follow-on
    - Why next:
-     - the first user-priority source wave is landed, so the next honest move is one bounded follow-on from [source-user-priority-follow-on-shortlist.md](repo-root/app/docs/source-user-priority-follow-on-shortlist.md)
+     - the first user-priority source wave is landed, so the next honest move is one bounded follow-on from [source-user-priority-follow-on-shortlist.md](source-user-priority-follow-on-shortlist.md)
    - Keep bounded:
      - one exact family only: `GeoNames`, `HDX`, `UNOSAT on HDX`, or `ReliefWeb` verification
    - Do not do:

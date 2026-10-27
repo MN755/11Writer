@@ -6,7 +6,7 @@ Status note:
 
 - Atlas source validation for Batch 7 is accepted for routing.
 - Atlas source validation is not implementation proof, contract proof, workflow-validation proof, or export-proof by itself.
-- Use [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) for current status truth.
+- Use [source-assignment-board.md](source-assignment-board.md) for current status truth.
 
 ## Ranked First 8 Handoffs
 

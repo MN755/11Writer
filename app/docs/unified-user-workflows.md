@@ -51,11 +51,11 @@ The same item should be able to appear in multiple regions:
 - a source failure appears in `Now`, `Sources`, and `Queue`
 - a marine anomaly appears in `Now`, `Map`, `Timeline`, `Queue`, and `Inspector`
 
-Cross-source pattern discovery should use the hypothesis workflow in [cross-source-hypothesis-graph.md](repo-root/app/docs/cross-source-hypothesis-graph.md). Seemingly unrelated records may be surfaced as reviewable hypotheses, but the UI must show relationship basis, caveats, confidence ceilings, open questions, and what the hypothesis does not prove.
+Cross-source pattern discovery should use the hypothesis workflow in [cross-source-hypothesis-graph.md](cross-source-hypothesis-graph.md). Seemingly unrelated records may be surfaced as reviewable hypotheses, but the UI must show relationship basis, caveats, confidence ceilings, open questions, and what the hypothesis does not prove.
 
-The imported 7Po8 project should be integrated as the Wave Monitor tool described in [7po8-integration-plan.md](repo-root/app/docs/7po8-integration-plan.md), not as a separate runtime or page tree.
+The imported 7Po8 project should be integrated as the Wave Monitor tool described in [7po8-integration-plan.md](7po8-integration-plan.md), not as a separate runtime or page tree.
 
-7Po8's source-discovery idea is now a platform-level 11Writer requirement, not only a Wave Monitor feature. The shared plan is [source-discovery-platform-plan.md](repo-root/app/docs/source-discovery-platform-plan.md). In workflow terms, discovery should surface source candidates, learn source reputation over time, share source memory across waves, and keep learned trust explainable from claim outcomes, source health, corrections, and corroboration.
+7Po8's source-discovery idea is now a platform-level 11Writer requirement, not only a Wave Monitor feature. The shared plan is [source-discovery-platform-plan.md](source-discovery-platform-plan.md). In workflow terms, discovery should surface source candidates, learn source reputation over time, share source memory across waves, and keep learned trust explainable from claim outcomes, source health, corrections, and corroboration.
 
 ## Universal Interaction Pattern
 
@@ -887,11 +887,11 @@ If the answer requires a separate workflow page, document why. Otherwise, integr
 
 ## Related Docs
 
-- [roadmap.md](repo-root/app/docs/roadmap.md)
-- [strategic-roadmap.md](repo-root/app/docs/strategic-roadmap.md)
-- [spatial-intelligence-loop.md](repo-root/app/docs/spatial-intelligence-loop.md)
-- [fusion-layer-architecture.md](repo-root/app/docs/fusion-layer-architecture.md)
-- [intelligence-loop.md](repo-root/app/docs/intelligence-loop.md)
-- [ui-integration.md](repo-root/app/docs/ui-integration.md)
-- [runtime-interface-requirements.md](repo-root/app/docs/runtime-interface-requirements.md)
-- [data-ai-user-workflows.md](repo-root/app/docs/data-ai-user-workflows.md)
+- [roadmap.md](roadmap.md)
+- [strategic-roadmap.md](strategic-roadmap.md)
+- [spatial-intelligence-loop.md](spatial-intelligence-loop.md)
+- [fusion-layer-architecture.md](fusion-layer-architecture.md)
+- [intelligence-loop.md](intelligence-loop.md)
+- [ui-integration.md](ui-integration.md)
+- [runtime-interface-requirements.md](runtime-interface-requirements.md)
+- [data-ai-user-workflows.md](data-ai-user-workflows.md)

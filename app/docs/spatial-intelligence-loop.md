@@ -64,7 +64,7 @@ Allowed examples:
 - source follow-up
 - operational review without harm recommendation
 
-Act in 11Writer is still bounded by [safety-boundaries.md](repo-root/app/docs/safety-boundaries.md). The platform supports awareness, review, and explanation. It does not support targeting, harmful-action recommendation, or coercive automation.
+Act in 11Writer is still bounded by [safety-boundaries.md](safety-boundaries.md). The platform supports awareness, review, and explanation. It does not support targeting, harmful-action recommendation, or coercive automation.
 
 ## Reporting Direction
 

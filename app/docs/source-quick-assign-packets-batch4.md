@@ -11,9 +11,9 @@ Use this doc when you want:
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the status truth.
-- These packets are intentionally shorter than [source-acceleration-phase2-batch4-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch4-briefs.md).
-- [source-consolidated-noauth-registry.md](repo-root/app/docs/source-consolidated-noauth-registry.md) is useful as candidate/backlog context only; it does not promote implementation, validation, or assignment status by itself.
+- [source-assignment-board.md](source-assignment-board.md) remains the status truth.
+- These packets are intentionally shorter than [source-acceleration-phase2-batch4-briefs.md](source-acceleration-phase2-batch4-briefs.md).
+- [source-consolidated-noauth-registry.md](source-consolidated-noauth-registry.md) is useful as candidate/backlog context only; it does not promote implementation, validation, or assignment status by itself.
 - `uk-police-crime` is included because the official API is assignment-ready and the caveats can be kept strong enough around anonymized, approximate, and non-live civic context.
 
 ## Recommended Immediate Assignment Order
@@ -112,7 +112,7 @@ Do not:
   - minimal urban station layer or inspector summary only
   - export should preserve station ids, pollutant or index fields, observed time, fetched time, source URL, and observed-only caveats
 - Validation commands:
-  - use the pinned source-specific endpoint and checks from [source-acceleration-phase2-batch4-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch4-briefs.md)
+  - use the pinned source-specific endpoint and checks from [source-acceleration-phase2-batch4-briefs.md](source-acceleration-phase2-batch4-briefs.md)
 - Do-not-do list:
   - do not mix observed station values with modeled or interpolated values
   - do not widen into historical archive ingestion
@@ -234,7 +234,7 @@ Do not:
   - minimal grid-context card or regional summary only
   - export should preserve dataset family, timestamps, fetched time, source URL, and context-only caveats
 - Validation commands:
-  - use the pinned source-specific endpoint and checks from [source-acceleration-phase2-batch4-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch4-briefs.md)
+  - use the pinned source-specific endpoint and checks from [source-acceleration-phase2-batch4-briefs.md](source-acceleration-phase2-batch4-briefs.md)
 - Do-not-do list:
   - do not broaden into catalog-wide Elexon ingestion
   - do not infer outages or operational failures

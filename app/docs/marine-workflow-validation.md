@@ -9,8 +9,8 @@ Purpose:
 - make smoke and export expectations explicit
 
 Related contract doc:
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
-- [marine-context-fixture-reference.md](repo-root/app/docs/marine-context-fixture-reference.md)
+- [marine-context-source-contract-matrix.md](marine-context-source-contract-matrix.md)
+- [marine-context-fixture-reference.md](marine-context-fixture-reference.md)
 
 ## Validation Checklist
 

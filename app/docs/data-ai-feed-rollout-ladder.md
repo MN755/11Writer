@@ -11,8 +11,8 @@ Use it to answer:
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the source-status truth.
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md) remains the validation-traceability truth.
+- [source-assignment-board.md](source-assignment-board.md) remains the source-status truth.
+- [source-validation-status.md](source-validation-status.md) remains the validation-traceability truth.
 - This ladder is a rollout and routing surface only.
 - It does not promote any feed family beyond explicit repo-local evidence.
 
@@ -190,9 +190,9 @@ Keep these categories out of the next active Data AI wave:
 
 ## Related Docs
 
-- [source-routing-priority-memo.md](repo-root/app/docs/source-routing-priority-memo.md)
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md)
-- [source-prompt-index.md](repo-root/app/docs/source-prompt-index.md)
-- [source-quick-assign-packets-data-ai-rss.md](repo-root/app/docs/source-quick-assign-packets-data-ai-rss.md)
-- [data-ai-rss-batch3-routing-packets.md](repo-root/app/docs/data-ai-rss-batch3-routing-packets.md)
-- [data-ai-rss-source-candidates.md](repo-root/app/docs/data-ai-rss-source-candidates.md)
+- [source-routing-priority-memo.md](source-routing-priority-memo.md)
+- [source-assignment-board.md](source-assignment-board.md)
+- [source-prompt-index.md](source-prompt-index.md)
+- [source-quick-assign-packets-data-ai-rss.md](source-quick-assign-packets-data-ai-rss.md)
+- [data-ai-rss-batch3-routing-packets.md](data-ai-rss-batch3-routing-packets.md)
+- [data-ai-rss-source-candidates.md](data-ai-rss-source-candidates.md)

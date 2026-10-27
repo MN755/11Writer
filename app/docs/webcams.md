@@ -586,7 +586,7 @@ The repo now carries explicit candidate inventory records for:
 
 These remain inventory-only candidates until compliance, stability, field mapping, and source-health review are explicitly approved. `finland-digitraffic-road-cameras` is the exception in type only: it is an official machine-readable API candidate, but it is still not active for ingest.
 
-The May 2026 global candidate discovery batch is documented in [`webcam-global-camera-candidate-batch-2026-05.md`](repo-root/app/docs/webcam-global-camera-candidate-batch-2026-05.md). That batch records the researched no-auth camera families, which candidates were added as candidate-only registry entries, which were held or blocked, and why candidate/source text remains inert operational evidence only.
+The May 2026 global candidate discovery batch is documented in [`webcam-global-camera-candidate-batch-2026-05.md`](webcam-global-camera-candidate-batch-2026-05.md). That batch records the researched no-auth camera families, which candidates were added as candidate-only registry entries, which were held or blocked, and why candidate/source text remains inert operational evidence only.
 
 The strongest new machine-readable candidates currently taken through deeper source-ops follow-up are:
 
@@ -690,7 +690,7 @@ Finland graduation summary:
   - source-health assumptions and rate-limit handling
   - review-state handling for missing orientation and out-of-collection presets
 - ingestion remains disabled until that work is complete
-- the detailed fixture-prep document lives at [`app/docs/webcam-finland-digitraffic-fixture-plan.md`](repo-root/app/docs/webcam-finland-digitraffic-fixture-plan.md)
+- the detailed fixture-prep document lives at [`app/docs/webcam-finland-digitraffic-fixture-plan.md`](webcam-finland-digitraffic-fixture-plan.md)
 - a fixture-first connector now exists, but it is sandbox-only:
   - default mode is fixture
   - no live ingestion is the default
@@ -1232,8 +1232,8 @@ Graduation rules:
 
 The repo now includes a lightweight endpoint-evaluation helper for webcam candidates:
 
-- helper: [`src/services/camera_endpoint_evaluator.py`](repo-root/app/server/src/services/camera_endpoint_evaluator.py)
-- CLI: [`scripts/evaluate_camera_candidate_endpoint.py`](repo-root/app/server/scripts/evaluate_camera_candidate_endpoint.py)
+- helper: [`src/services/camera_endpoint_evaluator.py`](../server/src/services/camera_endpoint_evaluator.py)
+- CLI: [`scripts/evaluate_camera_candidate_endpoint.py`](../server/scripts/evaluate_camera_candidate_endpoint.py)
 
 Example:
 
@@ -1294,7 +1294,7 @@ Rules:
 
 The repo now includes a read-only bulk report for configured webcam candidates:
 
-- script: [`scripts/report_camera_candidate_endpoints.py`](repo-root/app/server/scripts/report_camera_candidate_endpoints.py)
+- script: [`scripts/report_camera_candidate_endpoints.py`](../server/scripts/report_camera_candidate_endpoints.py)
 
 Examples:
 
@@ -1375,8 +1375,8 @@ If a future agent wants to update source definitions after a safe evaluation, th
 
 The repo now includes a read-only graduation-planning tool for webcam candidates:
 
-- helper: [`src/services/camera_candidate_graduation_plan.py`](repo-root/app/server/src/services/camera_candidate_graduation_plan.py)
-- CLI: [`scripts/plan_camera_candidate_graduation.py`](repo-root/app/server/scripts/plan_camera_candidate_graduation.py)
+- helper: [`src/services/camera_candidate_graduation_plan.py`](../server/src/services/camera_candidate_graduation_plan.py)
+- CLI: [`scripts/plan_camera_candidate_graduation.py`](../server/scripts/plan_camera_candidate_graduation.py)
 
 Examples:
 

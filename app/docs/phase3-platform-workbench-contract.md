@@ -9,25 +9,25 @@ Purpose:
 - give Systems, Workspace, Spatial, Reporting, and Connect one stable platform surface to build against
 
 Read with:
-- [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md)
-- [ui-integration.md](repo-root/app/docs/ui-integration.md)
-- [ui-primitive-migration-map.md](repo-root/app/docs/ui-primitive-migration-map.md)
-- [phase3-agent-management-plan.md](repo-root/app/docs/phase3-agent-management-plan.md)
+- [phase3-code-oss-workbench-spec.md](phase3-code-oss-workbench-spec.md)
+- [ui-integration.md](ui-integration.md)
+- [ui-primitive-migration-map.md](ui-primitive-migration-map.md)
+- [phase3-agent-management-plan.md](phase3-agent-management-plan.md)
 
 ## Current platform truth
 
 The current frontend already has useful raw ingredients, but they are coupled in the wrong places.
 
 Current anchors:
-- [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
+- [AppShell.tsx](../client/src/features/app-shell/AppShell.tsx)
   Owns shell layout, query orchestration, URL restore, imagery persistence, selection coordination, export assembly, and debug wiring in one file.
-- [store.ts](repo-root/app/client/src/lib/store.ts)
+- [store.ts](../client/src/lib/store.ts)
   Holds both durable operator preferences and volatile runtime entities in one flat Zustand store, without explicit persistence tiers.
-- [queries.ts](repo-root/app/client/src/lib/queries.ts)
+- [queries.ts](../client/src/lib/queries.ts)
   Is the shared route registry today, but it is a single high-collision file with domain query hooks and no workbench-level grouping.
-- [viewState.ts](repo-root/app/client/src/lib/viewState.ts)
+- [viewState.ts](../client/src/lib/viewState.ts)
   Persists only the current globe-era permalink subset, not the Phase 3 workbench state model.
-- [main.tsx](repo-root/app/client/src/main.tsx)
+- [main.tsx](../client/src/main.tsx)
   Creates one app-wide `QueryClient`, which is correct, but there is no documented query-key or invalidation contract around it.
 
 The immediate platform job is not a rewrite.

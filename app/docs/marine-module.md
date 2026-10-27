@@ -9,9 +9,9 @@ Marine subsystem only: vessel observations, AIS-like transmission gap evidence, 
 - Does not own geospatial reference datasets; optional `reference_ref_id` hook only.
 
 Related validation docs:
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md)
-- [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md)
-- [marine-context-fixture-reference.md](repo-root/app/docs/marine-context-fixture-reference.md)
+- [marine-workflow-validation.md](marine-workflow-validation.md)
+- [marine-context-source-contract-matrix.md](marine-context-source-contract-matrix.md)
+- [marine-context-fixture-reference.md](marine-context-fixture-reference.md)
 
 ## Provider Integration Strategy
 

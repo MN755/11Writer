@@ -3,9 +3,9 @@
 The geospatial subsystem now summarizes multiple environmental event sources through a shared frontend overview layer. This is a composition helper over already-loaded source state, not a new backend framework.
 
 There is now also a backend fusion helper for source-family review:
-- [environmental-source-family-overview.md](repo-root/app/docs/environmental-source-family-overview.md)
-- [environmental-current-awareness-digest.md](repo-root/app/docs/environmental-current-awareness-digest.md)
-- [environmental-question-briefing-packet.md](repo-root/app/docs/environmental-question-briefing-packet.md)
+- [environmental-source-family-overview.md](environmental-source-family-overview.md)
+- [environmental-current-awareness-digest.md](environmental-current-awareness-digest.md)
+- [environmental-question-briefing-packet.md](environmental-question-briefing-packet.md)
 - this backend helper summarizes source families, source health, evidence basis, caveats, and export-safe review lines across existing environmental/geospatial slices
 - the current-awareness digest adds a bounded `observe`, `orient`, `prioritize`, and `explain` artifact over the existing geospatial reporting stack without flattening observed, advisory, forecast/model, contextual, and static-reference meaning
 - the question briefing packet adds bounded place, timeframe, and family-filter posture over that same stack without turning briefing labels into incident truth

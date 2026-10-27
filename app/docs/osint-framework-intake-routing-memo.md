@@ -14,13 +14,13 @@ Status rule:
 - OSINT Framework listings are discovery input only
 - Wonder audit artifacts are research input only
 - neither proves no-auth safety, legality, authority, truth, attribution, causation, actionability, or implementation readiness
-- normal status promotion still belongs to [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md:1), [source-validation-status.md](repo-root/app/docs/source-validation-status.md:1), and [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md:1)
+- normal status promotion still belongs to [source-assignment-board.md](source-assignment-board.md:1), [source-validation-status.md](source-validation-status.md:1), and [source-workflow-validation-plan.md](source-workflow-validation-plan.md:1)
 
 Source artifacts reviewed:
 
-- [osint_framework_best_fit_audit.md](repo-root/output/osint_framework_best_fit_audit.md:1)
-- [osint_framework_best_fit_audit.csv](repo-root/output/osint_framework_best_fit_audit.csv:1)
-- [osint_framework_best_fit_audit.json](repo-root/output/osint_framework_best_fit_audit.json:1)
+- [osint_framework_best_fit_audit.md](../../output/osint_framework_best_fit_audit.md:1)
+- [osint_framework_best_fit_audit.csv](../../output/osint_framework_best_fit_audit.csv:1)
+- [osint_framework_best_fit_audit.json](../../output/osint_framework_best_fit_audit.json:1)
 
 ## Audit Summary
 

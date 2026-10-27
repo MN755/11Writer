@@ -21,7 +21,7 @@ Important platform decision:
 - Different waves should share source reputation so a new wave can reuse what prior waves learned about reliable, incorrect, stale, low-fit, or domain-specific sources.
 - Source correctness must stay separate from mission relevance: a source can be accurate but low-fit for a wave.
 - Static sources, live sources, full-text articles, social/image evidence, official sources, and community sources require different scoring rules.
-- See [source-discovery-platform-plan.md](repo-root/app/docs/source-discovery-platform-plan.md).
+- See [source-discovery-platform-plan.md](source-discovery-platform-plan.md).
 
 11Writer should not run 7Po8 as a second app. 7Po8 should become a tool inside 11Writer's shared runtime and Situation Workspace.
 
@@ -753,7 +753,7 @@ Agents working on 7Po8 integration should:
 - make Wave Monitor compatible with desktop, companion web, and backend-only runtime modes
 - keep source health, evidence basis, caveats, provenance, and export metadata mandatory
 - avoid broad crawling, scraping, or source expansion without explicit source rules
-- use [wave-llm-interpretation-framework.md](repo-root/app/docs/wave-llm-interpretation-framework.md) for per-wave LLM interpretation; model output is review input only and must not directly change source trust, facts, connector state, or user-facing claims
+- use [wave-llm-interpretation-framework.md](wave-llm-interpretation-framework.md) for per-wave LLM interpretation; model output is review input only and must not directly change source trust, facts, connector state, or user-facing claims
 
 ## Open Questions
 
@@ -772,11 +772,11 @@ Recommended defaults:
 
 ## Related Docs
 
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
-- [cross-source-hypothesis-graph.md](repo-root/app/docs/cross-source-hypothesis-graph.md)
-- [data-ai-user-workflows.md](repo-root/app/docs/data-ai-user-workflows.md)
-- [runtime-interface-requirements.md](repo-root/app/docs/runtime-interface-requirements.md)
-- [cross-platform-agent-guidelines.md](repo-root/app/docs/cross-platform-agent-guidelines.md)
-- [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md)
-- [wave-llm-interpretation-framework.md](repo-root/app/docs/wave-llm-interpretation-framework.md)
-- [7Po8 README](repo-root/7Po8/README.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
+- [cross-source-hypothesis-graph.md](cross-source-hypothesis-graph.md)
+- [data-ai-user-workflows.md](data-ai-user-workflows.md)
+- [runtime-interface-requirements.md](runtime-interface-requirements.md)
+- [cross-platform-agent-guidelines.md](cross-platform-agent-guidelines.md)
+- [source-workflow-validation-plan.md](source-workflow-validation-plan.md)
+- [wave-llm-interpretation-framework.md](wave-llm-interpretation-framework.md)
+- [7Po8 README](../../7Po8/README.md)

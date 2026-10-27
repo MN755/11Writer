@@ -56,4 +56,4 @@ Use the same narrow pattern for future no-auth event sources:
 Potential future sources: NOAA alerts, wildfire feeds, flood feeds, GDELT-derived context.
 Not implemented in this pass.
 
-The shared multi-source overview is documented in [environmental-events.md](repo-root/app/docs/environmental-events.md).
+The shared multi-source overview is documented in [environmental-events.md](environmental-events.md).

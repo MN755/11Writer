@@ -11,10 +11,10 @@ Use this doc when you want:
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the status truth.
-- These packets are intentionally shorter than [source-acceleration-phase2-batch5-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch5-briefs.md).
+- [source-assignment-board.md](source-assignment-board.md) remains the status truth.
+- These packets are intentionally shorter than [source-acceleration-phase2-batch5-briefs.md](source-acceleration-phase2-batch5-briefs.md).
 - One extra packet is included beyond the minimum five because `ireland-epa-wfd-catchments` is a clean low-collision reference/context source.
-- [source-consolidated-noauth-registry.md](repo-root/app/docs/source-consolidated-noauth-registry.md) is useful as candidate/backlog context only; it does not promote implementation, validation, or assignment status by itself.
+- [source-consolidated-noauth-registry.md](source-consolidated-noauth-registry.md) is useful as candidate/backlog context only; it does not promote implementation, validation, or assignment status by itself.
 
 ## Recommended Immediate Assignment Order
 
@@ -307,7 +307,7 @@ Do not:
   - minimal reference-layer consumer only
   - export should preserve dataset version, source URL, and static reference caveats
 - Validation commands:
-  - use the selected Natural Earth download page from [source-acceleration-phase2-batch5-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch5-briefs.md)
+  - use the selected Natural Earth download page from [source-acceleration-phase2-batch5-briefs.md](source-acceleration-phase2-batch5-briefs.md)
 - Do-not-do list:
   - do not treat static boundaries as live political-event truth
   - do not mix scales or admin levels

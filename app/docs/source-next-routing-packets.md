@@ -6,8 +6,8 @@ Use it when the goal is to assign the next bounded source or workflow-supporting
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the source-status truth.
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md) remains the validation-traceability truth.
+- [source-assignment-board.md](source-assignment-board.md) remains the source-status truth.
+- [source-validation-status.md](source-validation-status.md) remains the validation-traceability truth.
 - This doc is a routing layer only.
 - Atlas validation and backlog docs remain candidate context only, not implementation or workflow-validation proof.
 

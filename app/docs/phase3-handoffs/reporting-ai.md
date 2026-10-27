@@ -2,7 +2,7 @@
 
 ## Scope completed
 
-- Defined the Phase 3 reporting-desk UI contract in [phase3-reporting-workbench-contract.md](repo-root/app/docs/phase3-reporting-workbench-contract.md).
+- Defined the Phase 3 reporting-desk UI contract in [phase3-reporting-workbench-contract.md](../phase3-reporting-workbench-contract.md).
 - Locked the intended shape for:
   - `Reports` mode
   - `Exports` mode
@@ -31,24 +31,24 @@
 ## Files and surfaces to know
 
 - Contract doc:
-  - [phase3-reporting-workbench-contract.md](repo-root/app/docs/phase3-reporting-workbench-contract.md)
+  - [phase3-reporting-workbench-contract.md](../phase3-reporting-workbench-contract.md)
 - Shared reference docs:
-  - [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md)
-  - [reporting-loop-package-contract.md](repo-root/app/docs/reporting-loop-package-contract.md)
-  - [source-fusion-reporting-input-inventory.md](repo-root/app/docs/source-fusion-reporting-input-inventory.md)
-  - [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
+  - [phase3-code-oss-workbench-spec.md](../phase3-code-oss-workbench-spec.md)
+  - [reporting-loop-package-contract.md](../reporting-loop-package-contract.md)
+  - [source-fusion-reporting-input-inventory.md](../source-fusion-reporting-input-inventory.md)
+  - [unified-user-workflows.md](../unified-user-workflows.md)
 - Current shared UI primitives:
-  - [primitives.tsx](repo-root/app/client/src/components/ui/primitives.tsx)
-  - [ui-primitives.css](repo-root/app/client/src/styles/ui-primitives.css)
+  - [primitives.tsx](../../client/src/components/ui/primitives.tsx)
+  - [ui-primitives.css](../../client/src/styles/ui-primitives.css)
 - Current high-collision report consumer:
-  - [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
+  - [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
 - Current mature helper stacks:
-  - [dataAiSourceIntelligence.ts](repo-root/app/client/src/features/inspector/dataAiSourceIntelligence.ts)
-  - [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts)
-  - [marineQuestionBriefingPacket.ts](repo-root/app/client/src/features/marine/marineQuestionBriefingPacket.ts)
-  - [aerospaceFusionSnapshotInput.ts](repo-root/app/client/src/features/inspector/aerospaceFusionSnapshotInput.ts)
-  - [aerospaceQuestionBriefingPacket.ts](repo-root/app/client/src/features/inspector/aerospaceQuestionBriefingPacket.ts)
-  - [ImageryContextPanel.tsx](repo-root/app/client/src/features/imagery/ImageryContextPanel.tsx)
+  - [dataAiSourceIntelligence.ts](../../client/src/features/inspector/dataAiSourceIntelligence.ts)
+  - [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts)
+  - [marineQuestionBriefingPacket.ts](../../client/src/features/marine/marineQuestionBriefingPacket.ts)
+  - [aerospaceFusionSnapshotInput.ts](../../client/src/features/inspector/aerospaceFusionSnapshotInput.ts)
+  - [aerospaceQuestionBriefingPacket.ts](../../client/src/features/inspector/aerospaceQuestionBriefingPacket.ts)
+  - [ImageryContextPanel.tsx](../../client/src/features/imagery/ImageryContextPanel.tsx)
 
 ## Validation already run
 

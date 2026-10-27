@@ -4,8 +4,8 @@ Quick-access prompt index for Phase 2 source assignments.
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the implementation and status truth.
-- [source-consolidated-noauth-registry.md](repo-root/app/docs/source-consolidated-noauth-registry.md) is useful as candidate/backlog context only and does not promote implementation, validation, or assignment status by itself.
+- [source-assignment-board.md](source-assignment-board.md) remains the implementation and status truth.
+- [source-consolidated-noauth-registry.md](source-consolidated-noauth-registry.md) is useful as candidate/backlog context only and does not promote implementation, validation, or assignment status by itself.
 
 Use this doc when handing a source to a domain agent and you want:
 
@@ -17,54 +17,54 @@ Use this doc when handing a source to a domain agent and you want:
 
 Related planning docs:
 
-- [source-acceleration-phase2-briefs.md](repo-root/app/docs/source-acceleration-phase2-briefs.md)
-- [source-acceleration-phase2-international-briefs.md](repo-root/app/docs/source-acceleration-phase2-international-briefs.md)
-- [source-acceleration-phase2-global-briefs.md](repo-root/app/docs/source-acceleration-phase2-global-briefs.md)
-- [source-acceleration-phase2-batch3-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch3-briefs.md)
-- [source-acceleration-phase2-batch4-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch4-briefs.md)
-- [source-acceleration-phase2-batch5-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch5-briefs.md)
-- [source-acceleration-phase2-batch6-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch6-briefs.md)
-- [source-acceleration-phase2-batch7-base-earth-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch7-base-earth-briefs.md)
-- [source-routing-priority-memo.md](repo-root/app/docs/source-routing-priority-memo.md)
-- [reporting-desk-phase2-roadmap.md](repo-root/app/docs/reporting-desk-phase2-roadmap.md)
-- [source-next-routing-packets.md](repo-root/app/docs/source-next-routing-packets.md)
-- [data-ai-feed-rollout-ladder.md](repo-root/app/docs/data-ai-feed-rollout-ladder.md)
-- [data-ai-user-workflows.md](repo-root/app/docs/data-ai-user-workflows.md)
-- [source-routing-batch7-base-earth-reference.md](repo-root/app/docs/source-routing-batch7-base-earth-reference.md)
-- [source-quick-assign-packets-batch4.md](repo-root/app/docs/source-quick-assign-packets-batch4.md)
-- [source-quick-assign-packets-batch5.md](repo-root/app/docs/source-quick-assign-packets-batch5.md)
-- [source-quick-assign-packets-data-ai-rss.md](repo-root/app/docs/source-quick-assign-packets-data-ai-rss.md)
-- [data-ai-rss-batch3-routing-packets.md](repo-root/app/docs/data-ai-rss-batch3-routing-packets.md)
-- [source-ownership-consumption-map.md](repo-root/app/docs/source-ownership-consumption-map.md)
-- [source-consolidated-noauth-registry.md](repo-root/app/docs/source-consolidated-noauth-registry.md)
-- [source-discovery-platform-plan.md](repo-root/app/docs/source-discovery-platform-plan.md)
-- [source-discovery-agent-framework.md](repo-root/app/docs/source-discovery-agent-framework.md)
-- [wave-llm-interpretation-framework.md](repo-root/app/docs/wave-llm-interpretation-framework.md)
-- [source-discovery-reputation-governance-packet.md](repo-root/app/docs/source-discovery-reputation-governance-packet.md)
-- [osint-framework-intake-routing-memo.md](repo-root/app/docs/osint-framework-intake-routing-memo.md)
-- [source-candidate-to-brief-routing-matrix.md](repo-root/app/docs/source-candidate-to-brief-routing-matrix.md)
-- [source-user-priority-routing-governance-packet.md](repo-root/app/docs/source-user-priority-routing-governance-packet.md)
-- [phase2-next-biggest-wins-packet.md](repo-root/app/docs/phase2-next-biggest-wins-packet.md)
-- [phase2-next-after-next-shortlist.md](repo-root/app/docs/phase2-next-after-next-shortlist.md)
-- [browser-use-agent-guidelines.md](repo-root/app/docs/browser-use-agent-guidelines.md)
-- [webcam-global-camera-candidate-batch-2026-05.md](repo-root/app/docs/webcam-global-camera-candidate-batch-2026-05.md)
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
-- [cross-source-hypothesis-graph.md](repo-root/app/docs/cross-source-hypothesis-graph.md)
-- [safe-hypothesis-governance-packet.md](repo-root/app/docs/safe-hypothesis-governance-packet.md)
-- [7po8-integration-plan.md](repo-root/app/docs/7po8-integration-plan.md)
-- [wave-monitor-governance-intake.md](repo-root/app/docs/wave-monitor-governance-intake.md)
-- [chokepoint-intelligence-governance-packet.md](repo-root/app/docs/chokepoint-intelligence-governance-packet.md)
-- [source-acceleration-phase2-batch7-base-earth-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch7-base-earth-briefs.md)
-- [data-ai-rss-source-candidates.md](repo-root/app/docs/data-ai-rss-source-candidates.md)
-- [data_sources.noauth.registry.json](repo-root/app/docs/data_sources.noauth.registry.json)
+- [source-acceleration-phase2-briefs.md](source-acceleration-phase2-briefs.md)
+- [source-acceleration-phase2-international-briefs.md](source-acceleration-phase2-international-briefs.md)
+- [source-acceleration-phase2-global-briefs.md](source-acceleration-phase2-global-briefs.md)
+- [source-acceleration-phase2-batch3-briefs.md](source-acceleration-phase2-batch3-briefs.md)
+- [source-acceleration-phase2-batch4-briefs.md](source-acceleration-phase2-batch4-briefs.md)
+- [source-acceleration-phase2-batch5-briefs.md](source-acceleration-phase2-batch5-briefs.md)
+- [source-acceleration-phase2-batch6-briefs.md](source-acceleration-phase2-batch6-briefs.md)
+- [source-acceleration-phase2-batch7-base-earth-briefs.md](source-acceleration-phase2-batch7-base-earth-briefs.md)
+- [source-routing-priority-memo.md](source-routing-priority-memo.md)
+- [reporting-desk-phase2-roadmap.md](reporting-desk-phase2-roadmap.md)
+- [source-next-routing-packets.md](source-next-routing-packets.md)
+- [data-ai-feed-rollout-ladder.md](data-ai-feed-rollout-ladder.md)
+- [data-ai-user-workflows.md](data-ai-user-workflows.md)
+- [source-routing-batch7-base-earth-reference.md](source-routing-batch7-base-earth-reference.md)
+- [source-quick-assign-packets-batch4.md](source-quick-assign-packets-batch4.md)
+- [source-quick-assign-packets-batch5.md](source-quick-assign-packets-batch5.md)
+- [source-quick-assign-packets-data-ai-rss.md](source-quick-assign-packets-data-ai-rss.md)
+- [data-ai-rss-batch3-routing-packets.md](data-ai-rss-batch3-routing-packets.md)
+- [source-ownership-consumption-map.md](source-ownership-consumption-map.md)
+- [source-consolidated-noauth-registry.md](source-consolidated-noauth-registry.md)
+- [source-discovery-platform-plan.md](source-discovery-platform-plan.md)
+- [source-discovery-agent-framework.md](source-discovery-agent-framework.md)
+- [wave-llm-interpretation-framework.md](wave-llm-interpretation-framework.md)
+- [source-discovery-reputation-governance-packet.md](source-discovery-reputation-governance-packet.md)
+- [osint-framework-intake-routing-memo.md](osint-framework-intake-routing-memo.md)
+- [source-candidate-to-brief-routing-matrix.md](source-candidate-to-brief-routing-matrix.md)
+- [source-user-priority-routing-governance-packet.md](source-user-priority-routing-governance-packet.md)
+- [phase2-next-biggest-wins-packet.md](phase2-next-biggest-wins-packet.md)
+- [phase2-next-after-next-shortlist.md](phase2-next-after-next-shortlist.md)
+- [browser-use-agent-guidelines.md](browser-use-agent-guidelines.md)
+- [webcam-global-camera-candidate-batch-2026-05.md](webcam-global-camera-candidate-batch-2026-05.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
+- [cross-source-hypothesis-graph.md](cross-source-hypothesis-graph.md)
+- [safe-hypothesis-governance-packet.md](safe-hypothesis-governance-packet.md)
+- [7po8-integration-plan.md](7po8-integration-plan.md)
+- [wave-monitor-governance-intake.md](wave-monitor-governance-intake.md)
+- [chokepoint-intelligence-governance-packet.md](chokepoint-intelligence-governance-packet.md)
+- [source-acceleration-phase2-batch7-base-earth-briefs.md](source-acceleration-phase2-batch7-base-earth-briefs.md)
+- [data-ai-rss-source-candidates.md](data-ai-rss-source-candidates.md)
+- [data_sources.noauth.registry.json](data_sources.noauth.registry.json)
 
 ## Data AI RSS Candidates
 
 Use the full Data AI feed list for source ids, URLs, verification notes, caveats, and first-slice guidance:
 
-- [data-ai-rss-source-candidates.md](repo-root/app/docs/data-ai-rss-source-candidates.md)
-- [data-ai-rss-source-candidates-batch2.md](repo-root/app/docs/data-ai-rss-source-candidates-batch2.md)
-- [data-ai-rss-source-candidates-batch3.md](repo-root/app/docs/data-ai-rss-source-candidates-batch3.md)
+- [data-ai-rss-source-candidates.md](data-ai-rss-source-candidates.md)
+- [data-ai-rss-source-candidates-batch2.md](data-ai-rss-source-candidates-batch2.md)
+- [data-ai-rss-source-candidates-batch3.md](data-ai-rss-source-candidates-batch3.md)
 
 Recommended first implementation slice:
 
@@ -132,8 +132,8 @@ Implemented Data AI feed-family waves:
 
 Next grouped Batch 3 routing surface:
 
-- [data-ai-rss-batch3-routing-packets.md](repo-root/app/docs/data-ai-rss-batch3-routing-packets.md)
-- [data-ai-next-routing-after-family-summary.md](repo-root/app/docs/data-ai-next-routing-after-family-summary.md)
+- [data-ai-rss-batch3-routing-packets.md](data-ai-rss-batch3-routing-packets.md)
+- [data-ai-next-routing-after-family-summary.md](data-ai-next-routing-after-family-summary.md)
 - use it for the next grouped Data AI handoff after the implemented waves stay bounded
 - preferred next group:
   - `official/public advisories`
@@ -142,7 +142,7 @@ Next grouped Batch 3 routing surface:
 
 Historical packet surface for the already implemented follow-on waves:
 
-- [source-quick-assign-packets-data-ai-rss.md](repo-root/app/docs/source-quick-assign-packets-data-ai-rss.md)
+- [source-quick-assign-packets-data-ai-rss.md](source-quick-assign-packets-data-ai-rss.md)
 
 Do-not-do warning:
 - do not start by polling all validated feeds, scraping linked articles, or treating media/blog feeds as official event confirmation.
@@ -151,11 +151,11 @@ Do-not-do warning:
 
 Use this before assigning work where the system finds new sources from monitors, feeds, catalogs, records, or user-provided seed URLs:
 
-- [source-discovery-platform-plan.md](repo-root/app/docs/source-discovery-platform-plan.md)
-- [source-discovery-reputation-governance-packet.md](repo-root/app/docs/source-discovery-reputation-governance-packet.md)
-- [7po8-integration-plan.md](repo-root/app/docs/7po8-integration-plan.md)
-- [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md)
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
+- [source-discovery-platform-plan.md](source-discovery-platform-plan.md)
+- [source-discovery-reputation-governance-packet.md](source-discovery-reputation-governance-packet.md)
+- [7po8-integration-plan.md](7po8-integration-plan.md)
+- [source-workflow-validation-plan.md](source-workflow-validation-plan.md)
+- [source-validation-status.md](source-validation-status.md)
 
 Platform rule:
 
@@ -165,7 +165,7 @@ Platform rule:
 - correctness reputation must stay separate from wave mission relevance.
 - static, live, article, social/image, official, community, and dataset sources require different scoring rules.
 - full article text should be evaluated where legally and technically allowed; do not judge only from headlines.
-- agents implementing discovery jobs must follow [source-discovery-agent-framework.md](repo-root/app/docs/source-discovery-agent-framework.md).
+- agents implementing discovery jobs must follow [source-discovery-agent-framework.md](source-discovery-agent-framework.md).
 - current repo evidence also includes shared source-discovery runtime routes for overview, candidate writes, claim-outcome updates, seed-url jobs, health checks, bounded expansion jobs, archive-index scan, directory scan, content snapshots, reputation reversal, and manual scheduler ticks, but those remain candidate/review/runtime evidence only
 
 Owner routing:
@@ -199,9 +199,9 @@ Safe Manager prompt reminder:
 
 Use these docs before routing any Wonder audit result or OSINT Framework listing into a source lane:
 
-- [osint-framework-intake-routing-memo.md](repo-root/app/docs/osint-framework-intake-routing-memo.md)
-- [source-discovery-reputation-governance-packet.md](repo-root/app/docs/source-discovery-reputation-governance-packet.md)
-- [source-discovery-platform-plan.md](repo-root/app/docs/source-discovery-platform-plan.md)
+- [osint-framework-intake-routing-memo.md](osint-framework-intake-routing-memo.md)
+- [source-discovery-reputation-governance-packet.md](source-discovery-reputation-governance-packet.md)
+- [source-discovery-platform-plan.md](source-discovery-platform-plan.md)
 
 Owner routing:
 
@@ -218,7 +218,7 @@ Do-not-do warning:
 
 Use this before turning any Wonder, Atlas, source-discovery, or webcam candidate into a Gather brief or quick-assign packet:
 
-- [source-candidate-to-brief-routing-matrix.md](repo-root/app/docs/source-candidate-to-brief-routing-matrix.md)
+- [source-candidate-to-brief-routing-matrix.md](source-candidate-to-brief-routing-matrix.md)
 
 Key packet gate:
 
@@ -241,10 +241,10 @@ Do-not-do warning:
 
 Use these planning docs before assigning any relationship, correlation, cluster, or hypothesis work:
 
-- [cross-source-hypothesis-graph.md](repo-root/app/docs/cross-source-hypothesis-graph.md)
-- [safe-hypothesis-governance-packet.md](repo-root/app/docs/safe-hypothesis-governance-packet.md)
-- [fusion-layer-architecture.md](repo-root/app/docs/fusion-layer-architecture.md)
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
+- [cross-source-hypothesis-graph.md](cross-source-hypothesis-graph.md)
+- [safe-hypothesis-governance-packet.md](safe-hypothesis-governance-packet.md)
+- [fusion-layer-architecture.md](fusion-layer-architecture.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
 
 Owner routing:
 
@@ -264,10 +264,10 @@ Do-not-do warning:
 
 Use these planning docs before routing any Wave Monitor follow-on work:
 
-- [7po8-integration-plan.md](repo-root/app/docs/7po8-integration-plan.md)
-- [wave-monitor-governance-intake.md](repo-root/app/docs/wave-monitor-governance-intake.md)
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
-- [release-readiness.md](repo-root/app/docs/release-readiness.md)
+- [7po8-integration-plan.md](7po8-integration-plan.md)
+- [wave-monitor-governance-intake.md](wave-monitor-governance-intake.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
+- [release-readiness.md](release-readiness.md)
 
 Current status:
 
@@ -298,10 +298,10 @@ Do-not-do warning:
 
 Use these planning docs before routing any chokepoint, corridor, anchorage, queue, or passage-monitoring work:
 
-- [chokepoint-intelligence-governance-packet.md](repo-root/app/docs/chokepoint-intelligence-governance-packet.md)
-- [safe-hypothesis-governance-packet.md](repo-root/app/docs/safe-hypothesis-governance-packet.md)
-- [fusion-layer-architecture.md](repo-root/app/docs/fusion-layer-architecture.md)
-- [safety-boundaries.md](repo-root/app/docs/safety-boundaries.md)
+- [chokepoint-intelligence-governance-packet.md](chokepoint-intelligence-governance-packet.md)
+- [safe-hypothesis-governance-packet.md](safe-hypothesis-governance-packet.md)
+- [fusion-layer-architecture.md](fusion-layer-architecture.md)
+- [safety-boundaries.md](safety-boundaries.md)
 
 Safe owner routing:
 
@@ -329,8 +329,8 @@ Do-not-do warning:
 
 Use the full brief pack for scope, caveats, and classification detail:
 
-- [source-acceleration-phase2-batch7-base-earth-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch7-base-earth-briefs.md)
-- [source-routing-batch7-base-earth-reference.md](repo-root/app/docs/source-routing-batch7-base-earth-reference.md)
+- [source-acceleration-phase2-batch7-base-earth-briefs.md](source-acceleration-phase2-batch7-base-earth-briefs.md)
+- [source-routing-batch7-base-earth-reference.md](source-routing-batch7-base-earth-reference.md)
 
 ### Assignment-ready
 
@@ -415,11 +415,11 @@ Tier-2 rule:
 
 Use the full brief pack for scope, caveats, and classification detail:
 
-- [source-acceleration-phase2-batch5-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch5-briefs.md)
+- [source-acceleration-phase2-batch5-briefs.md](source-acceleration-phase2-batch5-briefs.md)
 
 Quick-assign packets are now available for the strongest next-wave handoffs:
 
-- [source-quick-assign-packets-batch5.md](repo-root/app/docs/source-quick-assign-packets-batch5.md)
+- [source-quick-assign-packets-batch5.md](source-quick-assign-packets-batch5.md)
 
 New compact packets added in the latest Batch 5 routing pass:
 
@@ -515,7 +515,7 @@ New compact packets added in the latest Batch 5 routing pass:
   - Purpose: static admin-boundary reference layer for country and regional context
   - First slice: one ADM0 boundary layer only
   - Validation commands:
-    - use the selected Natural Earth download page from [source-acceleration-phase2-batch5-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch5-briefs.md)
+    - use the selected Natural Earth download page from [source-acceleration-phase2-batch5-briefs.md](source-acceleration-phase2-batch5-briefs.md)
   - Do-not-do warning:
     - do not treat static boundaries as live political-event truth
 
@@ -559,11 +559,11 @@ Legacy note:
 
 Use the full brief pack for scope, caveats, and classification detail:
 
-- [source-acceleration-phase2-batch6-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch6-briefs.md)
+- [source-acceleration-phase2-batch6-briefs.md](source-acceleration-phase2-batch6-briefs.md)
 
 Compact quick-assign packets are now available for the strongest Batch 6 handoffs:
 
-- [source-quick-assign-packets-batch6.md](repo-root/app/docs/source-quick-assign-packets-batch6.md)
+- [source-quick-assign-packets-batch6.md](source-quick-assign-packets-batch6.md)
 
 ### Assignment-ready
 
@@ -651,7 +651,7 @@ Compact quick-assign packets are now available for the strongest Batch 6 handoff
 - `poland-imgw-public-data`
   - `needs-verification` because the bounded public file-family contract still needs tighter confirmation
 - `netherlands-rws-waterinfo`
-  - use [source-endpoint-verification-netherlands-rws-waterinfo.md](repo-root/app/docs/source-endpoint-verification-netherlands-rws-waterinfo.md) for the bounded POST-based WaterWebservices slice; it now exists backend-first and also has a bounded helper/export follow-on in repo progress, so route only narrow validation/export or equivalent marine-local follow-on work rather than a fresh source assignment
+  - use [source-endpoint-verification-netherlands-rws-waterinfo.md](source-endpoint-verification-netherlands-rws-waterinfo.md) for the bounded POST-based WaterWebservices slice; it now exists backend-first and also has a bounded helper/export follow-on in repo progress, so route only narrow validation/export or equivalent marine-local follow-on work rather than a fresh source assignment
 - `iaea-ines-news-events`
   - `needs-verification` because public reporting exists, but a stable machine-readable endpoint still needs pinning
 - `ecmwf-open-forecast`
@@ -667,8 +667,8 @@ Compact quick-assign packets are now available for the strongest Batch 6 handoff
 
 ## Data AI Routing
 
-Use [data-ai-onboarding.md](repo-root/app/docs/data-ai-onboarding.md) for lane boundaries and safety rules. Use [source-routing-priority-memo.md](repo-root/app/docs/source-routing-priority-memo.md) for the current Manager-facing ranked routing view.
-Use [data-ai-feed-rollout-ladder.md](repo-root/app/docs/data-ai-feed-rollout-ladder.md) for the short sequencing view after the active starter bundle.
+Use [data-ai-onboarding.md](data-ai-onboarding.md) for lane boundaries and safety rules. Use [source-routing-priority-memo.md](source-routing-priority-memo.md) for the current Manager-facing ranked routing view.
+Use [data-ai-feed-rollout-ladder.md](data-ai-feed-rollout-ladder.md) for the short sequencing view after the active starter bundle.
 
 Current Data AI implementation truth:
 
@@ -684,7 +684,7 @@ Current Data AI implementation truth:
 - the implemented aggregate feed waves now also include:
   - OSINT/investigations: `bellingcat`, `citizen-lab`, `occrp`, `icij`
   - rights/civic/digital-policy: `eff-updates`, `access-now`, `privacy-international`, `freedom-house`
-- use [data-ai-feed-rollout-ladder.md](repo-root/app/docs/data-ai-feed-rollout-ladder.md) plus [data-ai-rss-batch3-routing-packets.md](repo-root/app/docs/data-ai-rss-batch3-routing-packets.md) for the next bounded RSS/feed wave after those implemented families stay stable
+- use [data-ai-feed-rollout-ladder.md](data-ai-feed-rollout-ladder.md) plus [data-ai-rss-batch3-routing-packets.md](data-ai-rss-batch3-routing-packets.md) for the next bounded RSS/feed wave after those implemented families stay stable
 
 Primary Data AI handoffs:
 
@@ -735,11 +735,11 @@ Boundary note:
 
 Use the full brief pack for scope, caveats, and classification detail:
 
-- [source-acceleration-phase2-batch4-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch4-briefs.md)
+- [source-acceleration-phase2-batch4-briefs.md](source-acceleration-phase2-batch4-briefs.md)
 
 Compact quick-assign packets are now available for the strongest Batch 4 geospatial handoffs:
 
-- [source-quick-assign-packets-batch4.md](repo-root/app/docs/source-quick-assign-packets-batch4.md)
+- [source-quick-assign-packets-batch4.md](source-quick-assign-packets-batch4.md)
 
 New compact packets added in the latest Batch 4 routing pass:
 
@@ -775,7 +775,7 @@ New compact packets added in the latest Batch 4 routing pass:
   - Purpose: official displacement and refugee baseline context for country and region inspectors
   - First slice: one bounded country or region indicator family only
   - Validation commands:
-    - use the source-specific endpoint and checks from [source-acceleration-phase2-batch4-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch4-briefs.md)
+    - use the source-specific endpoint and checks from [source-acceleration-phase2-batch4-briefs.md](source-acceleration-phase2-batch4-briefs.md)
   - Do-not-do warning:
     - do not render aggregate displacement statistics as precise point events unless the source explicitly provides geometry
 
@@ -802,7 +802,7 @@ New compact packets added in the latest Batch 4 routing pass:
   - Purpose: urban station-observation layer for validated London air-quality readings
   - First slice: station metadata plus latest observation/index family only
   - Validation commands:
-    - use the source-specific endpoint and checks from [source-acceleration-phase2-batch4-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch4-briefs.md)
+    - use the source-specific endpoint and checks from [source-acceleration-phase2-batch4-briefs.md](source-acceleration-phase2-batch4-briefs.md)
   - Do-not-do warning:
     - do not mix observed station values with modeled interpolations unless the source explicitly labels them
 
@@ -812,7 +812,7 @@ New compact packets added in the latest Batch 4 routing pass:
   - First slice: one bounded station or vigilance family only
   - Status note: Marine AI progress now shows an active backend-only first slice, so this is no longer a fresh unstarted assignment
   - Validation commands:
-    - use the source-specific endpoint and checks from [source-acceleration-phase2-batch4-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch4-briefs.md)
+    - use the source-specific endpoint and checks from [source-acceleration-phase2-batch4-briefs.md](source-acceleration-phase2-batch4-briefs.md)
   - Do-not-do warning:
     - do not infer inundation extent from station or vigilance records alone
 
@@ -821,7 +821,7 @@ New compact packets added in the latest Batch 4 routing pass:
   - Purpose: Great Britain grid-context enrichment from one official public Elexon dataset family
   - First slice: one generation, demand, or balancing dataset family only
   - Validation commands:
-    - use the source-specific endpoint and checks from [source-acceleration-phase2-batch4-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch4-briefs.md)
+    - use the source-specific endpoint and checks from [source-acceleration-phase2-batch4-briefs.md](source-acceleration-phase2-batch4-briefs.md)
   - Do-not-do warning:
     - do not broaden into catalog-wide Elexon ingestion in the first patch
 
@@ -863,7 +863,7 @@ New compact packets added in the latest Batch 4 routing pass:
 
 Use the full brief pack for complete scope and caveats:
 
-- [source-acceleration-phase2-batch3-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch3-briefs.md)
+- [source-acceleration-phase2-batch3-briefs.md](source-acceleration-phase2-batch3-briefs.md)
 
 ### `metno-locationforecast`
 
@@ -877,7 +877,7 @@ Use the full brief pack for complete scope and caveats:
   - do not call the API from browser code without controlled `User-Agent` headers
   - do not present forecast output as observed weather
 - Paste-ready Codex prompt:
-  - use the `metno-locationforecast` packet from [source-acceleration-phase2-batch3-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch3-briefs.md)
+  - use the `metno-locationforecast` packet from [source-acceleration-phase2-batch3-briefs.md](source-acceleration-phase2-batch3-briefs.md)
 
 ### `metno-nowcast`
 
@@ -891,7 +891,7 @@ Use the full brief pack for complete scope and caveats:
   - do not treat nowcast output as station observation truth
   - do not make browser-direct production requests without a controlled `User-Agent`
 - Paste-ready Codex prompt:
-  - use the `metno-nowcast` packet from [source-acceleration-phase2-batch3-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch3-briefs.md)
+  - use the `metno-nowcast` packet from [source-acceleration-phase2-batch3-briefs.md](source-acceleration-phase2-batch3-briefs.md)
 
 ### `metno-metalerts-cap`
 
@@ -905,7 +905,7 @@ Use the full brief pack for complete scope and caveats:
   - do not broaden to forecast products in the same patch
   - do not make uncontrolled browser-direct calls
 - Paste-ready Codex prompt:
-  - use the `metno-metalerts-cap` packet from [source-acceleration-phase2-batch3-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch3-briefs.md)
+  - use the `metno-metalerts-cap` packet from [source-acceleration-phase2-batch3-briefs.md](source-acceleration-phase2-batch3-briefs.md)
 
 ### `nve-flood-cap`
 
@@ -919,7 +919,7 @@ Use the full brief pack for complete scope and caveats:
   - do not mix in HydAPI or keyed NVE services
   - do not broaden to full hydrology product families in the first slice
 - Paste-ready Codex prompt:
-  - use the `nve-flood-cap` packet from [source-acceleration-phase2-batch3-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch3-briefs.md)
+  - use the `nve-flood-cap` packet from [source-acceleration-phase2-batch3-briefs.md](source-acceleration-phase2-batch3-briefs.md)
 
 ### `fmi-open-data-wfs`
 
@@ -933,7 +933,7 @@ Use the full brief pack for complete scope and caveats:
   - do not attempt general WFS discovery or multiple stored queries in one patch
   - do not ignore documented rate limits
 - Paste-ready Codex prompt:
-  - use the `fmi-open-data-wfs` packet from [source-acceleration-phase2-batch3-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch3-briefs.md)
+  - use the `fmi-open-data-wfs` packet from [source-acceleration-phase2-batch3-briefs.md](source-acceleration-phase2-batch3-briefs.md)
 
 ### `opensky-anonymous-states`
 
@@ -947,7 +947,7 @@ Use the full brief pack for complete scope and caveats:
   - do not assume anonymous access supports historical or high-frequency polling
   - do not present OpenSky as authoritative air traffic control truth
 - Paste-ready Codex prompt:
-  - use the `opensky-anonymous-states` packet from [source-acceleration-phase2-batch3-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch3-briefs.md)
+  - use the `opensky-anonymous-states` packet from [source-acceleration-phase2-batch3-briefs.md](source-acceleration-phase2-batch3-briefs.md)
 
 ### `emsc-seismicportal-realtime`
 
@@ -961,7 +961,7 @@ Use the full brief pack for complete scope and caveats:
   - do not write tests that depend on a live websocket
   - do not expose raw stream jitter as event truth
 - Paste-ready Codex prompt:
-  - use the `emsc-seismicportal-realtime` packet from [source-acceleration-phase2-batch3-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch3-briefs.md)
+  - use the `emsc-seismicportal-realtime` packet from [source-acceleration-phase2-batch3-briefs.md](source-acceleration-phase2-batch3-briefs.md)
 
 ### `meteoalarm-atom-feeds`
 
@@ -975,7 +975,7 @@ Use the full brief pack for complete scope and caveats:
   - do not treat Meteoalarm as more authoritative than the underlying national source
   - do not ingest every country feed in the first patch
 - Paste-ready Codex prompt:
-  - use the `meteoalarm-atom-feeds` packet from [source-acceleration-phase2-batch3-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch3-briefs.md)
+  - use the `meteoalarm-atom-feeds` packet from [source-acceleration-phase2-batch3-briefs.md](source-acceleration-phase2-batch3-briefs.md)
 
 ## Batch 3 Do Not Assign Yet
 
@@ -1570,7 +1570,7 @@ Validation:
 
 ## Global Brief Pack Candidates
 
-Assignment-ready or narrow-slice ready candidates from [source-acceleration-phase2-global-briefs.md](repo-root/app/docs/source-acceleration-phase2-global-briefs.md:1):
+Assignment-ready or narrow-slice ready candidates from [source-acceleration-phase2-global-briefs.md](source-acceleration-phase2-global-briefs.md:1):
 
 - `hko-open-weather`
   - Status: already implemented backend-first in current repo truth
@@ -1632,7 +1632,7 @@ These sources already have active briefing, ownership, or implementation momentu
 
 ## Recommended Next Assignments
 
-- May 2026 next-wave packets: use [source-quick-assign-packets-may-2026.md](repo-root/app/docs/source-quick-assign-packets-may-2026.md) for the current bounded cross-lane packet set:
+- May 2026 next-wave packets: use [source-quick-assign-packets-may-2026.md](source-quick-assign-packets-may-2026.md) for the current bounded cross-lane packet set:
   - Data: the `2026-05-05 19:41 America/Chicago` `CISA KEV` / `RDAP` / `crt.sh` wave is now landed backend-first, and the bounded `SEC EDGAR` / `USAspending` follow-on is now landed too; next Data work should be follow-through or reassignment
   - Geospatial: the bounded Canada CAP plus Canada GeoMet package now appears completed in progress truth; treat `canada-cap-alerts`, `canada-geomet-ogc`, `meteoswiss-open-data`, and `bc-wildfire-datamart` as implemented follow-ons rather than fresh source intake
   - Geospatial deconfliction note: `dmi-forecast-aws`, `met-eireann-forecast`, `met-eireann-warnings`, `portugal-ipma-open-data`, `bc-wildfire-datamart`, and `usgs-geomagnetism` are all now repo-present backend-first slices; do not route them as fresh-source work
@@ -1650,7 +1650,7 @@ These sources already have active briefing, ownership, or implementation momentu
 - Peer/runtime note: Atlas media geolocation hardening remains peer and derived-evidence input only, and Wonder Statuspage/Mastodon plus Stack Exchange/seed-packet discovery remain candidate/review discovery input only; none of these peer surfaces are source approval, implementation proof, or workflow-validation proof
 - Wonder breadth note: archive-index scan, mailing-list archive adapters, and curated directory or regional-portal scan remain candidate/review/runtime discovery input only and must not be treated as source approval, implementation proof, or workflow-validation proof
 - Breadth/runtime note: Source Discovery breadth and seed-packet lineage remain candidate/review/runtime or explainability-only input, and media/OCR plus geolocation runtime helpers remain peer, runtime, or derived-evidence input only
-- User-priority source-list note: the `NOAA nowCOAST`, `National Weather Service Alerts API`, `RDAP`, `crt.sh`, `SEC EDGAR`, `USAspending`, `GPSJam`, and `Navtex` wave is now materially landed; use [source-user-priority-follow-on-shortlist.md](repo-root/app/docs/source-user-priority-follow-on-shortlist.md) for `GeoNames`, `HDX`, `UNOSAT on HDX`, and `ReliefWeb`, keep duplicates out of fake fresh-win routing, keep directories and analyst helpers in the `discovery only` or `browser-only` buckets, and keep `Sherlock`, `Maigret`, `WhatsMyName`, and `Blackbird` in the `safety-sensitive` do-not-route-directly bucket
+- User-priority source-list note: the `NOAA nowCOAST`, `National Weather Service Alerts API`, `RDAP`, `crt.sh`, `SEC EDGAR`, `USAspending`, `GPSJam`, and `Navtex` wave is now materially landed; use [source-user-priority-follow-on-shortlist.md](source-user-priority-follow-on-shortlist.md) for `GeoNames`, `HDX`, `UNOSAT on HDX`, and `ReliefWeb`, keep duplicates out of fake fresh-win routing, keep directories and analyst helpers in the `discovery only` or `browser-only` buckets, and keep `Sherlock`, `Maigret`, `WhatsMyName`, and `Blackbird` in the `safety-sensitive` do-not-route-directly bucket
 - Feature deconfliction note: `Evidence Timeline`, `Review Packet Export`, `Source Candidate Intake Queue`, `Source Health Console`, and `Attention Queue Unifier` are partially occupied already by domain-local packages; future work should target cross-domain normalization only, while `Source Fusion Snapshot` remains open globally but should compose existing domain packages rather than replace them
 - Peer-planning note: Wonder Browser Use, macOS plugin, and connector planning docs are routing/planning input only and do not create source approval or validation proof
 - Gather: continue source brief expansion and ownership-map maintenance

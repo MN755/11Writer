@@ -8,11 +8,11 @@ Purpose:
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains source-status truth.
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md) remains validation-traceability truth.
-- [source-onboarding-contract.md](repo-root/app/docs/source-onboarding-contract.md) remains the shared intake/onboarding contract for auth posture, machine usability, fixture-first expectations, and prompt-injection-safe source text handling.
-- [phase2-next-after-next-shortlist.md](repo-root/app/docs/phase2-next-after-next-shortlist.md) is the compact post-wave shortlist after the current larger controlled assignment wave.
-- [source-user-priority-follow-on-shortlist.md](repo-root/app/docs/source-user-priority-follow-on-shortlist.md) is the compact next handoff surface after the landed user-priority source wave.
+- [source-assignment-board.md](source-assignment-board.md) remains source-status truth.
+- [source-validation-status.md](source-validation-status.md) remains validation-traceability truth.
+- [source-onboarding-contract.md](source-onboarding-contract.md) remains the shared intake/onboarding contract for auth posture, machine usability, fixture-first expectations, and prompt-injection-safe source text handling.
+- [phase2-next-after-next-shortlist.md](phase2-next-after-next-shortlist.md) is the compact post-wave shortlist after the current larger controlled assignment wave.
+- [source-user-priority-follow-on-shortlist.md](source-user-priority-follow-on-shortlist.md) is the compact next handoff surface after the landed user-priority source wave.
 - Peer input, runtime surfaces, helper evidence, prepared smoke, and media/OCR plans remain below implementation or workflow-validation proof unless controlled evidence explicitly supports promotion.
 
 ## Reporting Shift

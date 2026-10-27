@@ -11,7 +11,7 @@ Use this doc when you want:
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the status truth.
+- [source-assignment-board.md](source-assignment-board.md) remains the status truth.
 - These packets are intentionally shorter than the full source briefs.
 
 ## 1. `geonet-geohazards`

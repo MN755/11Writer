@@ -8,9 +8,9 @@ Purpose:
 - make the first `global.css` decomposition step concrete instead of aspirational
 
 Read with:
-- [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md)
-- [ui-integration.md](repo-root/app/docs/ui-integration.md)
-- [ui-primitive-migration-map.md](repo-root/app/docs/ui-primitive-migration-map.md)
+- [phase3-code-oss-workbench-spec.md](phase3-code-oss-workbench-spec.md)
+- [ui-integration.md](ui-integration.md)
+- [ui-primitive-migration-map.md](ui-primitive-migration-map.md)
 
 ## Non-Negotiable Contract
 

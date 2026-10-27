@@ -10,9 +10,9 @@ Purpose:
 
 Status rule:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains source-status truth.
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md) remains validation-traceability truth.
-- [source-user-priority-routing-governance-packet.md](repo-root/app/docs/source-user-priority-routing-governance-packet.md) remains the bucket/governance surface for the whole user list.
+- [source-assignment-board.md](source-assignment-board.md) remains source-status truth.
+- [source-validation-status.md](source-validation-status.md) remains validation-traceability truth.
+- [source-user-priority-routing-governance-packet.md](source-user-priority-routing-governance-packet.md) remains the bucket/governance surface for the whole user list.
 
 ## Current truth
 

@@ -7,7 +7,7 @@ Assignment version: 2026-05-05 23:58 America/Chicago
 Recent Manager/Workflow Updates:
 - The user wants all active lanes to finish their current work cleanly and document what they did for the incoming Phase 3 chats.
 - This is a finish-up and handoff wave, not a fresh feature-expansion wave.
-- Phase 3 planning now has a dedicated handoff directory at [app/docs/phase3-handoffs/README.md](repo-root/app/docs/phase3-handoffs/README.md).
+- Phase 3 planning now has a dedicated handoff directory at [app/docs/phase3-handoffs/README.md](../phase3-handoffs/README.md).
 
 Current state:
 - Your current bounded integration checkpoint is still the right scope.
@@ -22,7 +22,7 @@ Do first:
 Tasks:
 1. Finish only the current integration/validation slice already in motion.
 2. Do not open a new source family, new frontend redesign, or new architectural branch.
-3. Update [app/docs/phase3-handoffs/connect-ai.md](repo-root/app/docs/phase3-handoffs/connect-ai.md) with:
+3. Update [app/docs/phase3-handoffs/connect-ai.md](../phase3-handoffs/connect-ai.md) with:
    - `Scope completed`
    - `Current state`
    - `Files and surfaces to know`

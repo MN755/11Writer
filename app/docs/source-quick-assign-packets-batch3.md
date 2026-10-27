@@ -11,8 +11,8 @@ Use this doc when you want:
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the status truth.
-- These packets are intentionally shorter than [source-acceleration-phase2-batch3-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch3-briefs.md).
+- [source-assignment-board.md](source-assignment-board.md) remains the status truth.
+- These packets are intentionally shorter than [source-acceleration-phase2-batch3-briefs.md](source-acceleration-phase2-batch3-briefs.md).
 
 ## Recommended Immediate Assignment Order
 

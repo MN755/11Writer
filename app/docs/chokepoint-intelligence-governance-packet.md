@@ -4,10 +4,10 @@ This packet defines the safe planning and routing boundary for future Chokepoint
 
 Use it with:
 
-- [safe-hypothesis-governance-packet.md](repo-root/app/docs/safe-hypothesis-governance-packet.md)
-- [fusion-layer-architecture.md](repo-root/app/docs/fusion-layer-architecture.md)
-- [safety-boundaries.md](repo-root/app/docs/safety-boundaries.md)
-- [wave-monitor-governance-intake.md](repo-root/app/docs/wave-monitor-governance-intake.md)
+- [safe-hypothesis-governance-packet.md](safe-hypothesis-governance-packet.md)
+- [fusion-layer-architecture.md](fusion-layer-architecture.md)
+- [safety-boundaries.md](safety-boundaries.md)
+- [wave-monitor-governance-intake.md](wave-monitor-governance-intake.md)
 
 Important rule:
 

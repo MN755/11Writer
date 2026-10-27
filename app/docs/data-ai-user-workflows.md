@@ -691,9 +691,9 @@ Agents implementing Data AI workflows must:
 
 ## Related Docs
 
-- [analyst-workbench.md](repo-root/app/docs/analyst-workbench.md)
-- [data-ai-feed-rollout-ladder.md](repo-root/app/docs/data-ai-feed-rollout-ladder.md)
-- [data-ai-rss-source-candidates.md](repo-root/app/docs/data-ai-rss-source-candidates.md)
-- [fusion-layer-architecture.md](repo-root/app/docs/fusion-layer-architecture.md)
-- [intelligence-loop.md](repo-root/app/docs/intelligence-loop.md)
-- [prompt-injection-defense.md](repo-root/app/docs/prompt-injection-defense.md)
+- [analyst-workbench.md](analyst-workbench.md)
+- [data-ai-feed-rollout-ladder.md](data-ai-feed-rollout-ladder.md)
+- [data-ai-rss-source-candidates.md](data-ai-rss-source-candidates.md)
+- [fusion-layer-architecture.md](fusion-layer-architecture.md)
+- [intelligence-loop.md](intelligence-loop.md)
+- [prompt-injection-defense.md](prompt-injection-defense.md)

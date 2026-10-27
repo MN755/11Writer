@@ -25,7 +25,7 @@ The goal is to make future migrations decision-complete:
 
 ## Phase 3 Status Vocabulary
 
-Use the canonical status words from [phase3-governance-sequencing-packet.md](repo-root/app/docs/phase3-governance-sequencing-packet.md):
+Use the canonical status words from [phase3-governance-sequencing-packet.md](phase3-governance-sequencing-packet.md):
 
 - `planned`
 - `active`

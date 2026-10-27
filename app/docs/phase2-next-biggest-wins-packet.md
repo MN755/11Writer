@@ -11,8 +11,8 @@ Use it to answer:
 
 Status rule:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the source-status truth.
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md) remains the validation-traceability truth.
+- [source-assignment-board.md](source-assignment-board.md) remains the source-status truth.
+- [source-validation-status.md](source-validation-status.md) remains the validation-traceability truth.
 - Atlas and Wonder remain peer or user-directed input only.
 - Source Discovery runtime, Wave LLM runtime, Browser Use guidance, Atlas Source Discovery Ten-Step notes, and Wonder macOS/plugin/connector planning are planning and runtime-boundary input here, not source-validation proof.
 - The `2026-05-05 19:41 America/Chicago` source-expansion wave has now materially landed across Data, Geospatial, Marine, Aerospace, and Features/Webcam.

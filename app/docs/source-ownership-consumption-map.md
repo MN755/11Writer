@@ -11,25 +11,25 @@ Purpose:
 
 Scope:
 
-- [source-onboarding-contract.md](repo-root/app/docs/source-onboarding-contract.md)
-- [source-acceleration-phase2-briefs.md](repo-root/app/docs/source-acceleration-phase2-briefs.md)
-- [source-acceleration-phase2-international-briefs.md](repo-root/app/docs/source-acceleration-phase2-international-briefs.md)
-- [source-acceleration-phase2-batch4-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch4-briefs.md)
-- [source-acceleration-phase2-batch5-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch5-briefs.md)
-- [source-acceleration-phase2-batch6-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch6-briefs.md)
-- [data-ai-onboarding.md](repo-root/app/docs/data-ai-onboarding.md)
-- [source-routing-priority-memo.md](repo-root/app/docs/source-routing-priority-memo.md)
-- [source-next-routing-packets.md](repo-root/app/docs/source-next-routing-packets.md)
-- [source-quick-assign-packets-data-ai-rss.md](repo-root/app/docs/source-quick-assign-packets-data-ai-rss.md)
-- [data-ai-feed-rollout-ladder.md](repo-root/app/docs/data-ai-feed-rollout-ladder.md)
-- [data-ai-rss-batch3-routing-packets.md](repo-root/app/docs/data-ai-rss-batch3-routing-packets.md)
-- [source-routing-batch7-base-earth-reference.md](repo-root/app/docs/source-routing-batch7-base-earth-reference.md)
-- [source-discovery-reputation-governance-packet.md](repo-root/app/docs/source-discovery-reputation-governance-packet.md)
-- [osint-framework-intake-routing-memo.md](repo-root/app/docs/osint-framework-intake-routing-memo.md)
-- [source-candidate-to-brief-routing-matrix.md](repo-root/app/docs/source-candidate-to-brief-routing-matrix.md)
-- [source-quick-assign-packets-may-2026.md](repo-root/app/docs/source-quick-assign-packets-may-2026.md)
-- [phase2-next-biggest-wins-packet.md](repo-root/app/docs/phase2-next-biggest-wins-packet.md)
-- [reporting-desk-phase2-roadmap.md](repo-root/app/docs/reporting-desk-phase2-roadmap.md)
+- [source-onboarding-contract.md](source-onboarding-contract.md)
+- [source-acceleration-phase2-briefs.md](source-acceleration-phase2-briefs.md)
+- [source-acceleration-phase2-international-briefs.md](source-acceleration-phase2-international-briefs.md)
+- [source-acceleration-phase2-batch4-briefs.md](source-acceleration-phase2-batch4-briefs.md)
+- [source-acceleration-phase2-batch5-briefs.md](source-acceleration-phase2-batch5-briefs.md)
+- [source-acceleration-phase2-batch6-briefs.md](source-acceleration-phase2-batch6-briefs.md)
+- [data-ai-onboarding.md](data-ai-onboarding.md)
+- [source-routing-priority-memo.md](source-routing-priority-memo.md)
+- [source-next-routing-packets.md](source-next-routing-packets.md)
+- [source-quick-assign-packets-data-ai-rss.md](source-quick-assign-packets-data-ai-rss.md)
+- [data-ai-feed-rollout-ladder.md](data-ai-feed-rollout-ladder.md)
+- [data-ai-rss-batch3-routing-packets.md](data-ai-rss-batch3-routing-packets.md)
+- [source-routing-batch7-base-earth-reference.md](source-routing-batch7-base-earth-reference.md)
+- [source-discovery-reputation-governance-packet.md](source-discovery-reputation-governance-packet.md)
+- [osint-framework-intake-routing-memo.md](osint-framework-intake-routing-memo.md)
+- [source-candidate-to-brief-routing-matrix.md](source-candidate-to-brief-routing-matrix.md)
+- [source-quick-assign-packets-may-2026.md](source-quick-assign-packets-may-2026.md)
+- [phase2-next-biggest-wins-packet.md](phase2-next-biggest-wins-packet.md)
+- [reporting-desk-phase2-roadmap.md](reporting-desk-phase2-roadmap.md)
 
 ## Source Discovery / Shared Memory Addendum
 
@@ -56,7 +56,7 @@ Boundary rules:
 
 These mappings define the new Data AI implementation lane for bounded public internet-information sources. They do not imply implementation has started unless a source already has repo-local evidence elsewhere in this map.
 
-Use [data-ai-feed-rollout-ladder.md](repo-root/app/docs/data-ai-feed-rollout-ladder.md) plus [data-ai-rss-batch3-routing-packets.md](repo-root/app/docs/data-ai-rss-batch3-routing-packets.md) for the next bounded feed wave after the currently implemented Data AI families stay stable.
+Use [data-ai-feed-rollout-ladder.md](data-ai-feed-rollout-ladder.md) plus [data-ai-rss-batch3-routing-packets.md](data-ai-rss-batch3-routing-packets.md) for the next bounded feed wave after the currently implemented Data AI families stay stable.
 
 | Source id | Primary owner agent | Secondary consumer agents | First implementation slice | Shared-or-local guidance | Collision risk |
 | --- | --- | --- | --- | --- | --- |
@@ -81,7 +81,7 @@ Repo-local status note:
 - the Data AI public-institution/world-context wave is also implemented backend-first on the shared recent-items route.
 - the shared `/api/feeds/data-ai/source-families/review` helper is review metadata only and must not be treated as source truth or workflow-validation proof.
 - the shared `/api/feeds/data-ai/source-families/review-queue` helper is review metadata only and must not be treated as source truth, source scoring, or workflow-validation proof.
-- use [data-ai-next-routing-after-family-summary.md](repo-root/app/docs/data-ai-next-routing-after-family-summary.md) for the next bounded helper/coherence lane or any later narrow family reopening instead of reopening those implemented waves as fresh source-creation work.
+- use [data-ai-next-routing-after-family-summary.md](data-ai-next-routing-after-family-summary.md) for the next bounded helper/coherence lane or any later narrow family reopening instead of reopening those implemented waves as fresh source-creation work.
 - `propublica` and `global-voices` are already implemented backend-first and should not be routed again as fresh next-wave Data work.
 - the next larger Data wave is one bounded topic/report/export follow-through on top of the completed source-intelligence, fusion, report-brief, world-news-awareness, topic-packet, current-awareness, and review/export coherence stack; do not reopen older implemented families as fresh work.
 
@@ -95,14 +95,14 @@ Runtime-boundary note:
 
 May 2026 camera-candidate note:
 
-- the `nsw-live-traffic-cameras` and `quebec-mtmd-traffic-cameras` packets in [source-quick-assign-packets-may-2026.md](repo-root/app/docs/source-quick-assign-packets-may-2026.md) remain `candidate-sandbox-importable` routing surfaces.
+- the `nsw-live-traffic-cameras` and `quebec-mtmd-traffic-cameras` packets in [source-quick-assign-packets-may-2026.md](source-quick-assign-packets-may-2026.md) remain `candidate-sandbox-importable` routing surfaces.
 - they do not create implementation ownership, validation proof, or activation proof by themselves.
 
 ## Batch 6 Ownership Addendum
 
 These mappings are classification-only ownership recommendations for the latest Batch 6 candidates. They do not imply implementation has started.
 
-For compact Manager-facing handoffs on the strongest Batch 6 candidates, use [source-quick-assign-packets-batch6.md](repo-root/app/docs/source-quick-assign-packets-batch6.md).
+For compact Manager-facing handoffs on the strongest Batch 6 candidates, use [source-quick-assign-packets-batch6.md](source-quick-assign-packets-batch6.md).
 
 | Source id | Primary owner agent | Secondary consumer agents | First implementation slice | Shared-or-local guidance | Collision risk |
 | --- | --- | --- | --- | --- | --- |
@@ -179,7 +179,7 @@ Repo-local status note:
 - Consumers must not re-implement a source because they want a slightly different panel or filter.
 - Source health, freshness, provenance, and caveat language must survive downstream consumption.
 - Export and evidence surfaces must preserve source id, source URL when available, observed time, fetched time, and caveat text.
-- Auth posture, machine-usability posture, and fixture-first expectations should follow [source-onboarding-contract.md](repo-root/app/docs/source-onboarding-contract.md) before a source is treated as implementation-ready.
+- Auth posture, machine-usability posture, and fixture-first expectations should follow [source-onboarding-contract.md](source-onboarding-contract.md) before a source is treated as implementation-ready.
 
 ## Ownership Table
 

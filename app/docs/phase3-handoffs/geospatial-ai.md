@@ -33,38 +33,38 @@
 ## Files and surfaces to know
 
 - Core source services:
-  - [nws_alerts_service.py](repo-root/app/server/src/services/nws_alerts_service.py)
-  - [noaa_nowcoast_service.py](repo-root/app/server/src/services/noaa_nowcoast_service.py)
-  - [nhc_gis_service.py](repo-root/app/server/src/services/nhc_gis_service.py)
+  - [nws_alerts_service.py](../../server/src/services/nws_alerts_service.py)
+  - [noaa_nowcoast_service.py](../../server/src/services/noaa_nowcoast_service.py)
+  - [nhc_gis_service.py](../../server/src/services/nhc_gis_service.py)
 - Core routes:
-  - [events.py](repo-root/app/server/src/routes/events.py)
-  - [weather_context.py](repo-root/app/server/src/routes/weather_context.py)
+  - [events.py](../../server/src/routes/events.py)
+  - [weather_context.py](../../server/src/routes/weather_context.py)
   - `GET /api/events/nws-alerts/recent`
   - `GET /api/events/nhc-gis/recent`
   - `GET /api/context/weather/nowcoast/layer-catalog`
 - Shared reporting/fusion surface:
-  - [environmental_source_families_overview_service.py](repo-root/app/server/src/services/environmental_source_families_overview_service.py)
+  - [environmental_source_families_overview_service.py](../../server/src/services/environmental_source_families_overview_service.py)
   - This is the main backend aggregation layer incoming Phase 3 agents must understand before widening environmental reporting.
 - Source contracts/settings:
-  - [api.py](repo-root/app/server/src/types/api.py)
-  - [settings.py](repo-root/app/server/src/config/settings.py)
+  - [api.py](../../server/src/types/api.py)
+  - [settings.py](../../server/src/config/settings.py)
 - Fixtures/tests:
-  - [nws_alerts_fixture.json](repo-root/app/server/data/nws_alerts_fixture.json)
-  - [noaa_nowcoast_layer_catalog_fixture.json](repo-root/app/server/data/noaa_nowcoast_layer_catalog_fixture.json)
-  - [nhc_gis_atlantic_fixture.xml](repo-root/app/server/data/nhc_gis_atlantic_fixture.xml)
-  - [test_nws_alerts.py](repo-root/app/server/tests/test_nws_alerts.py)
-  - [test_noaa_nowcoast.py](repo-root/app/server/tests/test_noaa_nowcoast.py)
-  - [test_nhc_gis.py](repo-root/app/server/tests/test_nhc_gis.py)
-  - [test_environmental_source_families_overview.py](repo-root/app/server/tests/test_environmental_source_families_overview.py)
-  - [test_environmental_fusion_snapshot_input.py](repo-root/app/server/tests/test_environmental_fusion_snapshot_input.py)
-  - [test_environmental_current_awareness_digest.py](repo-root/app/server/tests/test_environmental_current_awareness_digest.py)
+  - [nws_alerts_fixture.json](../../server/data/nws_alerts_fixture.json)
+  - [noaa_nowcoast_layer_catalog_fixture.json](../../server/data/noaa_nowcoast_layer_catalog_fixture.json)
+  - [nhc_gis_atlantic_fixture.xml](../../server/data/nhc_gis_atlantic_fixture.xml)
+  - [test_nws_alerts.py](../../server/tests/test_nws_alerts.py)
+  - [test_noaa_nowcoast.py](../../server/tests/test_noaa_nowcoast.py)
+  - [test_nhc_gis.py](../../server/tests/test_nhc_gis.py)
+  - [test_environmental_source_families_overview.py](../../server/tests/test_environmental_source_families_overview.py)
+  - [test_environmental_fusion_snapshot_input.py](../../server/tests/test_environmental_fusion_snapshot_input.py)
+  - [test_environmental_current_awareness_digest.py](../../server/tests/test_environmental_current_awareness_digest.py)
 - Domain docs:
-  - [environmental-events-nws-alerts.md](repo-root/app/docs/environmental-events-nws-alerts.md)
-  - [environmental-events-noaa-nowcoast.md](repo-root/app/docs/environmental-events-noaa-nowcoast.md)
-  - [environmental-events-nhc-gis.md](repo-root/app/docs/environmental-events-nhc-gis.md)
-  - [environmental-events.md](repo-root/app/docs/environmental-events.md)
-  - [environmental-source-family-overview.md](repo-root/app/docs/environmental-source-family-overview.md)
-  - [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
+  - [environmental-events-nws-alerts.md](../environmental-events-nws-alerts.md)
+  - [environmental-events-noaa-nowcoast.md](../environmental-events-noaa-nowcoast.md)
+  - [environmental-events-nhc-gis.md](../environmental-events-nhc-gis.md)
+  - [environmental-events.md](../environmental-events.md)
+  - [environmental-source-family-overview.md](../environmental-source-family-overview.md)
+  - [source-validation-status.md](../source-validation-status.md)
 
 ## Validation already run
 
@@ -104,12 +104,12 @@
   - no broad frontend layer or inspector expansion was done for this wave
   - incoming agents should not assume a fully surfaced client experience just because backend reporting support exists
 - Alerts ledger:
-  - last run of `python scripts/alerts_ledger.py --json` succeeded and reported open low-priority alerts in [alerts.md](repo-root/app/docs/alerts.md)
+  - last run of `python scripts/alerts_ledger.py --json` succeeded and reported open low-priority alerts in [alerts.md](../alerts.md)
 
 ## What the next AI should do first
 
 - `Spatial AI`
-  - read [environmental_source_families_overview_service.py](repo-root/app/server/src/services/environmental_source_families_overview_service.py) first
+  - read [environmental_source_families_overview_service.py](../../server/src/services/environmental_source_families_overview_service.py) first
   - verify any new spatial consumer keeps `advisory`, `contextual`, `observed`, and `reference` distinct
   - if adding map usage, start with source-provided geometry only and keep representative-point caveats visible
 - `Reporting AI`

@@ -8,10 +8,10 @@ Purpose:
 - keep `AppShell.tsx`, `LayerPanel.tsx`, and `InspectorPanel.tsx` from continuing to act as mixed shell-and-mode owners
 
 Read together with:
-- [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md)
-- [ui-integration.md](repo-root/app/docs/ui-integration.md)
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
-- [phase3-agent-management-plan.md](repo-root/app/docs/phase3-agent-management-plan.md)
+- [phase3-code-oss-workbench-spec.md](phase3-code-oss-workbench-spec.md)
+- [ui-integration.md](ui-integration.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
+- [phase3-agent-management-plan.md](phase3-agent-management-plan.md)
 
 ## Shell zones
 

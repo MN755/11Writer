@@ -10,8 +10,8 @@ Use it when Manager AI needs:
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the source-status truth.
-- [source-candidate-to-brief-routing-matrix.md](repo-root/app/docs/source-candidate-to-brief-routing-matrix.md) remains the gate between candidate evidence and real implementation prompts.
+- [source-assignment-board.md](source-assignment-board.md) remains the source-status truth.
+- [source-candidate-to-brief-routing-matrix.md](source-candidate-to-brief-routing-matrix.md) remains the gate between candidate evidence and real implementation prompts.
 - Wonder, Atlas, and source-discovery artifacts remain routing input only unless the official endpoint evidence below is independently sufficient.
 
 ## Recommended Manager Order

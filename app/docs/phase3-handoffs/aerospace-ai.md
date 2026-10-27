@@ -3,7 +3,7 @@
 ## Scope completed
 
 - Completed the bounded `GPSJam` aerospace source wave as contextual GNSS-disruption awareness only.
-- Completed the bounded aerospace hazard-context consumer follow-on in [aerospaceHazardContextConsumerPacket.ts](repo-root/app/client/src/features/inspector/aerospaceHazardContextConsumerPacket.ts).
+- Completed the bounded aerospace hazard-context consumer follow-on in [aerospaceHazardContextConsumerPacket.ts](../../client/src/features/inspector/aerospaceHazardContextConsumerPacket.ts).
 - Kept the active checkpoint small:
   no new large aerospace panel,
   no fresh source family beyond the already-in-motion hazard-context composition,
@@ -49,35 +49,35 @@
 ## Files and surfaces to know
 
 - Active bounded hazard-context helper:
-  [aerospaceHazardContextConsumerPacket.ts](repo-root/app/client/src/features/inspector/aerospaceHazardContextConsumerPacket.ts)
+  [aerospaceHazardContextConsumerPacket.ts](../../client/src/features/inspector/aerospaceHazardContextConsumerPacket.ts)
 - Existing GPSJam helper:
-  [aerospaceGpsJamContext.ts](repo-root/app/client/src/features/inspector/aerospaceGpsJamContext.ts)
+  [aerospaceGpsJamContext.ts](../../client/src/features/inspector/aerospaceGpsJamContext.ts)
 - Export/metadata wiring:
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
 - Workflow evidence surfaces:
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [aerospaceWorkflowValidationEvidenceSnapshot.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowValidationEvidenceSnapshot.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [aerospaceWorkflowValidationEvidenceSnapshot.ts](../../client/src/features/inspector/aerospaceWorkflowValidationEvidenceSnapshot.ts)
 - Higher-order aerospace reporting surfaces most likely to matter to Reporting AI:
-  [aerospaceReportBriefPackage.ts](repo-root/app/client/src/features/inspector/aerospaceReportBriefPackage.ts)
-  [aerospaceSelectedTargetOperationalQuestionPacket.ts](repo-root/app/client/src/features/inspector/aerospaceSelectedTargetOperationalQuestionPacket.ts)
-  [aerospaceCurrentAwarenessDigest.ts](repo-root/app/client/src/features/inspector/aerospaceCurrentAwarenessDigest.ts)
-  [aerospaceReportingHandoffContract.ts](repo-root/app/client/src/features/inspector/aerospaceReportingHandoffContract.ts)
-  [aerospaceQuestionBriefingPacket.ts](repo-root/app/client/src/features/inspector/aerospaceQuestionBriefingPacket.ts)
+  [aerospaceReportBriefPackage.ts](../../client/src/features/inspector/aerospaceReportBriefPackage.ts)
+  [aerospaceSelectedTargetOperationalQuestionPacket.ts](../../client/src/features/inspector/aerospaceSelectedTargetOperationalQuestionPacket.ts)
+  [aerospaceCurrentAwarenessDigest.ts](../../client/src/features/inspector/aerospaceCurrentAwarenessDigest.ts)
+  [aerospaceReportingHandoffContract.ts](../../client/src/features/inspector/aerospaceReportingHandoffContract.ts)
+  [aerospaceQuestionBriefingPacket.ts](../../client/src/features/inspector/aerospaceQuestionBriefingPacket.ts)
 - Client geospatial consumption hooks already used by aerospace:
-  [queries.ts](repo-root/app/client/src/lib/queries.ts)
+  [queries.ts](../../client/src/lib/queries.ts)
   Search for:
   `useNwsAlertsRecentQuery`
   `useNoaaNowCoastLayerCatalogQuery`
   `useGpsJamContextQuery`
 - Smoke-fixture and prepared smoke surfaces:
-  [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
+  [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
 - Domain docs:
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md)
 
 ## Validation already run
 
@@ -125,9 +125,9 @@
 ## What the next AI should do first
 
 - Read:
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  and the newest top entries in [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md).
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  and the newest top entries in [aerospace-ai.md](../agent-progress/aerospace-ai.md).
 - If working on browser workflow truth, first solve or route the Playwright Windows launcher blocker instead of changing aerospace assertions blindly.
 - If working with Spatial AI:
   consume `aerospaceHazardContextConsumerPacket` and `aerospaceFusionSnapshotInput` as bounded domain inputs, not as unified source truth.

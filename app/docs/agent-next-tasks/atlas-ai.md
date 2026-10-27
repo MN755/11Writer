@@ -5,7 +5,7 @@ Assignment version: 2026-05-05 23:58 America/Chicago
 Recent Manager/Workflow Updates:
 - The user explicitly asked for all active AIs to finish what they are doing and document what they did for the incoming Phase 3 chats.
 - You remain peer-level and user-directed; this finish-up packet exists because the user requested cross-agent handoff discipline.
-- Phase 3 planning now has a dedicated handoff directory at [app/docs/phase3-handoffs/README.md](repo-root/app/docs/phase3-handoffs/README.md).
+- Phase 3 planning now has a dedicated handoff directory at [app/docs/phase3-handoffs/README.md](../phase3-handoffs/README.md).
 
 Current state:
 - Your active work should stay bounded to the current user-directed media geolocation and related experimental slice already in motion.
@@ -19,7 +19,7 @@ Do first:
 Tasks:
 1. Finish only the current user-directed experimental slice already in motion.
 2. Do not branch into a new feature family just because Phase 3 is approaching.
-3. Update [app/docs/phase3-handoffs/atlas-ai.md](repo-root/app/docs/phase3-handoffs/atlas-ai.md) with:
+3. Update [app/docs/phase3-handoffs/atlas-ai.md](../phase3-handoffs/atlas-ai.md) with:
    - `Scope completed`
    - `Current state`
    - `Files and surfaces to know`

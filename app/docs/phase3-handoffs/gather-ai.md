@@ -4,7 +4,7 @@
 
 - finished the post-wave truth-reconciliation pass for the user-priority source wave
 - updated routing/governance docs so landed source work no longer reads like fresh intake
-- created the compact next-step packet at [source-user-priority-follow-on-shortlist.md](repo-root/app/docs/source-user-priority-follow-on-shortlist.md)
+- created the compact next-step packet at [source-user-priority-follow-on-shortlist.md](../source-user-priority-follow-on-shortlist.md)
 - added explicit validation/status traceability for:
   - `gpsjam-context`
   - `navtex-context`
@@ -12,11 +12,11 @@
 
 ## Current state
 
-- authoritative source-status truth is in [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md)
-- authoritative validation-traceability truth is in [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-- authoritative promotion-evidence requirements are in [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md)
-- authoritative user-priority bucketing is in [source-user-priority-routing-governance-packet.md](repo-root/app/docs/source-user-priority-routing-governance-packet.md)
-- authoritative next user-priority follow-on set is in [source-user-priority-follow-on-shortlist.md](repo-root/app/docs/source-user-priority-follow-on-shortlist.md)
+- authoritative source-status truth is in [source-assignment-board.md](../source-assignment-board.md)
+- authoritative validation-traceability truth is in [source-validation-status.md](../source-validation-status.md)
+- authoritative promotion-evidence requirements are in [source-workflow-validation-plan.md](../source-workflow-validation-plan.md)
+- authoritative user-priority bucketing is in [source-user-priority-routing-governance-packet.md](../source-user-priority-routing-governance-packet.md)
+- authoritative next user-priority follow-on set is in [source-user-priority-follow-on-shortlist.md](../source-user-priority-follow-on-shortlist.md)
 
 Current user-priority truth:
 
@@ -48,25 +48,25 @@ Current governance truth:
 
 Primary authoritative docs:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md)
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-- [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md)
-- [source-user-priority-routing-governance-packet.md](repo-root/app/docs/source-user-priority-routing-governance-packet.md)
-- [source-user-priority-follow-on-shortlist.md](repo-root/app/docs/source-user-priority-follow-on-shortlist.md)
-- [source-candidate-to-brief-routing-matrix.md](repo-root/app/docs/source-candidate-to-brief-routing-matrix.md)
-- [osint-framework-intake-routing-memo.md](repo-root/app/docs/osint-framework-intake-routing-memo.md)
-- [source-discovery-reputation-governance-packet.md](repo-root/app/docs/source-discovery-reputation-governance-packet.md)
-- [source-onboarding-contract.md](repo-root/app/docs/source-onboarding-contract.md)
+- [source-assignment-board.md](../source-assignment-board.md)
+- [source-validation-status.md](../source-validation-status.md)
+- [source-workflow-validation-plan.md](../source-workflow-validation-plan.md)
+- [source-user-priority-routing-governance-packet.md](../source-user-priority-routing-governance-packet.md)
+- [source-user-priority-follow-on-shortlist.md](../source-user-priority-follow-on-shortlist.md)
+- [source-candidate-to-brief-routing-matrix.md](../source-candidate-to-brief-routing-matrix.md)
+- [osint-framework-intake-routing-memo.md](../osint-framework-intake-routing-memo.md)
+- [source-discovery-reputation-governance-packet.md](../source-discovery-reputation-governance-packet.md)
+- [source-onboarding-contract.md](../source-onboarding-contract.md)
 
 Manager-routing surfaces that should usually match the authoritative docs above:
 
-- [source-routing-priority-memo.md](repo-root/app/docs/source-routing-priority-memo.md)
-- [phase2-next-biggest-wins-packet.md](repo-root/app/docs/phase2-next-biggest-wins-packet.md)
-- [phase2-next-after-next-shortlist.md](repo-root/app/docs/phase2-next-after-next-shortlist.md)
-- [reporting-desk-phase2-roadmap.md](repo-root/app/docs/reporting-desk-phase2-roadmap.md)
-- [source-fusion-reporting-input-inventory.md](repo-root/app/docs/source-fusion-reporting-input-inventory.md)
-- [source-prompt-index.md](repo-root/app/docs/source-prompt-index.md)
-- [source-ownership-consumption-map.md](repo-root/app/docs/source-ownership-consumption-map.md)
+- [source-routing-priority-memo.md](../source-routing-priority-memo.md)
+- [phase2-next-biggest-wins-packet.md](../phase2-next-biggest-wins-packet.md)
+- [phase2-next-after-next-shortlist.md](../phase2-next-after-next-shortlist.md)
+- [reporting-desk-phase2-roadmap.md](../reporting-desk-phase2-roadmap.md)
+- [source-fusion-reporting-input-inventory.md](../source-fusion-reporting-input-inventory.md)
+- [source-prompt-index.md](../source-prompt-index.md)
+- [source-ownership-consumption-map.md](../source-ownership-consumption-map.md)
 
 Agent-history surfaces to use as evidence, not as status truth by themselves:
 
@@ -121,7 +121,7 @@ Agent-history surfaces to use as evidence, not as status truth by themselves:
 
 For `Gov AI`:
 
-- treat [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md), [source-validation-status.md](repo-root/app/docs/source-validation-status.md), and [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md) as the source-status stack
+- treat [source-assignment-board.md](../source-assignment-board.md), [source-validation-status.md](../source-validation-status.md), and [source-workflow-validation-plan.md](../source-workflow-validation-plan.md) as the source-status stack
 - if a source is described differently anywhere else, reconcile toward those three docs, not toward older chat-era packet wording
 - keep the user-priority follow-on frontier narrowed to `GeoNames`, `HDX`, `UNOSAT on HDX`, and `ReliefWeb` verification unless newer progress explicitly lands one of them
 
@@ -139,9 +139,9 @@ For `Platform AI`:
 ## What not to break
 
 - do not demote the authoritative role of:
-  - [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md)
-  - [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-  - [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md)
+  - [source-assignment-board.md](../source-assignment-board.md)
+  - [source-validation-status.md](../source-validation-status.md)
+  - [source-workflow-validation-plan.md](../source-workflow-validation-plan.md)
 - do not reopen landed user-priority sources as fake fresh wins:
   - `CISA KEV`
   - `RDAP`

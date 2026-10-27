@@ -1,6 +1,6 @@
 # Phase 2 Source Acceleration Briefs
 
-Verified on April 29, 2026 against the existing no-auth registry in [data_sources.noauth.registry.json](repo-root/app/docs/data_sources.noauth.registry.json) and official provider docs/endpoints.
+Verified on April 29, 2026 against the existing no-auth registry in [data_sources.noauth.registry.json](data_sources.noauth.registry.json) and official provider docs/endpoints.
 
 These are implementation briefs and paste-ready handoff prompts only.
 

@@ -11,22 +11,22 @@ Use it to decide:
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the primary truth for source status.
+- [source-assignment-board.md](source-assignment-board.md) remains the primary truth for source status.
 - This refresh is a planning/ranking layer only.
-- [source-consolidated-noauth-registry.md](repo-root/app/docs/source-consolidated-noauth-registry.md) is candidate/backlog context only and does not promote implementation, validation, or assignment status by itself.
+- [source-consolidated-noauth-registry.md](source-consolidated-noauth-registry.md) is candidate/backlog context only and does not promote implementation, validation, or assignment status by itself.
 
 ## Inputs Used
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md)
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-- [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md)
-- [source-prompt-index.md](repo-root/app/docs/source-prompt-index.md)
-- [source-routing-priority-memo.md](repo-root/app/docs/source-routing-priority-memo.md)
-- [source-next-routing-packets.md](repo-root/app/docs/source-next-routing-packets.md)
-- [source-quick-assign-packets-data-ai-rss.md](repo-root/app/docs/source-quick-assign-packets-data-ai-rss.md)
-- [source-routing-batch7-base-earth-reference.md](repo-root/app/docs/source-routing-batch7-base-earth-reference.md)
-- [data-ai-rss-batch3-routing-packets.md](repo-root/app/docs/data-ai-rss-batch3-routing-packets.md)
-- [data_sources.noauth.registry.json](repo-root/app/docs/data_sources.noauth.registry.json)
+- [source-assignment-board.md](source-assignment-board.md)
+- [source-validation-status.md](source-validation-status.md)
+- [source-workflow-validation-plan.md](source-workflow-validation-plan.md)
+- [source-prompt-index.md](source-prompt-index.md)
+- [source-routing-priority-memo.md](source-routing-priority-memo.md)
+- [source-next-routing-packets.md](source-next-routing-packets.md)
+- [source-quick-assign-packets-data-ai-rss.md](source-quick-assign-packets-data-ai-rss.md)
+- [source-routing-batch7-base-earth-reference.md](source-routing-batch7-base-earth-reference.md)
+- [data-ai-rss-batch3-routing-packets.md](data-ai-rss-batch3-routing-packets.md)
+- [data_sources.noauth.registry.json](data_sources.noauth.registry.json)
 
 ## Recommended Next 8 Assignments
 
@@ -63,7 +63,7 @@ Owner follow-ons:
   - verify `eea-air-quality`, `singapore-nea-weather`, `esa-neocc-close-approaches`, and `imo-epos-geohazards`
 - Data:
   - keep the implemented starter, official cyber, infrastructure/status, OSINT/investigations, rights/civic/digital-policy, and fact-checking/disinformation waves bounded
-  - then route one grouped Batch 3 family from [data-ai-next-routing-after-family-summary.md](repo-root/app/docs/data-ai-next-routing-after-family-summary.md)
+  - then route one grouped Batch 3 family from [data-ai-next-routing-after-family-summary.md](data-ai-next-routing-after-family-summary.md)
   - start with `state-travel-advisories`
   - then `carbon-brief`
   - then one policy/think-tank or cyber-vendor/community follow-on family
@@ -78,13 +78,13 @@ After the current in-flight lanes (`france-vigicrues-hydrometry`, `finland-digit
 2. `hko-open-weather`
 3. `dmi-forecast-aws`
 
-For a cross-batch manager-facing ranking that also includes workflow-hardening and consumer follow-ons, use [source-routing-priority-memo.md](repo-root/app/docs/source-routing-priority-memo.md).
+For a cross-batch manager-facing ranking that also includes workflow-hardening and consumer follow-ons, use [source-routing-priority-memo.md](source-routing-priority-memo.md).
 
 Data AI note:
 
 - `cisa-cyber-advisories` and `first-epss` are already backend-first implemented Data AI slices.
 - the current implemented Data AI feed lane now includes the starter, official cyber, infrastructure/status, OSINT/investigations, rights/civic/digital-policy, and fact-checking/disinformation waves.
-- use [data-ai-next-routing-after-family-summary.md](repo-root/app/docs/data-ai-next-routing-after-family-summary.md) for the next grouped Batch 3 family rather than routing `full-fact`, `ncsc-uk-all`, `cert-fr-*`, or `cloudflare-radar` as fresh work.
+- use [data-ai-next-routing-after-family-summary.md](data-ai-next-routing-after-family-summary.md) for the next grouped Batch 3 family rather than routing `full-fact`, `ncsc-uk-all`, `cert-fr-*`, or `cloudflare-radar` as fresh work.
 
 ## Ranked Backlog
 
@@ -122,7 +122,7 @@ Data AI note:
   - functionally closer to `implemented` and `contract-tested` than to fresh backlog work
 - Repo evidence:
   - route `/api/aerospace/space/swpc-context`
-  - test file [test_swpc_contracts.py](repo-root/app/server/tests/test_swpc_contracts.py:1)
+  - test file [test_swpc_contracts.py](../server/tests/test_swpc_contracts.py:1)
   - client/query usage in aerospace inspector and app-shell
 - Planning note:
   - do not rank this as remaining backlog work
@@ -153,7 +153,7 @@ Hold themes:
 
 ## Validation Difficulty Notes
 
-This backlog uses the terminology from [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md):
+This backlog uses the terminology from [source-workflow-validation-plan.md](source-workflow-validation-plan.md):
 
 - `implemented`
   - the source slice exists in code
@@ -233,7 +233,7 @@ These notes add the latest Batch 3 source classifications without reranking the 
 
 These notes add the latest Batch 4 classifications without replacing the top-ranked assignment order above.
 
-Compact quick-assign packet coverage for the strongest Batch 4 geospatial handoffs is now available in [source-quick-assign-packets-batch4.md](repo-root/app/docs/source-quick-assign-packets-batch4.md).
+Compact quick-assign packet coverage for the strongest Batch 4 geospatial handoffs is now available in [source-quick-assign-packets-batch4.md](source-quick-assign-packets-batch4.md).
 
 New compact packets were added in the latest Batch 4 routing pass for:
 
@@ -282,7 +282,7 @@ New compact packets were added in the latest Batch 4 routing pass for:
 
 These notes add the latest Batch 5 classifications without replacing the current ranked queue above.
 
-Quick-assign packet coverage for the cleanest Batch 5 handoffs is now available in [source-quick-assign-packets-batch5.md](repo-root/app/docs/source-quick-assign-packets-batch5.md).
+Quick-assign packet coverage for the cleanest Batch 5 handoffs is now available in [source-quick-assign-packets-batch5.md](source-quick-assign-packets-batch5.md).
 
 New compact packets were added in the latest Batch 5 routing pass for:
 
@@ -324,7 +324,7 @@ New compact packets were added in the latest Batch 5 routing pass for:
 
 These notes add the latest Batch 6 classifications without replacing the current ranked queue above.
 
-Compact routing packets are now available in [source-quick-assign-packets-batch6.md](repo-root/app/docs/source-quick-assign-packets-batch6.md).
+Compact routing packets are now available in [source-quick-assign-packets-batch6.md](source-quick-assign-packets-batch6.md).
 
 ### Manager routing note
 
@@ -340,7 +340,7 @@ Current repo-local status truth:
 
 - `geosphere-austria-warnings`, `nasa-power-meteorology-solar`, `washington-vaac-advisories`, `anchorage-vaac-advisories`, `tokyo-vaac-advisories`, `nrc-event-notifications`, and `taiwan-cwa-aws-opendata` now have implemented backend-first or consumer-first slices in repo code.
 - Treat those as follow-on validation or bounded-consumer targets, not as fresh backlog assignments.
-- Use [data-ai-feed-rollout-ladder.md](repo-root/app/docs/data-ai-feed-rollout-ladder.md) for the next bounded Data AI feed-family wave rather than expanding this backlog table with broad feed polling.
+- Use [data-ai-feed-rollout-ladder.md](data-ai-feed-rollout-ladder.md) for the next bounded Data AI feed-family wave rather than expanding this backlog table with broad feed polling.
 
 ### Strong new assignment-ready additions
 

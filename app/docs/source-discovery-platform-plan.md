@@ -594,7 +594,7 @@ Validation:
 
 Agent framework:
 
-- [source-discovery-agent-framework.md](repo-root/app/docs/source-discovery-agent-framework.md)
+- [source-discovery-agent-framework.md](source-discovery-agent-framework.md)
 
 Slice 1: shared contract and docs
 

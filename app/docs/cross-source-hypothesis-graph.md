@@ -601,8 +601,8 @@ Agents must not:
 
 ## Related Docs
 
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
-- [data-ai-user-workflows.md](repo-root/app/docs/data-ai-user-workflows.md)
-- [fusion-layer-architecture.md](repo-root/app/docs/fusion-layer-architecture.md)
-- [safety-boundaries.md](repo-root/app/docs/safety-boundaries.md)
-- [prompt-injection-defense.md](repo-root/app/docs/prompt-injection-defense.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
+- [data-ai-user-workflows.md](data-ai-user-workflows.md)
+- [fusion-layer-architecture.md](fusion-layer-architecture.md)
+- [safety-boundaries.md](safety-boundaries.md)
+- [prompt-injection-defense.md](prompt-injection-defense.md)

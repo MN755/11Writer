@@ -9,16 +9,16 @@ Purpose:
 - use the pinned local Code - OSS snapshot as the reference source so the product does not end up looking like fake devtool cosplay
 
 Read together with:
-- [phase3-agent-management-plan.md](repo-root/app/docs/phase3-agent-management-plan.md)
-- [phase3-shared-ui-contract.md](repo-root/app/docs/phase3-shared-ui-contract.md)
-- [phase3-governance-sequencing-packet.md](repo-root/app/docs/phase3-governance-sequencing-packet.md)
-- [phase3-reporting-workbench-contract.md](repo-root/app/docs/phase3-reporting-workbench-contract.md)
-- [workbench-shell-contract.md](repo-root/app/docs/workbench-shell-contract.md)
-- [ui-integration.md](repo-root/app/docs/ui-integration.md)
-- [ui-primitive-migration-map.md](repo-root/app/docs/ui-primitive-migration-map.md)
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
-- [strategic-roadmap.md](repo-root/app/docs/strategic-roadmap.md)
-- [third_party/code-oss-reference/README.md](repo-root/third_party/code-oss-reference/README.md)
+- [phase3-agent-management-plan.md](phase3-agent-management-plan.md)
+- [phase3-shared-ui-contract.md](phase3-shared-ui-contract.md)
+- [phase3-governance-sequencing-packet.md](phase3-governance-sequencing-packet.md)
+- [phase3-reporting-workbench-contract.md](phase3-reporting-workbench-contract.md)
+- [workbench-shell-contract.md](workbench-shell-contract.md)
+- [ui-integration.md](ui-integration.md)
+- [ui-primitive-migration-map.md](ui-primitive-migration-map.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
+- [strategic-roadmap.md](strategic-roadmap.md)
+- [third_party/code-oss-reference/README.md](../../third_party/code-oss-reference/README.md)
 
 ## 1. Bottom-Line Target
 
@@ -113,7 +113,7 @@ No temporary Phase 3 workers should be introduced.
 
 The official local reference snapshot is:
 
-- [third_party/code-oss-reference/README.md](repo-root/third_party/code-oss-reference/README.md)
+- [third_party/code-oss-reference/README.md](../../third_party/code-oss-reference/README.md)
 
 Pinned upstream commit:
 
@@ -123,54 +123,54 @@ Primary reference files already present locally:
 
 ### 3.1 Workbench shell and layout
 
-- [workbench.ts](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/workbench.ts)
-- [layout.ts](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/layout.ts)
-- [style.css](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/media/style.css)
-- [part.css](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/media/part.css)
+- [workbench.ts](../../third_party/code-oss-reference/src/vs/workbench/browser/workbench.ts)
+- [layout.ts](../../third_party/code-oss-reference/src/vs/workbench/browser/layout.ts)
+- [style.css](../../third_party/code-oss-reference/src/vs/workbench/browser/media/style.css)
+- [part.css](../../third_party/code-oss-reference/src/vs/workbench/browser/media/part.css)
 
 ### 3.2 Major workbench parts
 
-- [activitybarPart.ts](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/parts/activitybar/activitybarPart.ts)
-- [activitybarpart.css](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/parts/activitybar/media/activitybarpart.css)
-- [sidebarPart.ts](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/parts/sidebar/sidebarPart.ts)
-- [sidebarpart.css](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/parts/sidebar/media/sidebarpart.css)
-- [panelPart.ts](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/parts/panel/panelPart.ts)
-- [panelpart.css](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/parts/panel/media/panelpart.css)
-- [titlebarPart.ts](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/parts/titlebar/titlebarPart.ts)
-- [titlebarpart.css](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/parts/titlebar/media/titlebarpart.css)
-- [statusbarPart.ts](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/parts/statusbar/statusbarPart.ts)
-- [statusbarpart.css](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/parts/statusbar/media/statusbarpart.css)
-- [viewPane.ts](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/parts/views/viewPane.ts)
-- [viewPaneContainer.ts](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/parts/views/viewPaneContainer.ts)
-- [views.css](repo-root/third_party/code-oss-reference/src/vs/workbench/browser/parts/views/media/views.css)
+- [activitybarPart.ts](../../third_party/code-oss-reference/src/vs/workbench/browser/parts/activitybar/activitybarPart.ts)
+- [activitybarpart.css](../../third_party/code-oss-reference/src/vs/workbench/browser/parts/activitybar/media/activitybarpart.css)
+- [sidebarPart.ts](../../third_party/code-oss-reference/src/vs/workbench/browser/parts/sidebar/sidebarPart.ts)
+- [sidebarpart.css](../../third_party/code-oss-reference/src/vs/workbench/browser/parts/sidebar/media/sidebarpart.css)
+- [panelPart.ts](../../third_party/code-oss-reference/src/vs/workbench/browser/parts/panel/panelPart.ts)
+- [panelpart.css](../../third_party/code-oss-reference/src/vs/workbench/browser/parts/panel/media/panelpart.css)
+- [titlebarPart.ts](../../third_party/code-oss-reference/src/vs/workbench/browser/parts/titlebar/titlebarPart.ts)
+- [titlebarpart.css](../../third_party/code-oss-reference/src/vs/workbench/browser/parts/titlebar/media/titlebarpart.css)
+- [statusbarPart.ts](../../third_party/code-oss-reference/src/vs/workbench/browser/parts/statusbar/statusbarPart.ts)
+- [statusbarpart.css](../../third_party/code-oss-reference/src/vs/workbench/browser/parts/statusbar/media/statusbarpart.css)
+- [viewPane.ts](../../third_party/code-oss-reference/src/vs/workbench/browser/parts/views/viewPane.ts)
+- [viewPaneContainer.ts](../../third_party/code-oss-reference/src/vs/workbench/browser/parts/views/viewPaneContainer.ts)
+- [views.css](../../third_party/code-oss-reference/src/vs/workbench/browser/parts/views/media/views.css)
 
 ### 3.3 Shared browser UI primitives
 
-- [inputBox.ts](repo-root/third_party/code-oss-reference/src/vs/base/browser/ui/inputbox/inputBox.ts)
-- [inputBox.css](repo-root/third_party/code-oss-reference/src/vs/base/browser/ui/inputbox/inputBox.css)
-- [button.ts](repo-root/third_party/code-oss-reference/src/vs/base/browser/ui/button/button.ts)
-- [button.css](repo-root/third_party/code-oss-reference/src/vs/base/browser/ui/button/button.css)
-- [dropdown.ts](repo-root/third_party/code-oss-reference/src/vs/base/browser/ui/dropdown/dropdown.ts)
-- [dropdown.css](repo-root/third_party/code-oss-reference/src/vs/base/browser/ui/dropdown/dropdown.css)
-- [toolbar.ts](repo-root/third_party/code-oss-reference/src/vs/base/browser/ui/toolbar/toolbar.ts)
-- [toolbar.css](repo-root/third_party/code-oss-reference/src/vs/base/browser/ui/toolbar/toolbar.css)
-- [list.ts](repo-root/third_party/code-oss-reference/src/vs/base/browser/ui/list/list.ts)
-- [list.css](repo-root/third_party/code-oss-reference/src/vs/base/browser/ui/list/list.css)
-- [splitview.ts](repo-root/third_party/code-oss-reference/src/vs/base/browser/ui/splitview/splitview.ts)
-- [splitview.css](repo-root/third_party/code-oss-reference/src/vs/base/browser/ui/splitview/splitview.css)
+- [inputBox.ts](../../third_party/code-oss-reference/src/vs/base/browser/ui/inputbox/inputBox.ts)
+- [inputBox.css](../../third_party/code-oss-reference/src/vs/base/browser/ui/inputbox/inputBox.css)
+- [button.ts](../../third_party/code-oss-reference/src/vs/base/browser/ui/button/button.ts)
+- [button.css](../../third_party/code-oss-reference/src/vs/base/browser/ui/button/button.css)
+- [dropdown.ts](../../third_party/code-oss-reference/src/vs/base/browser/ui/dropdown/dropdown.ts)
+- [dropdown.css](../../third_party/code-oss-reference/src/vs/base/browser/ui/dropdown/dropdown.css)
+- [toolbar.ts](../../third_party/code-oss-reference/src/vs/base/browser/ui/toolbar/toolbar.ts)
+- [toolbar.css](../../third_party/code-oss-reference/src/vs/base/browser/ui/toolbar/toolbar.css)
+- [list.ts](../../third_party/code-oss-reference/src/vs/base/browser/ui/list/list.ts)
+- [list.css](../../third_party/code-oss-reference/src/vs/base/browser/ui/list/list.css)
+- [splitview.ts](../../third_party/code-oss-reference/src/vs/base/browser/ui/splitview/splitview.ts)
+- [splitview.css](../../third_party/code-oss-reference/src/vs/base/browser/ui/splitview/splitview.css)
 
 ### 3.4 Theme and token references
 
-- [colorRegistry.ts](repo-root/third_party/code-oss-reference/src/vs/platform/theme/common/colorRegistry.ts)
-- [baseColors.ts](repo-root/third_party/code-oss-reference/src/vs/platform/theme/common/colors/baseColors.ts)
-- [inputColors.ts](repo-root/third_party/code-oss-reference/src/vs/platform/theme/common/colors/inputColors.ts)
-- [theme.ts](repo-root/third_party/code-oss-reference/src/vs/platform/theme/common/theme.ts)
+- [colorRegistry.ts](../../third_party/code-oss-reference/src/vs/platform/theme/common/colorRegistry.ts)
+- [baseColors.ts](../../third_party/code-oss-reference/src/vs/platform/theme/common/colors/baseColors.ts)
+- [inputColors.ts](../../third_party/code-oss-reference/src/vs/platform/theme/common/colors/inputColors.ts)
+- [theme.ts](../../third_party/code-oss-reference/src/vs/platform/theme/common/theme.ts)
 
 ### 3.5 Initial theme JSON references
 
-- [light_vs.json](repo-root/third_party/code-oss-reference/extensions/theme-defaults/themes/light_vs.json)
-- [dark_vs.json](repo-root/third_party/code-oss-reference/extensions/theme-defaults/themes/dark_vs.json)
-- [abyss-color-theme.json](repo-root/third_party/code-oss-reference/extensions/theme-abyss/themes/abyss-color-theme.json)
+- [light_vs.json](../../third_party/code-oss-reference/extensions/theme-defaults/themes/light_vs.json)
+- [dark_vs.json](../../third_party/code-oss-reference/extensions/theme-defaults/themes/dark_vs.json)
+- [abyss-color-theme.json](../../third_party/code-oss-reference/extensions/theme-abyss/themes/abyss-color-theme.json)
 
 ## 4. What We Should Mirror From Code - OSS
 
@@ -286,8 +286,8 @@ Likely controls:
 
 Likely current anchors in the app:
 
-- [TopBar.tsx](repo-root/app/client/src/features/status/TopBar.tsx)
-- [HudBar.tsx](repo-root/app/client/src/features/status/HudBar.tsx)
+- [TopBar.tsx](../client/src/features/status/TopBar.tsx)
+- [HudBar.tsx](../client/src/features/status/HudBar.tsx)
 
 Rules:
 
@@ -333,7 +333,7 @@ Purpose:
 
 Current likely anchor:
 
-- [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
+- [InspectorPanel.tsx](../client/src/features/inspector/InspectorPanel.tsx)
 
 The inspector should answer:
 
@@ -424,8 +424,8 @@ Purpose:
 
 Current anchors:
 
-- [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-- [CesiumViewport.tsx](repo-root/app/client/src/components/CesiumViewport.tsx)
+- [AppShell.tsx](../client/src/features/app-shell/AppShell.tsx)
+- [CesiumViewport.tsx](../client/src/components/CesiumViewport.tsx)
 
 Output types:
 
@@ -526,8 +526,8 @@ Use Code - OSS view container and list references to shape these.
 
 These should extend the current primitive direction in:
 
-- [primitives.tsx](repo-root/app/client/src/components/ui/primitives.tsx)
-- [ui-primitives.css](repo-root/app/client/src/styles/ui-primitives.css)
+- [primitives.tsx](../client/src/components/ui/primitives.tsx)
+- [ui-primitives.css](../client/src/styles/ui-primitives.css)
 
 Required shared families:
 
@@ -602,9 +602,9 @@ Token families should cover:
 
 Initial color mapping should reference:
 
-- `Standard Light` -> [light_vs.json](repo-root/third_party/code-oss-reference/extensions/theme-defaults/themes/light_vs.json)
-- `Standard Dark` -> [dark_vs.json](repo-root/third_party/code-oss-reference/extensions/theme-defaults/themes/dark_vs.json)
-- `Abyss` -> [abyss-color-theme.json](repo-root/third_party/code-oss-reference/extensions/theme-abyss/themes/abyss-color-theme.json)
+- `Standard Light` -> [light_vs.json](../../third_party/code-oss-reference/extensions/theme-defaults/themes/light_vs.json)
+- `Standard Dark` -> [dark_vs.json](../../third_party/code-oss-reference/extensions/theme-defaults/themes/dark_vs.json)
+- `Abyss` -> [abyss-color-theme.json](../../third_party/code-oss-reference/extensions/theme-abyss/themes/abyss-color-theme.json)
 
 Important rule:
 
@@ -643,13 +643,13 @@ Phase 3 should reshape the frontend around the workbench.
 
 Current high-collision files:
 
-- [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-- [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-- [LayerPanel.tsx](repo-root/app/client/src/features/layers/LayerPanel.tsx)
-- [WebcamOperationsPanel.tsx](repo-root/app/client/src/features/layers/WebcamOperationsPanel.tsx)
-- [global.css](repo-root/app/client/src/styles/global.css)
-- [queries.ts](repo-root/app/client/src/lib/queries.ts)
-- [store.ts](repo-root/app/client/src/lib/store.ts)
+- [AppShell.tsx](../client/src/features/app-shell/AppShell.tsx)
+- [InspectorPanel.tsx](../client/src/features/inspector/InspectorPanel.tsx)
+- [LayerPanel.tsx](../client/src/features/layers/LayerPanel.tsx)
+- [WebcamOperationsPanel.tsx](../client/src/features/layers/WebcamOperationsPanel.tsx)
+- [global.css](../client/src/styles/global.css)
+- [queries.ts](../client/src/lib/queries.ts)
+- [store.ts](../client/src/lib/store.ts)
 
 ## 11.2 Target module shape
 
@@ -1017,7 +1017,7 @@ A migration slice is done only if:
 - theme switching still works
 - smoke or deterministic validation still passes where relevant
 
-Detailed slice-type acceptance criteria and the active/deferred/blocked status vocabulary live in [phase3-governance-sequencing-packet.md](repo-root/app/docs/phase3-governance-sequencing-packet.md).
+Detailed slice-type acceptance criteria and the active/deferred/blocked status vocabulary live in [phase3-governance-sequencing-packet.md](phase3-governance-sequencing-packet.md).
 
 ## 16. Anti-Patterns
 
@@ -1040,7 +1040,7 @@ The first practical follow-ons should be:
 1. create the Phase 3 theme-token contract
 2. create the shared control primitive contract for inputs, buttons, selects, tabs, and toolbars
 3. create the workbench shell contract for rail, sidebar, top bar, center workspace, inspector, and status strip
-   - current contract: [workbench-shell-contract.md](repo-root/app/docs/workbench-shell-contract.md)
+   - current contract: [workbench-shell-contract.md](workbench-shell-contract.md)
 4. create the mode-router contract
 5. create the Phase 3 reporting workbench contract for reports, exports, evidence rows, readiness, and question briefings
 6. create the first migration packet for `AppShell`, `InspectorPanel`, and `LayerPanel`
@@ -1067,7 +1067,7 @@ That gives 11Writer the right outcome:
 
 The first concrete Systems AI Phase 3 contract now lives in:
 
-- [phase3-shared-ui-contract.md](repo-root/app/docs/phase3-shared-ui-contract.md)
+- [phase3-shared-ui-contract.md](phase3-shared-ui-contract.md)
 
 It establishes:
 

@@ -1,6 +1,6 @@
 # Finland Digitraffic Fixture Plan
 
-This document prepares the first deterministic fixture slice for [`finland-digitraffic-road-cameras`](repo-root/app/server/src/services/camera_registry.py).
+This document prepares the first deterministic fixture slice for [`finland-digitraffic-road-cameras`](../server/src/services/camera_registry.py).
 
 Current source lifecycle status:
 
@@ -182,7 +182,7 @@ Minimum fixture set:
 
 The repo now includes a tiny synthetic fixture skeleton at:
 
-- [`app/server/data/finland_digitraffic_weathercam_fixture.json`](repo-root/app/server/data/finland_digitraffic_weathercam_fixture.json)
+- [`app/server/data/finland_digitraffic_weathercam_fixture.json`](../server/data/finland_digitraffic_weathercam_fixture.json)
 
 This file is intentionally small and synthetic:
 

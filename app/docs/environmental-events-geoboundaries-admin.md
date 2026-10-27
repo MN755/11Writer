@@ -57,7 +57,7 @@ Normalized row fields:
 Fixture-first behavior:
 - default mode is `fixture`
 - deterministic fixture:
-  - [geoboundaries_admin_bel_adm1_fixture.json](repo-root/app/server/data/geoboundaries_admin_bel_adm1_fixture.json)
+  - [geoboundaries_admin_bel_adm1_fixture.json](../server/data/geoboundaries_admin_bel_adm1_fixture.json)
 - live mode is backend-only and still stays pinned to the same `gbOpen/BEL/ADM1` endpoint family
 
 Guardrails:

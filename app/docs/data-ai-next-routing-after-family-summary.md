@@ -10,8 +10,8 @@ Purpose:
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the source-status truth.
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md) remains the validation-traceability truth.
+- [source-assignment-board.md](source-assignment-board.md) remains the source-status truth.
+- [source-validation-status.md](source-validation-status.md) remains the validation-traceability truth.
 - Atlas candidate docs remain routing input only, not implementation or workflow-validation proof.
 - A compact backend readiness/export snapshot now exists for implemented Data AI families; use it as the export/readiness surface before reopening any new family expansion.
 - A compact backend family review surface now exists at `GET /api/feeds/data-ai/source-families/review`; use it for coverage review before reopening any new family expansion.
@@ -276,8 +276,8 @@ Status:
 
 ## Related Docs
 
-- [data-ai-rss-batch3-routing-packets.md](repo-root/app/docs/data-ai-rss-batch3-routing-packets.md)
-- [data-ai-feed-rollout-ladder.md](repo-root/app/docs/data-ai-feed-rollout-ladder.md)
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md)
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-- [source-prompt-index.md](repo-root/app/docs/source-prompt-index.md)
+- [data-ai-rss-batch3-routing-packets.md](data-ai-rss-batch3-routing-packets.md)
+- [data-ai-feed-rollout-ladder.md](data-ai-feed-rollout-ladder.md)
+- [source-assignment-board.md](source-assignment-board.md)
+- [source-validation-status.md](source-validation-status.md)
+- [source-prompt-index.md](source-prompt-index.md)

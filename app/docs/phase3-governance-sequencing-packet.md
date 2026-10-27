@@ -11,14 +11,14 @@ Purpose:
 - provide a durable doc-memory layer for active, blocked, and complete Phase 3 UI slices
 
 Read with:
-- [phase3-agent-management-plan.md](repo-root/app/docs/phase3-agent-management-plan.md)
-- [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md)
-- [ui-integration.md](repo-root/app/docs/ui-integration.md)
-- [ui-primitive-migration-map.md](repo-root/app/docs/ui-primitive-migration-map.md)
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
-- [phase3-spatial-mode-contract.md](repo-root/app/docs/phase3-spatial-mode-contract.md)
-- [phase3-handoffs/gather-ai.md](repo-root/app/docs/phase3-handoffs/gather-ai.md)
-- [phase3-handoffs/connect-ai.md](repo-root/app/docs/phase3-handoffs/connect-ai.md)
+- [phase3-agent-management-plan.md](phase3-agent-management-plan.md)
+- [phase3-code-oss-workbench-spec.md](phase3-code-oss-workbench-spec.md)
+- [ui-integration.md](ui-integration.md)
+- [ui-primitive-migration-map.md](ui-primitive-migration-map.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
+- [phase3-spatial-mode-contract.md](phase3-spatial-mode-contract.md)
+- [phase3-handoffs/gather-ai.md](phase3-handoffs/gather-ai.md)
+- [phase3-handoffs/connect-ai.md](phase3-handoffs/connect-ai.md)
 
 ## Phase 3 Governance Rules
 

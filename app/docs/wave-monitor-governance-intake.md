@@ -4,9 +4,9 @@ This packet is the current governance and ownership intake surface for Wave Moni
 
 Use it with:
 
-- [7po8-integration-plan.md](repo-root/app/docs/7po8-integration-plan.md)
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
-- [release-readiness.md](repo-root/app/docs/release-readiness.md)
+- [7po8-integration-plan.md](7po8-integration-plan.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
+- [release-readiness.md](release-readiness.md)
 
 Wave Monitor status in current repo evidence:
 

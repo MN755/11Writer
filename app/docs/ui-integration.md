@@ -6,15 +6,15 @@
 
 This document defines the first consolidation slice, the current duplication hotspots, and the rules domain agents should follow when adding UI.
 
-Workflow consolidation should follow the single workspace model in [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md): `User sees information -> user wants more information -> user can decide or move on`.
+Workflow consolidation should follow the single workspace model in [unified-user-workflows.md](unified-user-workflows.md): `User sees information -> user wants more information -> user can decide or move on`.
 
-For rollout sequencing and section-by-section migration targets, see [ui-primitive-migration-map.md](repo-root/app/docs/ui-primitive-migration-map.md).
+For rollout sequencing and section-by-section migration targets, see [ui-primitive-migration-map.md](ui-primitive-migration-map.md).
 
-For the full Phase 3 shell, theme, and Code - OSS reference-backed target, see [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md).
+For the full Phase 3 shell, theme, and Code - OSS reference-backed target, see [phase3-code-oss-workbench-spec.md](phase3-code-oss-workbench-spec.md).
 
-For the concrete Phase 3 token and shared-control contract, see [phase3-shared-ui-contract.md](repo-root/app/docs/phase3-shared-ui-contract.md).
+For the concrete Phase 3 token and shared-control contract, see [phase3-shared-ui-contract.md](phase3-shared-ui-contract.md).
 
-For canonical Phase 3 sequencing, slice acceptance, vocabulary enforcement, and one-off UI deviation handling, see [phase3-governance-sequencing-packet.md](repo-root/app/docs/phase3-governance-sequencing-packet.md).
+For canonical Phase 3 sequencing, slice acceptance, vocabulary enforcement, and one-off UI deviation handling, see [phase3-governance-sequencing-packet.md](phase3-governance-sequencing-packet.md).
 
 Phase 3 enforcement note:
 

@@ -140,7 +140,7 @@ It is not a source-certification, severity, readiness-for-action, or operational
 - Status:
   `prepared`
 - Scope:
-  the metadata-level aerospace smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs), including:
+  the metadata-level aerospace smoke assertions in [playwright_smoke.mjs](../client/scripts/playwright_smoke.mjs), including:
   `gpsjamContext`
   `aerospaceSourceReadiness`
   `aerospaceSourceReadinessBundle`

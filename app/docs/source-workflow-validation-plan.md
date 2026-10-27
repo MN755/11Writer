@@ -11,9 +11,9 @@ Purpose:
 
 Related docs:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md)
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-- [source-prompt-index.md](repo-root/app/docs/source-prompt-index.md)
+- [source-assignment-board.md](source-assignment-board.md)
+- [source-validation-status.md](source-validation-status.md)
+- [source-prompt-index.md](source-prompt-index.md)
 
 Important rules:
 
@@ -26,9 +26,9 @@ Important rules:
 
 Source discovery platform update:
 
-- [source-discovery-platform-plan.md](repo-root/app/docs/source-discovery-platform-plan.md:1) defines 7Po8-style source discovery as a core 11Writer platform capability.
-- [source-discovery-agent-framework.md](repo-root/app/docs/source-discovery-agent-framework.md:1) defines bounded discovery jobs, candidate-state handling, and no-hidden-crawler rules for implementation lanes.
-- [source-discovery-reputation-governance-packet.md](repo-root/app/docs/source-discovery-reputation-governance-packet.md:1) defines the compact policy boundary for candidate states, reputation observations, claim outcomes, and shared source-memory routing.
+- [source-discovery-platform-plan.md](source-discovery-platform-plan.md:1) defines 7Po8-style source discovery as a core 11Writer platform capability.
+- [source-discovery-agent-framework.md](source-discovery-agent-framework.md:1) defines bounded discovery jobs, candidate-state handling, and no-hidden-crawler rules for implementation lanes.
+- [source-discovery-reputation-governance-packet.md](source-discovery-reputation-governance-packet.md:1) defines the compact policy boundary for candidate states, reputation observations, claim outcomes, and shared source-memory routing.
 - Discovery outputs must be tracked as candidate/source-review/source-memory evidence, not as source implementation proof.
 - Any discovered candidate must preserve provenance, access result, machine-readability result, caveats, policy state, source-health state, source class, source reputation basis, wave-fit basis, duplicate checks, and owner recommendation before it can be routed for implementation.
 - Correctness reputation must be evaluated separately from mission relevance.
@@ -40,7 +40,7 @@ Source discovery platform update:
 
 Marine workflow update:
 
-- [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md:1) now records explicit workflow-validation evidence for:
+- [marine-workflow-validation.md](marine-workflow-validation.md:1) now records explicit workflow-validation evidence for:
   - `noaa-coops-tides-currents`
   - `noaa-ndbc-realtime`
   - `scottish-water-overflows`
@@ -61,7 +61,7 @@ Marine workflow update:
 
 Aerospace workflow update:
 
-- [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md:1) now records explicit workflow-validation goals and export expectations for:
+- [aerospace-workflow-validation.md](aerospace-workflow-validation.md:1) now records explicit workflow-validation goals and export expectations for:
   - `noaa-aviation-weather-center-data-api`
   - `faa-nas-airport-status`
   - `nasa-jpl-cneos`
@@ -175,7 +175,7 @@ Data workflow update:
   - `apnic-blog`
 - Treat that consumer as metadata-only workflow support over readiness/review/review-queue surfaces, not as source truth or workflow-validation proof.
 - None of these Data lanes should be treated as `workflow-validated` yet because no explicit consumer-path, smoke, or export-workflow validation is recorded.
-- The active bounded Data AI feed lane should not be widened into broad polling; use [data-ai-next-routing-after-family-summary.md](repo-root/app/docs/data-ai-next-routing-after-family-summary.md) plus [data-ai-rss-batch3-routing-packets.md](repo-root/app/docs/data-ai-rss-batch3-routing-packets.md) for the next grouped Batch 3 expansion only after the implemented waves stay stable, starting with official/public advisories rather than reopening implemented fact-checking, OSINT, or rights/civic families.
+- The active bounded Data AI feed lane should not be widened into broad polling; use [data-ai-next-routing-after-family-summary.md](data-ai-next-routing-after-family-summary.md) plus [data-ai-rss-batch3-routing-packets.md](data-ai-rss-batch3-routing-packets.md) for the next grouped Batch 3 expansion only after the implemented waves stay stable, starting with official/public advisories rather than reopening implemented fact-checking, OSINT, or rights/civic families.
 
 Cross-lane helper update:
 
@@ -306,7 +306,7 @@ Cross-lane helper update:
 
 Wave Monitor tool update:
 
-- [7po8-integration-plan.md](repo-root/app/docs/7po8-integration-plan.md:1) plus Atlas AI progress now record a fixture-backed Wave Monitor route at `/api/tools/waves/overview`.
+- [7po8-integration-plan.md](7po8-integration-plan.md:1) plus Atlas AI progress now record a fixture-backed Wave Monitor route at `/api/tools/waves/overview`.
 - Atlas AI progress now also records `tool-wave-monitor` integration into analyst evidence-timeline and source-readiness surfaces.
 - Treat Wave Monitor as an implemented tool surface and shared architecture input, not a source row and not a separate runtime.
 - Persistent storage, live connector execution, scheduler behavior, and Situation Workspace UI still remain outside current implemented proof.
@@ -314,7 +314,7 @@ Wave Monitor tool update:
 
 Source discovery memory update:
 
-- [source-discovery-platform-plan.md](repo-root/app/docs/source-discovery-platform-plan.md:1), [source-discovery-agent-framework.md](repo-root/app/docs/source-discovery-agent-framework.md:1), and Atlas AI progress now record a shared source-discovery runtime with overview, candidate-write, claim-outcome update, seed-url, record-source-extract, health-check, bounded expand, feed-link-scan, snapshot, reversal, review queue/actions, runtime status, and manual scheduler-tick routes.
+- [source-discovery-platform-plan.md](source-discovery-platform-plan.md:1), [source-discovery-agent-framework.md](source-discovery-agent-framework.md:1), and Atlas AI progress now record a shared source-discovery runtime with overview, candidate-write, claim-outcome update, seed-url, record-source-extract, health-check, bounded expand, feed-link-scan, snapshot, reversal, review queue/actions, runtime status, and manual scheduler-tick routes.
 - Current repo evidence supports persistence models, SQLite-backed session wiring, deterministic claim-outcome reputation updates, Wave Monitor candidate seeding, metadata-only health checks, bounded expansion jobs, content snapshots, review queue/actions, runtime status, and reputation reversal.
 - Connect AI progress now also records `runtime_scheduler_service.py` as conservative compatibility and status plumbing rather than proof of hidden background scheduling.
 - Connect AI progress now also records provider/runtime boundary truth where config presence is exposed by key-source name only, `fixture` remains deterministic and review-only, and `openai`, `OpenRouter`, `Anthropic`, `xAI`, `Google`, `OpenClaw`, and `ollama` remain gated by provider configuration, explicit network permission, and positive request budget.
@@ -953,8 +953,8 @@ Required:
   - fixture-backed marine context in `app/server/tests/smoke_fixture_app.py`
   - client hook `useMarineNoaaCoopsContextQuery`
   - downstream marine summary/export usage noted in repo evidence
-  - explicit contract guarantees in [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md:1)
-  - explicit workflow evidence in [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md:1)
+  - explicit contract guarantees in [marine-context-source-contract-matrix.md](marine-context-source-contract-matrix.md:1)
+  - explicit workflow evidence in [marine-workflow-validation.md](marine-workflow-validation.md:1)
   - CO-OPS observations preserve `observed` evidence basis semantics
 - Missing workflow evidence:
   - remaining gap is full-validation confirmation for `unavailable` or `degraded` source-health behavior and any live-mode caveat handling
@@ -1216,8 +1216,8 @@ Required:
   - fixture-backed marine context in `app/server/tests/smoke_fixture_app.py`
   - client hook `useMarineNdbcContextQuery`
   - downstream marine summary/export usage noted in repo evidence
-  - explicit contract guarantees in [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md:1)
-  - explicit workflow evidence in [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md:1)
+  - explicit contract guarantees in [marine-context-source-contract-matrix.md](marine-context-source-contract-matrix.md:1)
+  - explicit workflow evidence in [marine-workflow-validation.md](marine-workflow-validation.md:1)
   - NDBC observations preserve `observed` evidence basis semantics
 - Missing workflow evidence:
   - remaining gap is full-validation confirmation for `unavailable` or `degraded` source-health behavior and any live-mode caveat handling
@@ -1263,8 +1263,8 @@ Required:
   - fixture-backed marine context in `app/server/tests/smoke_fixture_app.py`
   - client hook `useMarineScottishWaterOverflowsQuery`
   - downstream marine summary/export usage noted in repo evidence
-  - explicit contract guarantees in [marine-context-source-contract-matrix.md](repo-root/app/docs/marine-context-source-contract-matrix.md:1)
-  - explicit workflow evidence in [marine-workflow-validation.md](repo-root/app/docs/marine-workflow-validation.md:1)
+  - explicit contract guarantees in [marine-context-source-contract-matrix.md](marine-context-source-contract-matrix.md:1)
+  - explicit workflow evidence in [marine-workflow-validation.md](marine-workflow-validation.md:1)
   - Scottish Water overflow events preserve `source-reported` evidence basis semantics
 - Missing workflow evidence:
   - remaining gap is full-validation confirmation for `unavailable` or `degraded` source-health behavior and any live-mode caveat handling

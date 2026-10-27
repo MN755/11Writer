@@ -50,38 +50,38 @@
 ## Files and surfaces to know
 
 - Backend feed registry and services:
-  - [data_ai_feed_registry.py](repo-root/app/server/src/services/data_ai_feed_registry.py)
-  - [data_ai_multi_feed_service.py](repo-root/app/server/src/services/data_ai_multi_feed_service.py)
-  - [data_ai_source_family_review_service.py](repo-root/app/server/src/services/data_ai_source_family_review_service.py)
-  - [data_ai_source_family_review_queue_service.py](repo-root/app/server/src/services/data_ai_source_family_review_queue_service.py)
-  - [data_ai_feeds.py](repo-root/app/server/src/routes/data_ai_feeds.py)
+  - [data_ai_feed_registry.py](../../server/src/services/data_ai_feed_registry.py)
+  - [data_ai_multi_feed_service.py](../../server/src/services/data_ai_multi_feed_service.py)
+  - [data_ai_source_family_review_service.py](../../server/src/services/data_ai_source_family_review_service.py)
+  - [data_ai_source_family_review_queue_service.py](../../server/src/services/data_ai_source_family_review_queue_service.py)
+  - [data_ai_feeds.py](../../server/src/routes/data_ai_feeds.py)
 - Backend endpoint-style context slices:
-  - [cisa_cyber_advisories_service.py](repo-root/app/server/src/services/cisa_cyber_advisories_service.py)
-  - [first_epss_service.py](repo-root/app/server/src/services/first_epss_service.py)
-  - [nvd_cve_service.py](repo-root/app/server/src/services/nvd_cve_service.py)
-  - [cve_context_service.py](repo-root/app/server/src/services/cve_context_service.py)
-  - [cisa_kev_service.py](repo-root/app/server/src/services/cisa_kev_service.py)
-  - [rdap_context_service.py](repo-root/app/server/src/services/rdap_context_service.py)
-  - [crtsh_service.py](repo-root/app/server/src/services/crtsh_service.py)
-  - [sec_edgar_service.py](repo-root/app/server/src/services/sec_edgar_service.py)
-  - [usaspending_service.py](repo-root/app/server/src/services/usaspending_service.py)
-  - [internet_context.py](repo-root/app/server/src/routes/internet_context.py)
-  - [institutional_context.py](repo-root/app/server/src/routes/institutional_context.py)
+  - [cisa_cyber_advisories_service.py](../../server/src/services/cisa_cyber_advisories_service.py)
+  - [first_epss_service.py](../../server/src/services/first_epss_service.py)
+  - [nvd_cve_service.py](../../server/src/services/nvd_cve_service.py)
+  - [cve_context_service.py](../../server/src/services/cve_context_service.py)
+  - [cisa_kev_service.py](../../server/src/services/cisa_kev_service.py)
+  - [rdap_context_service.py](../../server/src/services/rdap_context_service.py)
+  - [crtsh_service.py](../../server/src/services/crtsh_service.py)
+  - [sec_edgar_service.py](../../server/src/services/sec_edgar_service.py)
+  - [usaspending_service.py](../../server/src/services/usaspending_service.py)
+  - [internet_context.py](../../server/src/routes/internet_context.py)
+  - [institutional_context.py](../../server/src/routes/institutional_context.py)
 - Shared contracts and settings:
-  - [api.py](repo-root/app/server/src/types/api.py)
-  - [settings.py](repo-root/app/server/src/config/settings.py)
+  - [api.py](../../server/src/types/api.py)
+  - [settings.py](../../server/src/config/settings.py)
 - Client reporting helper surfaces:
-  - [dataAiSourceIntelligence.ts](repo-root/app/client/src/features/inspector/dataAiSourceIntelligence.ts)
-  - [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  - [queries.ts](repo-root/app/client/src/lib/queries.ts)
-  - [api.ts](repo-root/app/client/src/types/api.ts)
-  - [dataAiSourceIntelligenceRegression.mjs](repo-root/app/client/scripts/dataAiSourceIntelligenceRegression.mjs)
+  - [dataAiSourceIntelligence.ts](../../client/src/features/inspector/dataAiSourceIntelligence.ts)
+  - [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  - [queries.ts](../../client/src/lib/queries.ts)
+  - [api.ts](../../client/src/types/api.ts)
+  - [dataAiSourceIntelligenceRegression.mjs](../../client/scripts/dataAiSourceIntelligenceRegression.mjs)
 - Primary docs to trust:
-  - [cyber-context-sources.md](repo-root/app/docs/cyber-context-sources.md)
-  - [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-  - [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md)
-  - [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md)
-  - [agent-progress/data-ai.md](repo-root/app/docs/agent-progress/data-ai.md)
+  - [cyber-context-sources.md](../cyber-context-sources.md)
+  - [source-validation-status.md](../source-validation-status.md)
+  - [source-assignment-board.md](../source-assignment-board.md)
+  - [source-workflow-validation-plan.md](../source-workflow-validation-plan.md)
+  - [agent-progress/data-ai.md](../agent-progress/data-ai.md)
 
 ## Validation already run
 
@@ -115,7 +115,7 @@
 ## What the next AI should do first
 
 - For reporting-oriented Phase 3 work:
-  - start by reading [cyber-context-sources.md](repo-root/app/docs/cyber-context-sources.md), [source-validation-status.md](repo-root/app/docs/source-validation-status.md), and [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md)
+  - start by reading [cyber-context-sources.md](../cyber-context-sources.md), [source-validation-status.md](../source-validation-status.md), and [source-workflow-validation-plan.md](../source-workflow-validation-plan.md)
   - treat `dataAiSourceIntelligence` as the existing reporting helper hub rather than building a parallel consumer
   - prefer extending existing export-safe metadata packages over adding raw-text-heavy views
 - For Platform AI:

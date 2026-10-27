@@ -63,54 +63,54 @@ Candidate posture snapshot:
 
 Core registry and lifecycle posture:
 
-- [`app/server/src/services/camera_registry.py`](repo-root/app/server/src/services/camera_registry.py)
-- [`app/server/src/services/camera_candidate_endpoint_report.py`](repo-root/app/server/src/services/camera_candidate_endpoint_report.py)
-- [`app/server/src/services/camera_candidate_graduation_plan.py`](repo-root/app/server/src/services/camera_candidate_graduation_plan.py)
-- [`app/server/src/services/camera_sandbox_validation_report.py`](repo-root/app/server/src/services/camera_sandbox_validation_report.py)
+- [`app/server/src/services/camera_registry.py`](../../server/src/services/camera_registry.py)
+- [`app/server/src/services/camera_candidate_endpoint_report.py`](../../server/src/services/camera_candidate_endpoint_report.py)
+- [`app/server/src/services/camera_candidate_graduation_plan.py`](../../server/src/services/camera_candidate_graduation_plan.py)
+- [`app/server/src/services/camera_sandbox_validation_report.py`](../../server/src/services/camera_sandbox_validation_report.py)
 
 Source-ops summary and reporting surfaces:
 
-- [`app/server/src/services/camera_source_ops_detail.py`](repo-root/app/server/src/services/camera_source_ops_detail.py)
-- [`app/server/src/services/camera_source_ops_report_index.py`](repo-root/app/server/src/services/camera_source_ops_report_index.py)
-- [`app/server/src/services/camera_source_ops_export_summary.py`](repo-root/app/server/src/services/camera_source_ops_export_summary.py)
-- [`app/server/src/services/camera_source_ops_review_queue.py`](repo-root/app/server/src/services/camera_source_ops_review_queue.py)
-- [`app/server/src/services/camera_source_ops_evidence_packets.py`](repo-root/app/server/src/services/camera_source_ops_evidence_packets.py)
-- [`app/server/src/services/camera_source_ops_export_readiness.py`](repo-root/app/server/src/services/camera_source_ops_export_readiness.py)
+- [`app/server/src/services/camera_source_ops_detail.py`](../../server/src/services/camera_source_ops_detail.py)
+- [`app/server/src/services/camera_source_ops_report_index.py`](../../server/src/services/camera_source_ops_report_index.py)
+- [`app/server/src/services/camera_source_ops_export_summary.py`](../../server/src/services/camera_source_ops_export_summary.py)
+- [`app/server/src/services/camera_source_ops_review_queue.py`](../../server/src/services/camera_source_ops_review_queue.py)
+- [`app/server/src/services/camera_source_ops_evidence_packets.py`](../../server/src/services/camera_source_ops_evidence_packets.py)
+- [`app/server/src/services/camera_source_ops_export_readiness.py`](../../server/src/services/camera_source_ops_export_readiness.py)
 
 Cohort-level evidence artifacts:
 
-- [`app/server/src/services/camera_source_ops_candidate_network_summary.py`](repo-root/app/server/src/services/camera_source_ops_candidate_network_summary.py)
-- [`app/server/src/services/camera_source_ops_promotion_readiness_summary.py`](repo-root/app/server/src/services/camera_source_ops_promotion_readiness_summary.py)
-- [`app/server/src/services/camera_source_ops_sandbox_readiness_comparison.py`](repo-root/app/server/src/services/camera_source_ops_sandbox_readiness_comparison.py)
-- [`app/server/src/services/camera_source_ops_portfolio_digest.py`](repo-root/app/server/src/services/camera_source_ops_portfolio_digest.py)
-- [`app/server/src/services/camera_source_ops_review_priority_packet.py`](repo-root/app/server/src/services/camera_source_ops_review_priority_packet.py)
-- [`app/server/src/services/camera_source_ops_regional_portfolio_packet.py`](repo-root/app/server/src/services/camera_source_ops_regional_portfolio_packet.py)
-- [`app/server/src/services/camera_source_ops_osm_lead_discovery_packet.py`](repo-root/app/server/src/services/camera_source_ops_osm_lead_discovery_packet.py)
-- [`app/server/src/services/camera_source_ops_osm_lead_review_reconciliation_packet.py`](repo-root/app/server/src/services/camera_source_ops_osm_lead_review_reconciliation_packet.py)
+- [`app/server/src/services/camera_source_ops_candidate_network_summary.py`](../../server/src/services/camera_source_ops_candidate_network_summary.py)
+- [`app/server/src/services/camera_source_ops_promotion_readiness_summary.py`](../../server/src/services/camera_source_ops_promotion_readiness_summary.py)
+- [`app/server/src/services/camera_source_ops_sandbox_readiness_comparison.py`](../../server/src/services/camera_source_ops_sandbox_readiness_comparison.py)
+- [`app/server/src/services/camera_source_ops_portfolio_digest.py`](../../server/src/services/camera_source_ops_portfolio_digest.py)
+- [`app/server/src/services/camera_source_ops_review_priority_packet.py`](../../server/src/services/camera_source_ops_review_priority_packet.py)
+- [`app/server/src/services/camera_source_ops_regional_portfolio_packet.py`](../../server/src/services/camera_source_ops_regional_portfolio_packet.py)
+- [`app/server/src/services/camera_source_ops_osm_lead_discovery_packet.py`](../../server/src/services/camera_source_ops_osm_lead_discovery_packet.py)
+- [`app/server/src/services/camera_source_ops_osm_lead_review_reconciliation_packet.py`](../../server/src/services/camera_source_ops_osm_lead_review_reconciliation_packet.py)
 
 API contracts and route surface:
 
-- [`app/server/src/types/api.py`](repo-root/app/server/src/types/api.py)
-- [`app/server/src/routes/cameras.py`](repo-root/app/server/src/routes/cameras.py)
+- [`app/server/src/types/api.py`](../../server/src/types/api.py)
+- [`app/server/src/routes/cameras.py`](../../server/src/routes/cameras.py)
 
 Candidate connectors and fixtures:
 
-- [`app/server/src/adapters/cameras.py`](repo-root/app/server/src/adapters/cameras.py)
-- [`app/server/data/finland_digitraffic_weathercam_fixture.json`](repo-root/app/server/data/finland_digitraffic_weathercam_fixture.json)
-- [`app/server/data/nsw_live_traffic_cameras_fixture.json`](repo-root/app/server/data/nsw_live_traffic_cameras_fixture.json)
-- [`app/server/data/quebec_mtmd_traffic_cameras_fixture.json`](repo-root/app/server/data/quebec_mtmd_traffic_cameras_fixture.json)
-- [`app/server/data/maryland_chart_traffic_cameras_fixture.json`](repo-root/app/server/data/maryland_chart_traffic_cameras_fixture.json)
-- [`app/server/data/fingal_traffic_cameras_fixture.json`](repo-root/app/server/data/fingal_traffic_cameras_fixture.json)
-- [`app/server/data/baton_rouge_traffic_cameras_fixture.json`](repo-root/app/server/data/baton_rouge_traffic_cameras_fixture.json)
-- [`app/server/data/vancouver_web_cam_url_links_fixture.json`](repo-root/app/server/data/vancouver_web_cam_url_links_fixture.json)
-- [`app/server/data/caltrans_cctv_cameras_fixture.json`](repo-root/app/server/data/caltrans_cctv_cameras_fixture.json)
+- [`app/server/src/adapters/cameras.py`](../../server/src/adapters/cameras.py)
+- [`app/server/data/finland_digitraffic_weathercam_fixture.json`](../../server/data/finland_digitraffic_weathercam_fixture.json)
+- [`app/server/data/nsw_live_traffic_cameras_fixture.json`](../../server/data/nsw_live_traffic_cameras_fixture.json)
+- [`app/server/data/quebec_mtmd_traffic_cameras_fixture.json`](../../server/data/quebec_mtmd_traffic_cameras_fixture.json)
+- [`app/server/data/maryland_chart_traffic_cameras_fixture.json`](../../server/data/maryland_chart_traffic_cameras_fixture.json)
+- [`app/server/data/fingal_traffic_cameras_fixture.json`](../../server/data/fingal_traffic_cameras_fixture.json)
+- [`app/server/data/baton_rouge_traffic_cameras_fixture.json`](../../server/data/baton_rouge_traffic_cameras_fixture.json)
+- [`app/server/data/vancouver_web_cam_url_links_fixture.json`](../../server/data/vancouver_web_cam_url_links_fixture.json)
+- [`app/server/data/caltrans_cctv_cameras_fixture.json`](../../server/data/caltrans_cctv_cameras_fixture.json)
 
 Docs that carry the lane truth:
 
-- [`app/docs/webcams.md`](repo-root/app/docs/webcams.md)
-- [`app/docs/webcam-source-lifecycle-policy.md`](repo-root/app/docs/webcam-source-lifecycle-policy.md)
-- [`app/docs/webcam-global-camera-candidate-batch-2026-05.md`](repo-root/app/docs/webcam-global-camera-candidate-batch-2026-05.md)
-- [`app/docs/agent-progress/features-webcam-ai.md`](repo-root/app/docs/agent-progress/features-webcam-ai.md)
+- [`app/docs/webcams.md`](../webcams.md)
+- [`app/docs/webcam-source-lifecycle-policy.md`](../webcam-source-lifecycle-policy.md)
+- [`app/docs/webcam-global-camera-candidate-batch-2026-05.md`](../webcam-global-camera-candidate-batch-2026-05.md)
+- [`app/docs/agent-progress/features-webcam-ai.md`](../agent-progress/features-webcam-ai.md)
 
 ## Validation already run
 
@@ -165,8 +165,8 @@ UI and surface caveats:
 
 For Workspace AI:
 
-- read [`app/docs/webcams.md`](repo-root/app/docs/webcams.md) and [`app/docs/webcam-source-lifecycle-policy.md`](repo-root/app/docs/webcam-source-lifecycle-policy.md) first
-- then inspect [`app/server/src/types/api.py`](repo-root/app/server/src/types/api.py) and the report/export services before changing route or contract shapes
+- read [`app/docs/webcams.md`](../webcams.md) and [`app/docs/webcam-source-lifecycle-policy.md`](../webcam-source-lifecycle-policy.md) first
+- then inspect [`app/server/src/types/api.py`](../../server/src/types/api.py) and the report/export services before changing route or contract shapes
 
 For Reporting AI:
 

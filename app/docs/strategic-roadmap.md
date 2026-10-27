@@ -10,15 +10,15 @@ The fusion layer is the product.
 
 This document is the strategic reference for project direction. It should be read together with:
 
-- [spatial-intelligence-loop.md](repo-root/app/docs/spatial-intelligence-loop.md)
-- [fusion-layer-architecture.md](repo-root/app/docs/fusion-layer-architecture.md)
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
-- [safety-boundaries.md](repo-root/app/docs/safety-boundaries.md)
-- [roadmap.md](repo-root/app/docs/roadmap.md)
-- [runtime-interface-requirements.md](repo-root/app/docs/runtime-interface-requirements.md)
-- [cross-platform-implementation-playbook.md](repo-root/app/docs/cross-platform-implementation-playbook.md)
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-- [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md)
+- [spatial-intelligence-loop.md](spatial-intelligence-loop.md)
+- [fusion-layer-architecture.md](fusion-layer-architecture.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
+- [safety-boundaries.md](safety-boundaries.md)
+- [roadmap.md](roadmap.md)
+- [runtime-interface-requirements.md](runtime-interface-requirements.md)
+- [cross-platform-implementation-playbook.md](cross-platform-implementation-playbook.md)
+- [source-validation-status.md](source-validation-status.md)
+- [phase3-code-oss-workbench-spec.md](phase3-code-oss-workbench-spec.md)
 
 ## Core Platform Operating Plan
 
@@ -36,7 +36,7 @@ What is currently true in repo:
 
 - the browser client plus FastAPI backend foundation is operational and is still the main implementation surface
 - research-grade Source Discovery backend breadth is implemented as bounded candidate, review, and runtime infrastructure
-- source breadth is ahead of validation maturity, so source-level claims should be checked against [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
+- source breadth is ahead of validation maturity, so source-level claims should be checked against [source-validation-status.md](source-validation-status.md)
 - Phase 3 is now active through the persistent controlled roster:
   - `Connect AI`
   - `Systems AI`
@@ -234,7 +234,7 @@ Not allowed:
 
 The fusion layer is the shared language across domains while preserving domain-specific semantics.
 
-Conceptual core objects should align with [fusion-layer-architecture.md](repo-root/app/docs/fusion-layer-architecture.md):
+Conceptual core objects should align with [fusion-layer-architecture.md](fusion-layer-architecture.md):
 
 - `SourceDefinition`
 - `SourceRun`
@@ -529,7 +529,7 @@ Status:
 
 Phase 3 management note:
 
-- the current controlled Phase 2 domain/source lanes have already handed off their work into repo docs and [phase3-handoffs](repo-root/app/docs/phase3-handoffs/README.md)
+- the current controlled Phase 2 domain/source lanes have already handed off their work into repo docs and [phase3-handoffs](phase3-handoffs/README.md)
 - `Connect AI` stays active
 - the active persistent Phase 3 roster is:
   - `Systems AI`
@@ -543,9 +543,9 @@ Phase 3 management note:
 - use a smaller persistent roster centered on UI/workflow ownership rather than source-family ownership
 - require shared common UI parts so agents do not keep reinventing text boxes, cards, badges, caveats, and empty states
 
-See [phase3-agent-management-plan.md](repo-root/app/docs/phase3-agent-management-plan.md).
+See [phase3-agent-management-plan.md](phase3-agent-management-plan.md).
 
-The concrete Phase 3 shell/theme/component target is in [phase3-code-oss-workbench-spec.md](repo-root/app/docs/phase3-code-oss-workbench-spec.md).
+The concrete Phase 3 shell/theme/component target is in [phase3-code-oss-workbench-spec.md](phase3-code-oss-workbench-spec.md).
 
 ### Phase 4: Final Polish and Resilient Expansion
 

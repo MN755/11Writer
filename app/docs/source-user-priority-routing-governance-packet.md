@@ -12,8 +12,8 @@ Use it to answer:
 
 Status rule:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains source-status truth.
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md) remains validation-traceability truth.
+- [source-assignment-board.md](source-assignment-board.md) remains source-status truth.
+- [source-validation-status.md](source-validation-status.md) remains validation-traceability truth.
 - Wonder, Atlas, Source Discovery, media/OCR, and runtime/provider surfaces remain peer, candidate, review, derived-evidence, or runtime input only unless explicitly promoted later.
 
 ## Landed In Current Wave
@@ -137,4 +137,4 @@ Treat these as safety-sensitive identity-enumeration utilities. Do not route the
 - `features-webcam`
   - the `Overpass API`, `OpenStreetMap`, and `Geofabrik` lead-support wave is now completed source-ops evidence; keep it below implementation proof and use only one bounded candidate follow-on if explicitly reopened
 - `gather`
-  - keep governance, bucketing, and duplicate-risk truth aligned with the packet above and use [source-user-priority-follow-on-shortlist.md](repo-root/app/docs/source-user-priority-follow-on-shortlist.md) for the next deconflicted handoff set
+  - keep governance, bucketing, and duplicate-risk truth aligned with the packet above and use [source-user-priority-follow-on-shortlist.md](source-user-priority-follow-on-shortlist.md) for the next deconflicted handoff set

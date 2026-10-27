@@ -15,7 +15,7 @@ Status rule:
 - source discovery creates candidates and review evidence only
 - source memory does not create an implemented source
 - source reputation does not create source truth
-- validation status still follows the normal lifecycle in [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md:1), [source-validation-status.md](repo-root/app/docs/source-validation-status.md:1), and [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md:1)
+- validation status still follows the normal lifecycle in [source-assignment-board.md](source-assignment-board.md:1), [source-validation-status.md](source-validation-status.md:1), and [source-workflow-validation-plan.md](source-workflow-validation-plan.md:1)
 
 ## Current Repo Evidence
 

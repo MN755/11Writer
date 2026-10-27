@@ -11,21 +11,21 @@ Use it to answer:
 
 Status note:
 
-- [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md) remains the source-status truth.
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md) remains the validation-traceability truth.
+- [source-assignment-board.md](source-assignment-board.md) remains the source-status truth.
+- [source-validation-status.md](source-validation-status.md) remains the validation-traceability truth.
 - This memo is a routing layer only.
 - Atlas backlog and registry docs remain candidate context only, not implementation proof.
-- [data-ai-feed-rollout-ladder.md](repo-root/app/docs/data-ai-feed-rollout-ladder.md) is the short sequencing surface for the next Data AI feed-family wave.
-- [source-next-routing-packets.md](repo-root/app/docs/source-next-routing-packets.md) is the compact cross-lane handoff packet surface for the next 8-12 bounded Manager assignments.
-- [source-discovery-reputation-governance-packet.md](repo-root/app/docs/source-discovery-reputation-governance-packet.md) is the routing boundary for source discovery, source reputation, claim outcomes, and shared source memory.
-- [osint-framework-intake-routing-memo.md](repo-root/app/docs/osint-framework-intake-routing-memo.md) is the routing boundary for Wonder audit and OSINT Framework candidate intake.
-- [source-candidate-to-brief-routing-matrix.md](repo-root/app/docs/source-candidate-to-brief-routing-matrix.md) is the compact gate between candidate evidence and Gather brief creation.
-- [source-quick-assign-packets-may-2026.md](repo-root/app/docs/source-quick-assign-packets-may-2026.md) is the current compact cross-lane packet set for the strongest surviving May 2026 candidates.
-- [phase2-next-biggest-wins-packet.md](repo-root/app/docs/phase2-next-biggest-wins-packet.md) is the compact Manager-facing larger-handoff surface after the latest controlled-agent completions.
-- [phase2-next-after-next-shortlist.md](repo-root/app/docs/phase2-next-after-next-shortlist.md) is the compact post-wave shortlist once the current larger controlled wave is closed.
-- [reporting-desk-phase2-roadmap.md](repo-root/app/docs/reporting-desk-phase2-roadmap.md) is the current reporting-desk direction surface for question-driven reporting inputs, validation gaps, and stale-source routing repair.
-- [source-user-priority-routing-governance-packet.md](repo-root/app/docs/source-user-priority-routing-governance-packet.md) is the compact bucketing surface for the latest user-supplied source list.
-- [source-user-priority-follow-on-shortlist.md](repo-root/app/docs/source-user-priority-follow-on-shortlist.md) is the compact next handoff surface after the landed user-priority wave.
+- [data-ai-feed-rollout-ladder.md](data-ai-feed-rollout-ladder.md) is the short sequencing surface for the next Data AI feed-family wave.
+- [source-next-routing-packets.md](source-next-routing-packets.md) is the compact cross-lane handoff packet surface for the next 8-12 bounded Manager assignments.
+- [source-discovery-reputation-governance-packet.md](source-discovery-reputation-governance-packet.md) is the routing boundary for source discovery, source reputation, claim outcomes, and shared source memory.
+- [osint-framework-intake-routing-memo.md](osint-framework-intake-routing-memo.md) is the routing boundary for Wonder audit and OSINT Framework candidate intake.
+- [source-candidate-to-brief-routing-matrix.md](source-candidate-to-brief-routing-matrix.md) is the compact gate between candidate evidence and Gather brief creation.
+- [source-quick-assign-packets-may-2026.md](source-quick-assign-packets-may-2026.md) is the current compact cross-lane packet set for the strongest surviving May 2026 candidates.
+- [phase2-next-biggest-wins-packet.md](phase2-next-biggest-wins-packet.md) is the compact Manager-facing larger-handoff surface after the latest controlled-agent completions.
+- [phase2-next-after-next-shortlist.md](phase2-next-after-next-shortlist.md) is the compact post-wave shortlist once the current larger controlled wave is closed.
+- [reporting-desk-phase2-roadmap.md](reporting-desk-phase2-roadmap.md) is the current reporting-desk direction surface for question-driven reporting inputs, validation gaps, and stale-source routing repair.
+- [source-user-priority-routing-governance-packet.md](source-user-priority-routing-governance-packet.md) is the compact bucketing surface for the latest user-supplied source list.
+- [source-user-priority-follow-on-shortlist.md](source-user-priority-follow-on-shortlist.md) is the compact next handoff surface after the landed user-priority wave.
 
 ## Current Domain Availability
 
@@ -78,7 +78,7 @@ Status note:
   - `/api/feeds/data-ai/source-families/review` is implemented as review metadata only and should not be treated as source truth or workflow validation.
   - `/api/feeds/data-ai/source-families/review-queue` is implemented as bounded family/source issue metadata only and should not be treated as source truth or workflow validation.
   - `dataAiSourceIntelligence` is implemented as a client-light metadata-only consumer, and its newer topic/context lens plus export-safe topic lines should not be treated as source truth or workflow validation by themselves.
-  - Use [data-ai-rss-batch3-routing-packets.md](repo-root/app/docs/data-ai-rss-batch3-routing-packets.md) to route the next grouped Batch 3 expansion after those implemented waves.
+  - Use [data-ai-rss-batch3-routing-packets.md](data-ai-rss-batch3-routing-packets.md) to route the next grouped Batch 3 expansion after those implemented waves.
   - The infrastructure/status context package over `cloudflare-radar`, `netblocks`, and `apnic-blog` is now completed in Data progress.
   - The Atlas-approved public cyber/internet feed expansion plus metadata-only long-tail intake/dedupe posture package now also appear completed in Data progress.
   - The bounded fusion-snapshot or claim-integrity helper and bounded report-brief package are now completed in Data progress.
@@ -95,13 +95,13 @@ Status note:
   - Keep `gather` on intake truth and candidate bucketing until one bounded machine-readable endpoint is pinned.
   - Do not route OSINT Framework listings straight into source implementation.
 - `candidate-to-brief gate`
-  - Use [source-candidate-to-brief-routing-matrix.md](repo-root/app/docs/source-candidate-to-brief-routing-matrix.md) before converting any Wonder, Atlas, source-discovery, or webcam candidate lead into a Gather brief or quick-assign packet.
+  - Use [source-candidate-to-brief-routing-matrix.md](source-candidate-to-brief-routing-matrix.md) before converting any Wonder, Atlas, source-discovery, or webcam candidate lead into a Gather brief or quick-assign packet.
   - No candidate should skip the minimum packet evidence gate.
 
 ## Source Discovery Routing
 
 - assign source discovery as candidate/review/governance work only
-- use [source-discovery-reputation-governance-packet.md](repo-root/app/docs/source-discovery-reputation-governance-packet.md) before any source-memory, reputation, or claim-outcome task
+- use [source-discovery-reputation-governance-packet.md](source-discovery-reputation-governance-packet.md) before any source-memory, reputation, or claim-outcome task
 - keep candidate states separate from implemented-source states
 - require provenance, access result, machine-readability result, source class, caveats, reputation basis, wave-fit basis, and owner recommendation
 - route shared runtime/storage truth to `connect`
@@ -111,7 +111,7 @@ Status note:
 
 ## OSINT Framework Routing
 
-- use [osint-framework-intake-routing-memo.md](repo-root/app/docs/osint-framework-intake-routing-memo.md) before routing Wonder audit results
+- use [osint-framework-intake-routing-memo.md](osint-framework-intake-routing-memo.md) before routing Wonder audit results
 - keep Wonder audit artifacts in candidate, review-directory, hold, or manual-review buckets until endpoint pinning is explicit
 - only route to `data` or a domain owner after one bounded machine-readable endpoint is pinned cleanly
 - do not treat OSINT Framework listings as approval, authority, legality, or workflow-validation proof
@@ -234,8 +234,8 @@ Current additional implemented feed families:
 
 Packet surfaces:
 
-- use [source-quick-assign-packets-data-ai-rss.md](repo-root/app/docs/source-quick-assign-packets-data-ai-rss.md) as the historical packet surface for the already implemented official cyber and infrastructure/status waves
-- use [data-ai-rss-batch3-routing-packets.md](repo-root/app/docs/data-ai-rss-batch3-routing-packets.md) for the next grouped Batch 3 expansion after the implemented cyber and infrastructure waves
+- use [source-quick-assign-packets-data-ai-rss.md](source-quick-assign-packets-data-ai-rss.md) as the historical packet surface for the already implemented official cyber and infrastructure/status waves
+- use [data-ai-rss-batch3-routing-packets.md](data-ai-rss-batch3-routing-packets.md) for the next grouped Batch 3 expansion after the implemented cyber and infrastructure waves
 
 Boundary rules:
 
@@ -281,8 +281,8 @@ Avoid stacking multiple frontend-heavy assignments at once while these caveats r
 
 ## Atlas Batch 7 Handling
 
-- Treat [source-acceleration-phase2-batch7-base-earth-briefs.md](repo-root/app/docs/source-acceleration-phase2-batch7-base-earth-briefs.md) as backlog and planning context only.
-- Use [source-routing-batch7-base-earth-reference.md](repo-root/app/docs/source-routing-batch7-base-earth-reference.md) for the first narrow static/reference Manager handoffs.
+- Treat [source-acceleration-phase2-batch7-base-earth-briefs.md](source-acceleration-phase2-batch7-base-earth-briefs.md) as backlog and planning context only.
+- Use [source-routing-batch7-base-earth-reference.md](source-routing-batch7-base-earth-reference.md) for the first narrow static/reference Manager handoffs.
 - Batch 7 base-earth/geography sources are not implementation proof, contract proof, or workflow-validation proof by themselves.
 - If Manager routes a Batch 7 source, keep it narrow and static/reference-first:
   - one physical theme
@@ -296,9 +296,9 @@ Avoid stacking multiple frontend-heavy assignments at once while these caveats r
 This memo is based on:
 
 - quick-assign packet coverage for Batch 4, Batch 5, and Batch 6
-- current assignment/status truth in [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md)
-- current validation truth in [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-- current workflow-gap truth in [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md)
+- current assignment/status truth in [source-assignment-board.md](source-assignment-board.md)
+- current validation truth in [source-validation-status.md](source-validation-status.md)
+- current workflow-gap truth in [source-workflow-validation-plan.md](source-workflow-validation-plan.md)
 - latest progress entries for Geospatial, Aerospace, Marine, Features/Webcam, and Connect
 - latest Data AI startup progress and Atlas Batch 7 intake progress
 

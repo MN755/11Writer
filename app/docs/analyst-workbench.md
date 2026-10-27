@@ -2,7 +2,7 @@
 
 The analyst workbench adds three local-first backend surfaces that compose existing fixture-backed sources without adding paid APIs, credentials, protected scraping, or live-network-dependent tests.
 
-For the broader product workflow target for Data AI feeds, lead queues, event clusters, drilldowns, source-health cards, and exportable context cards, see [data-ai-user-workflows.md](repo-root/app/docs/data-ai-user-workflows.md).
+For the broader product workflow target for Data AI feeds, lead queues, event clusters, drilldowns, source-health cards, and exportable context cards, see [data-ai-user-workflows.md](data-ai-user-workflows.md).
 
 ## Evidence Timeline
 

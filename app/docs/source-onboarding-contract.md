@@ -8,11 +8,11 @@ It exists to keep source expansion consistent across lanes without forcing every
 
 Use this with:
 
-- [source-ownership-consumption-map.md](repo-root/app/docs/source-ownership-consumption-map.md)
-- [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-- [source-fusion-reporting-input-inventory.md](repo-root/app/docs/source-fusion-reporting-input-inventory.md)
-- [reporting-desk-phase2-roadmap.md](repo-root/app/docs/reporting-desk-phase2-roadmap.md)
-- [safety-boundaries.md](repo-root/app/docs/safety-boundaries.md)
+- [source-ownership-consumption-map.md](source-ownership-consumption-map.md)
+- [source-validation-status.md](source-validation-status.md)
+- [source-fusion-reporting-input-inventory.md](source-fusion-reporting-input-inventory.md)
+- [reporting-desk-phase2-roadmap.md](reporting-desk-phase2-roadmap.md)
+- [safety-boundaries.md](safety-boundaries.md)
 
 ## Contract scope
 
@@ -247,8 +247,8 @@ This applies especially to:
 
 Current repo-local typed surfaces already provide much of the shared contract vocabulary:
 
-- [api.py](repo-root/app/server/src/types/api.py)
-- [api.ts](repo-root/app/client/src/types/api.ts)
+- [api.py](../server/src/types/api.py)
+- [api.ts](../client/src/types/api.ts)
 
 Current shared fields already cover most of:
 

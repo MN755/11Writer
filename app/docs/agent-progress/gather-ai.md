@@ -10,12 +10,12 @@ Task:
 
 What changed:
 - finished the current checkpoint cleanly without opening a new source-intake wave
-- wrote the Gather Phase 3 handoff packet at [gather-ai.md](repo-root/app/docs/phase3-handoffs/gather-ai.md:1)
+- wrote the Gather Phase 3 handoff packet at [gather-ai.md](../phase3-handoffs/gather-ai.md:1)
 - documented the most important outgoing governance truth for incoming Phase 3 chats:
   - the authoritative status stack is:
-    - [source-assignment-board.md](repo-root/app/docs/source-assignment-board.md:1)
-    - [source-validation-status.md](repo-root/app/docs/source-validation-status.md:1)
-    - [source-workflow-validation-plan.md](repo-root/app/docs/source-workflow-validation-plan.md:1)
+    - [source-assignment-board.md](../source-assignment-board.md:1)
+    - [source-validation-status.md](../source-validation-status.md:1)
+    - [source-workflow-validation-plan.md](../source-workflow-validation-plan.md:1)
   - the landed user-priority wave now includes:
     - `CISA KEV`
     - `RDAP`
@@ -73,7 +73,7 @@ What changed:
   - `aerospace`: `GPSJam` is landed backend-first
   - `features-webcam`: `OpenStreetMap` / `Overpass` / `Geofabrik` lead-support is completed source-ops evidence
 - no `19:41` source-wave lane remains in progress; the remaining active work is outside that source wave, including the Connect shared reporting-loop contract lane and narrower follow-through or workflow-closure lanes in other domains
-- created a new compact next-step packet at [source-user-priority-follow-on-shortlist.md](repo-root/app/docs/source-user-priority-follow-on-shortlist.md:1)
+- created a new compact next-step packet at [source-user-priority-follow-on-shortlist.md](../source-user-priority-follow-on-shortlist.md:1)
   - remaining clean next frontier is now:
     - `GeoNames`
     - `HDX`

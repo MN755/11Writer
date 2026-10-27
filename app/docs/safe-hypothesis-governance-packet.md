@@ -4,9 +4,9 @@ This packet defines the safe planning boundary for relationship and hypothesis f
 
 Use it with:
 
-- [cross-source-hypothesis-graph.md](repo-root/app/docs/cross-source-hypothesis-graph.md)
-- [fusion-layer-architecture.md](repo-root/app/docs/fusion-layer-architecture.md)
-- [unified-user-workflows.md](repo-root/app/docs/unified-user-workflows.md)
+- [cross-source-hypothesis-graph.md](cross-source-hypothesis-graph.md)
+- [fusion-layer-architecture.md](fusion-layer-architecture.md)
+- [unified-user-workflows.md](unified-user-workflows.md)
 
 Core frame:
 

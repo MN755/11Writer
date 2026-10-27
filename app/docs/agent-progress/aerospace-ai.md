@@ -8,7 +8,7 @@
   Finish the current aerospace slice at the smallest coherent checkpoint and write the Phase 3 Aerospace AI handoff packet without opening another source-expansion wave.
 - What changed:
   Recorded the new assignment version and stopped at a coherent checkpoint because the active hazard-context consumer slice was already complete.
-  Wrote the Aerospace AI Phase 3 handoff packet in [aerospace-ai.md](repo-root/app/docs/phase3-handoffs/aerospace-ai.md).
+  Wrote the Aerospace AI Phase 3 handoff packet in [aerospace-ai.md](../phase3-handoffs/aerospace-ai.md).
   The handoff documents:
   completed scope,
   current source/workflow posture,
@@ -20,8 +20,8 @@
   and why the current aerospace stack matters for Spatial AI, Reporting AI, Platform AI, and Connect AI.
   The handoff explicitly preserves observed versus derived versus contextual posture, source-readiness and source-health posture, the prepared-versus-executed smoke distinction, and the no-intent / no-causation guardrails across the aerospace reporting/export stack.
 - Files touched:
-  [aerospace-ai.md](repo-root/app/docs/phase3-handoffs/aerospace-ai.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospace-ai.md](../phase3-handoffs/aerospace-ai.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   No new product-code validation was run in this handoff-only pass.
   The handoff references the already completed current-slice validation recorded in the previous progress entry:
@@ -46,31 +46,31 @@
 - Task:
   Build one bounded aerospace hazard-context consumer follow-on over the completed GPSJam wave and the newly landed geospatial `NWS Alerts` and `NOAA nowCOAST` surfaces, without adding a new large panel or collapsing source semantics.
 - What changed:
-  Recorded the assignment version for this wave and completed the bounded hazard-context consumer artifact as [aerospaceHazardContextConsumerPacket.ts](repo-root/app/client/src/features/inspector/aerospaceHazardContextConsumerPacket.ts).
+  Recorded the assignment version for this wave and completed the bounded hazard-context consumer artifact as [aerospaceHazardContextConsumerPacket.ts](../../client/src/features/inspector/aerospaceHazardContextConsumerPacket.ts).
   The new packet is export/snapshot composition only and preserves explicit separation between:
   GPSJam GNSS-disruption context,
   NWS public weather advisories,
   and NOAA nowCOAST contextual map-layer metadata.
   It does not turn those feeds into aviation operational status, route-impact verdicts, outage claims, target-specific effects, safety consequences, or action recommendations.
-  Client coverage was completed by adding typed `NWS Alerts` and `nowCOAST` contracts and query hooks, wiring the packet into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) snapshot/export metadata as `aerospaceHazardContextConsumerPacket`, and extending [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) so existing export profiles can prioritize the packet without adding a new UI surface.
-  Deterministic smoke-fixture support was added in [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py) for `GET /api/events/nws-alerts/recent` and `GET /api/context/weather/nowcoast/layer-catalog`, and prepared aerospace smoke assertions were extended in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) to require `aerospaceHazardContextConsumerPacket`, hazard-separation guardrails, and export-profile metadata-key coverage.
-  Deterministic regression coverage was added in [aerospaceHazardContextConsumerPacketRegression.mjs](repo-root/app/client/scripts/aerospaceHazardContextConsumerPacketRegression.mjs) and wired into [package.json](repo-root/app/client/package.json).
+  Client coverage was completed by adding typed `NWS Alerts` and `nowCOAST` contracts and query hooks, wiring the packet into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) snapshot/export metadata as `aerospaceHazardContextConsumerPacket`, and extending [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) so existing export profiles can prioritize the packet without adding a new UI surface.
+  Deterministic smoke-fixture support was added in [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py) for `GET /api/events/nws-alerts/recent` and `GET /api/context/weather/nowcoast/layer-catalog`, and prepared aerospace smoke assertions were extended in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) to require `aerospaceHazardContextConsumerPacket`, hazard-separation guardrails, and export-profile metadata-key coverage.
+  Deterministic regression coverage was added in [aerospaceHazardContextConsumerPacketRegression.mjs](../../client/scripts/aerospaceHazardContextConsumerPacketRegression.mjs) and wired into [package.json](../../client/package.json).
   Aerospace docs were updated so this new artifact is documented as bounded hazard-context composition only and not a new source of aviation truth.
 - Files touched:
-  [api.ts](repo-root/app/client/src/types/api.ts)
-  [queries.ts](repo-root/app/client/src/lib/queries.ts)
-  [aerospaceHazardContextConsumerPacket.ts](repo-root/app/client/src/features/inspector/aerospaceHazardContextConsumerPacket.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospaceHazardContextConsumerPacketRegression.mjs](repo-root/app/client/scripts/aerospaceHazardContextConsumerPacketRegression.mjs)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [package.json](repo-root/app/client/package.json)
-  [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [api.ts](../../client/src/types/api.ts)
+  [queries.ts](../../client/src/lib/queries.ts)
+  [aerospaceHazardContextConsumerPacket.ts](../../client/src/features/inspector/aerospaceHazardContextConsumerPacket.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospaceHazardContextConsumerPacketRegression.mjs](../../client/scripts/aerospaceHazardContextConsumerPacketRegression.mjs)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [package.json](../../client/package.json)
+  [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `cmd /c node --experimental-strip-types --experimental-specifier-resolution=node scripts/aerospaceHazardContextConsumerPacketRegression.mjs` passed from `app/client`.
   `python -m pytest app/server/tests/test_gpsjam_contracts.py -q` passed.
@@ -100,36 +100,36 @@
   GPSJam was selected because it was the user-priority fresh source and fits the aerospace workflow as bounded GNSS-disruption context without replacing existing aircraft, airport, weather, or space-weather truth.
   Backend GPSJam route, fixture-first adapter/service, settings, typed contracts, and contract coverage were completed and preserved explicit no-outage/no-attribution/no-target-effect caveats.
   Client GPSJam types, query hook, and pure helper were integrated into existing aerospace export/digest/question surfaces only, preserving source id, source mode, source health, daily date posture, flagged-hex counts, top-sample summary, export-safe lines, and explicit does-not-prove lines under `gpsjamContext`.
-  Deterministic regression coverage was added in [aerospaceGpsJamContextRegression.mjs](repo-root/app/client/scripts/aerospaceGpsJamContextRegression.mjs) and wired into [package.json](repo-root/app/client/package.json).
-  Aerospace smoke-prep support was completed by adding a deterministic GPSJam smoke-fixture route and source-status entry in [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py), plus prepared metadata assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) for `gpsjamContext`, selected-target packet GNSS-awareness coverage, current-awareness digest GPSJam distinction lines, and export-profile metadata-key coverage.
+  Deterministic regression coverage was added in [aerospaceGpsJamContextRegression.mjs](../../client/scripts/aerospaceGpsJamContextRegression.mjs) and wired into [package.json](../../client/package.json).
+  Aerospace smoke-prep support was completed by adding a deterministic GPSJam smoke-fixture route and source-status entry in [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py), plus prepared metadata assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) for `gpsjamContext`, selected-target packet GNSS-awareness coverage, current-awareness digest GPSJam distinction lines, and export-profile metadata-key coverage.
   Aerospace docs were updated so GPSJam is documented as contextual GNSS-disruption awareness only and not proof of outage, jamming attribution, intent, route impact, safety consequence, or action need.
 - Files touched:
-  [settings.py](repo-root/app/server/src/config/settings.py)
-  [api.py](repo-root/app/server/src/types/api.py)
-  [gpsjam.py](repo-root/app/server/src/adapters/gpsjam.py)
-  [gpsjam_service.py](repo-root/app/server/src/services/gpsjam_service.py)
-  [gpsjam.py](repo-root/app/server/src/routes/gpsjam.py)
-  [status_service.py](repo-root/app/server/src/services/status_service.py)
-  [app.py](repo-root/app/server/src/app.py)
-  [gpsjam_context_fixture.json](repo-root/app/server/data/gpsjam_context_fixture.json)
-  [test_gpsjam_contracts.py](repo-root/app/server/tests/test_gpsjam_contracts.py)
-  [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py)
-  [api.ts](repo-root/app/client/src/types/api.ts)
-  [queries.ts](repo-root/app/client/src/lib/queries.ts)
-  [aerospaceGpsJamContext.ts](repo-root/app/client/src/features/inspector/aerospaceGpsJamContext.ts)
-  [aerospaceSelectedTargetOperationalQuestionPacket.ts](repo-root/app/client/src/features/inspector/aerospaceSelectedTargetOperationalQuestionPacket.ts)
-  [aerospaceCurrentAwarenessDigest.ts](repo-root/app/client/src/features/inspector/aerospaceCurrentAwarenessDigest.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospaceGpsJamContextRegression.mjs](repo-root/app/client/scripts/aerospaceGpsJamContextRegression.mjs)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [package.json](repo-root/app/client/package.json)
-  [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [settings.py](../../server/src/config/settings.py)
+  [api.py](../../server/src/types/api.py)
+  [gpsjam.py](../../server/src/adapters/gpsjam.py)
+  [gpsjam_service.py](../../server/src/services/gpsjam_service.py)
+  [gpsjam.py](../../server/src/routes/gpsjam.py)
+  [status_service.py](../../server/src/services/status_service.py)
+  [app.py](../../server/src/app.py)
+  [gpsjam_context_fixture.json](../../server/data/gpsjam_context_fixture.json)
+  [test_gpsjam_contracts.py](../../server/tests/test_gpsjam_contracts.py)
+  [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py)
+  [api.ts](../../client/src/types/api.ts)
+  [queries.ts](../../client/src/lib/queries.ts)
+  [aerospaceGpsJamContext.ts](../../client/src/features/inspector/aerospaceGpsJamContext.ts)
+  [aerospaceSelectedTargetOperationalQuestionPacket.ts](../../client/src/features/inspector/aerospaceSelectedTargetOperationalQuestionPacket.ts)
+  [aerospaceCurrentAwarenessDigest.ts](../../client/src/features/inspector/aerospaceCurrentAwarenessDigest.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospaceGpsJamContextRegression.mjs](../../client/scripts/aerospaceGpsJamContextRegression.mjs)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [package.json](../../client/package.json)
+  [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `cmd /c node --experimental-strip-types --experimental-specifier-resolution=node scripts/aerospaceGpsJamContextRegression.mjs` passed from `app/client`.
   `python -m pytest app/server/tests/test_gpsjam_contracts.py -q` passed.
@@ -156,7 +156,7 @@
 - Task:
   Build one bounded aerospace question briefing packet on top of the existing aerospace reporting stack without adding a new large panel.
 - What changed:
-  Added the new pure helper [aerospaceQuestionBriefingPacket.ts](repo-root/app/client/src/features/inspector/aerospaceQuestionBriefingPacket.ts).
+  Added the new pure helper [aerospaceQuestionBriefingPacket.ts](../../client/src/features/inspector/aerospaceQuestionBriefingPacket.ts).
   The packet builds on the existing aerospace reporting stack only:
   selected-target evidence summary,
   `aerospaceReportBriefPackage`,
@@ -170,23 +170,23 @@
   It does not add a new source and it does not add a new large panel.
   The packet preserves selected-target or area posture, active question posture, active context profile, validation and readiness posture, source ids, source modes, source health states, freshness posture, current/advisory/archive/observed distinction lines, lineage across packet/brief/digest/handoff surfaces, briefing-safe export lines, explicit caveats, and does-not-prove lines.
   Integration stayed bounded to snapshot/export surfaces only:
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) now preserves `aerospaceQuestionBriefingPacket`,
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) now carries the packet metadata key and footer section,
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts) now tracks the helper and metadata key,
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) now has prepared metadata assertions for the question briefing packet,
-  and [aerospaceQuestionBriefingPacketRegression.mjs](repo-root/app/client/scripts/aerospaceQuestionBriefingPacketRegression.mjs) was added as deterministic coverage.
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) now preserves `aerospaceQuestionBriefingPacket`,
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) now carries the packet metadata key and footer section,
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts) now tracks the helper and metadata key,
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) now has prepared metadata assertions for the question briefing packet,
+  and [aerospaceQuestionBriefingPacketRegression.mjs](../../client/scripts/aerospaceQuestionBriefingPacketRegression.mjs) was added as deterministic coverage.
 - Files touched:
-  [aerospaceQuestionBriefingPacket.ts](repo-root/app/client/src/features/inspector/aerospaceQuestionBriefingPacket.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [aerospaceQuestionBriefingPacketRegression.mjs](repo-root/app/client/scripts/aerospaceQuestionBriefingPacketRegression.mjs)
-  [package.json](repo-root/app/client/package.json)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceQuestionBriefingPacket.ts](../../client/src/features/inspector/aerospaceQuestionBriefingPacket.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [aerospaceQuestionBriefingPacketRegression.mjs](../../client/scripts/aerospaceQuestionBriefingPacketRegression.mjs)
+  [package.json](../../client/package.json)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `cmd /c node --experimental-strip-types --experimental-specifier-resolution=node scripts/aerospaceQuestionBriefingPacketRegression.mjs` passed from `app/client`.
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed.
@@ -210,7 +210,7 @@
 - Task:
   Build one bounded aerospace reporting handoff contract on top of the existing aerospace reporting stack without adding a new large panel.
 - What changed:
-  Added the new pure helper [aerospaceReportingHandoffContract.ts](repo-root/app/client/src/features/inspector/aerospaceReportingHandoffContract.ts).
+  Added the new pure helper [aerospaceReportingHandoffContract.ts](../../client/src/features/inspector/aerospaceReportingHandoffContract.ts).
   The contract builds on the existing aerospace reporting stack only:
   selected-target evidence summary,
   `aerospaceReportBriefPackage`,
@@ -223,23 +223,23 @@
   It does not create a new analyst-facing panel.
   It preserves selected-target or area posture, current/advisory/archive/observed distinction lines, source ids, source modes, source health states, evidence bases, validation and readiness posture, lineage across packet/brief/digest surfaces, export-safe handoff lines, explicit caveats, and does-not-prove lines.
   Integration stayed bounded to snapshot/export surfaces only:
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) now preserves `aerospaceReportingHandoffContract`,
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) now carries the contract metadata key and footer section,
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts) now tracks the helper and metadata key,
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) now has prepared metadata assertions for the handoff contract,
-  and [aerospaceReportingHandoffContractRegression.mjs](repo-root/app/client/scripts/aerospaceReportingHandoffContractRegression.mjs) was added as deterministic coverage.
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) now preserves `aerospaceReportingHandoffContract`,
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) now carries the contract metadata key and footer section,
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts) now tracks the helper and metadata key,
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) now has prepared metadata assertions for the handoff contract,
+  and [aerospaceReportingHandoffContractRegression.mjs](../../client/scripts/aerospaceReportingHandoffContractRegression.mjs) was added as deterministic coverage.
 - Files touched:
-  [aerospaceReportingHandoffContract.ts](repo-root/app/client/src/features/inspector/aerospaceReportingHandoffContract.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [aerospaceReportingHandoffContractRegression.mjs](repo-root/app/client/scripts/aerospaceReportingHandoffContractRegression.mjs)
-  [package.json](repo-root/app/client/package.json)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceReportingHandoffContract.ts](../../client/src/features/inspector/aerospaceReportingHandoffContract.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [aerospaceReportingHandoffContractRegression.mjs](../../client/scripts/aerospaceReportingHandoffContractRegression.mjs)
+  [package.json](../../client/package.json)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `cmd /c node --experimental-strip-types --experimental-specifier-resolution=node scripts/aerospaceReportingHandoffContractRegression.mjs` passed from `app/client`.
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed.
@@ -263,7 +263,7 @@
 - Task:
   Build a bounded aerospace current-awareness digest on top of the existing aerospace reporting stack without adding a new large panel.
 - What changed:
-  Added the new pure helper [aerospaceCurrentAwarenessDigest.ts](repo-root/app/client/src/features/inspector/aerospaceCurrentAwarenessDigest.ts).
+  Added the new pure helper [aerospaceCurrentAwarenessDigest.ts](../../client/src/features/inspector/aerospaceCurrentAwarenessDigest.ts).
   The digest builds on the existing aerospace reporting stack only:
   selected-target evidence summary,
   `aerospaceOperationalContext`,
@@ -275,24 +275,24 @@
   and `aerospaceWorkflowValidationEvidenceSnapshot`.
   It preserves current target-or-area posture, active context profile, validation posture, continuity posture, source ids, source modes, source health states, evidence bases, current/archive/advisory/observed distinction lines, observe/orient/prioritize/explain sections, caveats, and explicit does-not-prove lines.
   Integration stayed bounded to snapshot/export surfaces only:
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) now preserves `aerospaceCurrentAwarenessDigest` metadata,
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) can prioritize compact digest footer lines,
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts) now tracks the helper and metadata key,
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) now has prepared metadata assertions for the digest,
-  and [aerospaceCurrentAwarenessDigestRegression.mjs](repo-root/app/client/scripts/aerospaceCurrentAwarenessDigestRegression.mjs) was added as deterministic coverage.
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) now preserves `aerospaceCurrentAwarenessDigest` metadata,
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) can prioritize compact digest footer lines,
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts) now tracks the helper and metadata key,
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) now has prepared metadata assertions for the digest,
+  and [aerospaceCurrentAwarenessDigestRegression.mjs](../../client/scripts/aerospaceCurrentAwarenessDigestRegression.mjs) was added as deterministic coverage.
   No new large inspector panel was added.
 - Files touched:
-  [aerospaceCurrentAwarenessDigest.ts](repo-root/app/client/src/features/inspector/aerospaceCurrentAwarenessDigest.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [aerospaceCurrentAwarenessDigestRegression.mjs](repo-root/app/client/scripts/aerospaceCurrentAwarenessDigestRegression.mjs)
-  [package.json](repo-root/app/client/package.json)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceCurrentAwarenessDigest.ts](../../client/src/features/inspector/aerospaceCurrentAwarenessDigest.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [aerospaceCurrentAwarenessDigestRegression.mjs](../../client/scripts/aerospaceCurrentAwarenessDigestRegression.mjs)
+  [package.json](../../client/package.json)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `cmd /c node --experimental-strip-types --experimental-specifier-resolution=node scripts/aerospaceCurrentAwarenessDigestRegression.mjs` passed from `app/client`.
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed.
@@ -316,7 +316,7 @@
 - Task:
   Build a bounded selected-target operational question packet on top of the existing aerospace reporting stack without adding a new large panel.
 - What changed:
-  Added the new pure helper [aerospaceSelectedTargetOperationalQuestionPacket.ts](repo-root/app/client/src/features/inspector/aerospaceSelectedTargetOperationalQuestionPacket.ts).
+  Added the new pure helper [aerospaceSelectedTargetOperationalQuestionPacket.ts](../../client/src/features/inspector/aerospaceSelectedTargetOperationalQuestionPacket.ts).
   This helper builds on the existing aerospace reporting stack only:
   selected-target evidence summary,
   `aerospaceOperationalContext`,
@@ -339,22 +339,22 @@
   and `explain` sections,
   caveats,
   and explicit does-not-prove lines.
-  Wired the packet into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) as snapshot/export metadata under `aerospaceSelectedTargetOperationalQuestionPacket` and into [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `selected-target-operational-question-packet` footer section plus export-profile metadata-key coverage.
-  Added the focused regression [aerospaceSelectedTargetOperationalQuestionPacketRegression.mjs](repo-root/app/client/scripts/aerospaceSelectedTargetOperationalQuestionPacketRegression.mjs) and exposed it in [package.json](repo-root/app/client/package.json).
-  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so aircraft and satellite export-path checks now require `aerospaceSelectedTargetOperationalQuestionPacket`, distinct context-entry coverage, does-not-prove lines, and the question-packet guardrail.
-  Updated [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts), [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) so the packet is documented as a bounded selected-target operational-context question artifact rather than a new analyst-facing surface.
+  Wired the packet into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) as snapshot/export metadata under `aerospaceSelectedTargetOperationalQuestionPacket` and into [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `selected-target-operational-question-packet` footer section plus export-profile metadata-key coverage.
+  Added the focused regression [aerospaceSelectedTargetOperationalQuestionPacketRegression.mjs](../../client/scripts/aerospaceSelectedTargetOperationalQuestionPacketRegression.mjs) and exposed it in [package.json](../../client/package.json).
+  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so aircraft and satellite export-path checks now require `aerospaceSelectedTargetOperationalQuestionPacket`, distinct context-entry coverage, does-not-prove lines, and the question-packet guardrail.
+  Updated [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts), [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](../aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) so the packet is documented as a bounded selected-target operational-context question artifact rather than a new analyst-facing surface.
 - Files touched:
-  [aerospaceSelectedTargetOperationalQuestionPacket.ts](repo-root/app/client/src/features/inspector/aerospaceSelectedTargetOperationalQuestionPacket.ts)
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospaceSelectedTargetOperationalQuestionPacketRegression.mjs](repo-root/app/client/scripts/aerospaceSelectedTargetOperationalQuestionPacketRegression.mjs)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [package.json](repo-root/app/client/package.json)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceSelectedTargetOperationalQuestionPacket.ts](../../client/src/features/inspector/aerospaceSelectedTargetOperationalQuestionPacket.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospaceSelectedTargetOperationalQuestionPacketRegression.mjs](../../client/scripts/aerospaceSelectedTargetOperationalQuestionPacketRegression.mjs)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [package.json](../../client/package.json)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   From `app/client`, `cmd /c node --experimental-strip-types --experimental-specifier-resolution=node scripts/aerospaceSelectedTargetOperationalQuestionPacketRegression.mjs` passed and reported the expected packet id, selected-target label, available context count, gap count, and distinct context ids.
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
@@ -380,7 +380,7 @@
 - Task:
   Build a bounded aerospace space-weather continuity package on top of the existing aerospace reporting stack without adding a new large panel.
 - What changed:
-  Added the new pure helper [aerospaceSpaceWeatherContinuityPackage.ts](repo-root/app/client/src/features/inspector/aerospaceSpaceWeatherContinuityPackage.ts).
+  Added the new pure helper [aerospaceSpaceWeatherContinuityPackage.ts](../../client/src/features/inspector/aerospaceSpaceWeatherContinuityPackage.ts).
   This helper builds on existing aerospace reporting surfaces only:
   `aerospaceCurrentArchiveContext`,
   `geomagnetismContext`,
@@ -397,22 +397,22 @@
   caveats,
   and explicit does-not-prove lines.
   Current advisory context, archive metadata, and observed geomagnetism remain explicitly distinct and the guardrails stay non-causal and non-failure-claiming.
-  Wired the package into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) as snapshot/export metadata under `aerospaceSpaceWeatherContinuityPackage` and into [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `space-weather-continuity-package` footer section plus export-profile metadata-key coverage.
-  Added the focused regression [aerospaceSpaceWeatherContinuityPackageRegression.mjs](repo-root/app/client/scripts/aerospaceSpaceWeatherContinuityPackageRegression.mjs) and exposed it in [package.json](repo-root/app/client/package.json).
-  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so aircraft and satellite export-path checks now require `aerospaceSpaceWeatherContinuityPackage`, observed evidence-basis preservation, does-not-prove lines, and the distinct-source guardrail.
-  Updated [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts), [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) so the package is documented as bounded space-weather continuity accounting rather than a new analyst-facing surface.
+  Wired the package into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) as snapshot/export metadata under `aerospaceSpaceWeatherContinuityPackage` and into [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `space-weather-continuity-package` footer section plus export-profile metadata-key coverage.
+  Added the focused regression [aerospaceSpaceWeatherContinuityPackageRegression.mjs](../../client/scripts/aerospaceSpaceWeatherContinuityPackageRegression.mjs) and exposed it in [package.json](../../client/package.json).
+  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so aircraft and satellite export-path checks now require `aerospaceSpaceWeatherContinuityPackage`, observed evidence-basis preservation, does-not-prove lines, and the distinct-source guardrail.
+  Updated [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts), [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](../aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) so the package is documented as bounded space-weather continuity accounting rather than a new analyst-facing surface.
 - Files touched:
-  [aerospaceSpaceWeatherContinuityPackage.ts](repo-root/app/client/src/features/inspector/aerospaceSpaceWeatherContinuityPackage.ts)
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospaceSpaceWeatherContinuityPackageRegression.mjs](repo-root/app/client/scripts/aerospaceSpaceWeatherContinuityPackageRegression.mjs)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [package.json](repo-root/app/client/package.json)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceSpaceWeatherContinuityPackage.ts](../../client/src/features/inspector/aerospaceSpaceWeatherContinuityPackage.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospaceSpaceWeatherContinuityPackageRegression.mjs](../../client/scripts/aerospaceSpaceWeatherContinuityPackageRegression.mjs)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [package.json](../../client/package.json)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   From `app/client`, `cmd /c node --experimental-strip-types --experimental-specifier-resolution=node scripts/aerospaceSpaceWeatherContinuityPackageRegression.mjs` passed and reported the expected package id, continuity posture, source ids, current freshness label, observed timing label, and archive coverage label.
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
@@ -438,7 +438,7 @@
 - Task:
   Build one bounded aerospace VAAC advisory consumer or report package on top of the existing aerospace reporting stack without adding a new large panel.
 - What changed:
-  Added the new pure helper [aerospaceVaacAdvisoryReportPackage.ts](repo-root/app/client/src/features/inspector/aerospaceVaacAdvisoryReportPackage.ts).
+  Added the new pure helper [aerospaceVaacAdvisoryReportPackage.ts](../../client/src/features/inspector/aerospaceVaacAdvisoryReportPackage.ts).
   This helper builds on the existing aerospace VAAC context and reporting stack only:
   `vaacContext`
   plus the completed `aerospaceReportBriefPackage`.
@@ -453,22 +453,22 @@
   caveats,
   and explicit does-not-prove lines.
   Washington, Anchorage, and Tokyo remain advisory/source-reported only inside the package.
-  Wired the package into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) as snapshot/export metadata under `aerospaceVaacAdvisoryReportPackage` and into [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `vaac-advisory-report-package` footer section plus metadata-key coverage across the aerospace export profiles.
-  Added the focused regression [aerospaceVaacAdvisoryReportPackageRegression.mjs](repo-root/app/client/scripts/aerospaceVaacAdvisoryReportPackageRegression.mjs) and exposed it in [package.json](repo-root/app/client/package.json).
-  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so aircraft and satellite metadata checks now require `aerospaceVaacAdvisoryReportPackage`, advisory rows, VAAC source coverage, metadata-key coverage, does-not-prove lines, and the no-route-impact guardrail.
-  Updated [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts), [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) so the package is documented as a bounded VAAC advisory/report consumer rather than a new analyst-facing surface.
+  Wired the package into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) as snapshot/export metadata under `aerospaceVaacAdvisoryReportPackage` and into [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `vaac-advisory-report-package` footer section plus metadata-key coverage across the aerospace export profiles.
+  Added the focused regression [aerospaceVaacAdvisoryReportPackageRegression.mjs](../../client/scripts/aerospaceVaacAdvisoryReportPackageRegression.mjs) and exposed it in [package.json](../../client/package.json).
+  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so aircraft and satellite metadata checks now require `aerospaceVaacAdvisoryReportPackage`, advisory rows, VAAC source coverage, metadata-key coverage, does-not-prove lines, and the no-route-impact guardrail.
+  Updated [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts), [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](../aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) so the package is documented as a bounded VAAC advisory/report consumer rather than a new analyst-facing surface.
 - Files touched:
-  [aerospaceVaacAdvisoryReportPackage.ts](repo-root/app/client/src/features/inspector/aerospaceVaacAdvisoryReportPackage.ts)
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospaceVaacAdvisoryReportPackageRegression.mjs](repo-root/app/client/scripts/aerospaceVaacAdvisoryReportPackageRegression.mjs)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [package.json](repo-root/app/client/package.json)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceVaacAdvisoryReportPackage.ts](../../client/src/features/inspector/aerospaceVaacAdvisoryReportPackage.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospaceVaacAdvisoryReportPackageRegression.mjs](../../client/scripts/aerospaceVaacAdvisoryReportPackageRegression.mjs)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [package.json](../../client/package.json)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   From `app/client`, `node --experimental-strip-types --experimental-specifier-resolution=node scripts/aerospaceVaacAdvisoryReportPackageRegression.mjs` passed and reported the expected package id, preserved VAAC advisory rows, timestamps, and affected-area fields.
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
@@ -494,7 +494,7 @@
 - Task:
   Build a bounded aerospace report-brief package on top of the existing fusion-snapshot input without adding a new large analyst surface.
 - What changed:
-  Added the new pure helper [aerospaceReportBriefPackage.ts](repo-root/app/client/src/features/inspector/aerospaceReportBriefPackage.ts).
+  Added the new pure helper [aerospaceReportBriefPackage.ts](../../client/src/features/inspector/aerospaceReportBriefPackage.ts).
   This helper builds only on the existing `aerospaceFusionSnapshotInput` package and does not create another aerospace review/export/timeline surface.
   It converts the fusion input into four bounded report-ready sections:
   `observe`,
@@ -515,22 +515,22 @@
   report-safe lines,
   and explicit does-not-prove/guardrail wording.
   It keeps observed, forecast, advisory, archive, anonymous-comparison, and validation context distinct by reading the grouped fusion-input sections rather than recomputing source semantics.
-  Wired the package into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) as snapshot/export metadata under `aerospaceReportBriefPackage` and into [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `report-brief-package` footer section plus metadata-key coverage across the aerospace export profiles.
-  Added the focused regression [aerospaceReportBriefPackageRegression.mjs](repo-root/app/client/scripts/aerospaceReportBriefPackageRegression.mjs) and exposed it in [package.json](repo-root/app/client/package.json).
-  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so aircraft and satellite metadata checks now require `aerospaceReportBriefPackage`, the four report-brief sections, distinct context-class coverage, and the report-accounting guardrail.
-  Updated [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts), [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) so the package is documented as a report-ready transformation over fusion input rather than a new analyst-facing surface.
+  Wired the package into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) as snapshot/export metadata under `aerospaceReportBriefPackage` and into [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `report-brief-package` footer section plus metadata-key coverage across the aerospace export profiles.
+  Added the focused regression [aerospaceReportBriefPackageRegression.mjs](../../client/scripts/aerospaceReportBriefPackageRegression.mjs) and exposed it in [package.json](../../client/package.json).
+  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so aircraft and satellite metadata checks now require `aerospaceReportBriefPackage`, the four report-brief sections, distinct context-class coverage, and the report-accounting guardrail.
+  Updated [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts), [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](../aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) so the package is documented as a report-ready transformation over fusion input rather than a new analyst-facing surface.
 - Files touched:
-  [aerospaceReportBriefPackage.ts](repo-root/app/client/src/features/inspector/aerospaceReportBriefPackage.ts)
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospaceReportBriefPackageRegression.mjs](repo-root/app/client/scripts/aerospaceReportBriefPackageRegression.mjs)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [package.json](repo-root/app/client/package.json)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceReportBriefPackage.ts](../../client/src/features/inspector/aerospaceReportBriefPackage.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospaceReportBriefPackageRegression.mjs](../../client/scripts/aerospaceReportBriefPackageRegression.mjs)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [package.json](../../client/package.json)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   From `app/client`, `node --experimental-strip-types --experimental-specifier-resolution=node scripts/aerospaceReportBriefPackageRegression.mjs` passed and reported the expected report-brief package id, section ids, distinct context classes, validation posture, and export-readiness label.
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
@@ -556,7 +556,7 @@
 - Task:
   Build a bounded aerospace fusion-snapshot input package from the existing aerospace helper stack without adding a new review surface.
 - What changed:
-  Added the new pure helper [aerospaceFusionSnapshotInput.ts](repo-root/app/client/src/features/inspector/aerospaceFusionSnapshotInput.ts).
+  Added the new pure helper [aerospaceFusionSnapshotInput.ts](../../client/src/features/inspector/aerospaceFusionSnapshotInput.ts).
   This helper composes the existing aerospace package stack only:
   selected-target evidence summary,
   context snapshot/report,
@@ -584,22 +584,22 @@
   explicit does-not-prove lines,
   and export-safe lines.
   It keeps observed, forecast, advisory, source-reported, archive, reference, anonymous-comparison, derived, and validation context distinct by grouping the existing evidence-timeline entries instead of collapsing them.
-  Wired the package into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) as snapshot/export metadata under `aerospaceFusionSnapshotInput` and into [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `fusion-snapshot-input` footer section plus metadata-key coverage across the aerospace export profiles.
-  Added the focused regression [aerospaceFusionSnapshotInputRegression.mjs](repo-root/app/client/scripts/aerospaceFusionSnapshotInputRegression.mjs) and exposed it in [package.json](repo-root/app/client/package.json).
-  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so aircraft and satellite metadata checks now require `aerospaceFusionSnapshotInput`, distinct archive/comparison or archive/validation section coverage, does-not-prove lines, and the metadata/accounting input guardrail.
-  Updated [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts), [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) so the new package is documented as a future cross-domain input rather than a new analyst-facing aerospace surface.
+  Wired the package into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) as snapshot/export metadata under `aerospaceFusionSnapshotInput` and into [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `fusion-snapshot-input` footer section plus metadata-key coverage across the aerospace export profiles.
+  Added the focused regression [aerospaceFusionSnapshotInputRegression.mjs](../../client/scripts/aerospaceFusionSnapshotInputRegression.mjs) and exposed it in [package.json](../../client/package.json).
+  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so aircraft and satellite metadata checks now require `aerospaceFusionSnapshotInput`, distinct archive/comparison or archive/validation section coverage, does-not-prove lines, and the metadata/accounting input guardrail.
+  Updated [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts), [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](../aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) so the new package is documented as a future cross-domain input rather than a new analyst-facing aerospace surface.
 - Files touched:
-  [aerospaceFusionSnapshotInput.ts](repo-root/app/client/src/features/inspector/aerospaceFusionSnapshotInput.ts)
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospaceFusionSnapshotInputRegression.mjs](repo-root/app/client/scripts/aerospaceFusionSnapshotInputRegression.mjs)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [package.json](repo-root/app/client/package.json)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceFusionSnapshotInput.ts](../../client/src/features/inspector/aerospaceFusionSnapshotInput.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospaceFusionSnapshotInputRegression.mjs](../../client/scripts/aerospaceFusionSnapshotInputRegression.mjs)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [package.json](../../client/package.json)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   From `app/client`, `node --experimental-strip-types --experimental-specifier-resolution=node scripts/aerospaceFusionSnapshotInputRegression.mjs` passed and reported the expected fusion package id, evidence-class sections, validation posture, and export-readiness posture.
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
@@ -625,7 +625,7 @@
 - Task:
   Add a bounded aerospace package-coherence and source-health/export parity surface across the existing aerospace helper/export stack without adding another renamed review/export/timeline package.
 - What changed:
-  Added the new pure helper [aerospacePackageCoherence.ts](repo-root/app/client/src/features/inspector/aerospacePackageCoherence.ts).
+  Added the new pure helper [aerospacePackageCoherence.ts](../../client/src/features/inspector/aerospacePackageCoherence.ts).
   This helper checks parity across the existing aerospace package stack only:
   context-review queue,
   context-review export bundle,
@@ -643,22 +643,22 @@
   missing-evidence-count parity,
   review-count parity,
   and explicit no-inference/does-not-prove guardrail coverage.
-  Wired the package into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) as `aerospacePackageCoherence` and into [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `package-coherence` footer section plus metadata-key coverage for all aerospace export profiles.
-  Added the focused static regression [aerospacePackageCoherenceRegression.mjs](repo-root/app/client/scripts/aerospacePackageCoherenceRegression.mjs) and exposed it in [package.json](repo-root/app/client/package.json).
-  Extended prepared metadata smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so aircraft and satellite export checks now require `aerospacePackageCoherence`, aligned coherence state, zero unexpected review findings, metadata-key coverage, and the accounting-only guardrail.
-  Updated [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) to document the new parity surface as non-duplicative metadata/accounting only.
+  Wired the package into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) as `aerospacePackageCoherence` and into [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `package-coherence` footer section plus metadata-key coverage for all aerospace export profiles.
+  Added the focused static regression [aerospacePackageCoherenceRegression.mjs](../../client/scripts/aerospacePackageCoherenceRegression.mjs) and exposed it in [package.json](../../client/package.json).
+  Extended prepared metadata smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so aircraft and satellite export checks now require `aerospacePackageCoherence`, aligned coherence state, zero unexpected review findings, metadata-key coverage, and the accounting-only guardrail.
+  Updated [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](../aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) to document the new parity surface as non-duplicative metadata/accounting only.
 - Files touched:
-  [aerospacePackageCoherence.ts](repo-root/app/client/src/features/inspector/aerospacePackageCoherence.ts)
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospacePackageCoherenceRegression.mjs](repo-root/app/client/scripts/aerospacePackageCoherenceRegression.mjs)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [package.json](repo-root/app/client/package.json)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospacePackageCoherence.ts](../../client/src/features/inspector/aerospacePackageCoherence.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospacePackageCoherenceRegression.mjs](../../client/scripts/aerospacePackageCoherenceRegression.mjs)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [package.json](../../client/package.json)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   From `app/client`, `node --experimental-strip-types --experimental-specifier-resolution=node scripts/aerospacePackageCoherenceRegression.mjs` passed and reported an aligned case plus a review case.
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
@@ -684,7 +684,7 @@
 - Task:
   Add a bounded aerospace evidence timeline/export package over existing source-backed selected-target context, availability accounting, workflow-validation posture, and source-health evidence without adding new sources or collapsing prepared smoke into executed smoke.
 - What changed:
-  Added the new pure helper [aerospaceEvidenceTimelinePackage.ts](repo-root/app/client/src/features/inspector/aerospaceEvidenceTimelinePackage.ts).
+  Added the new pure helper [aerospaceEvidenceTimelinePackage.ts](../../client/src/features/inspector/aerospaceEvidenceTimelinePackage.ts).
   The package builds compact export-safe timeline entries from already-loaded aerospace summaries only:
   selected-target data health,
   AWC METAR/TAF,
@@ -700,25 +700,25 @@
   and workflow-validation posture.
   It preserves source ids, source modes, source health states, evidence bases, observed/source timestamps where available, prepared/executed smoke posture, missing-evidence rows, export-safe lines, and a non-causation guardrail.
   The helper keeps observed, forecast, archive, reference, anonymous-comparison, advisory/source-reported, derived, and validation entries distinct instead of flattening them into one blended status line.
-  Wired the package into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) as `aerospaceEvidenceTimelinePackage` and into [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `evidence-timeline` footer section plus metadata-key coverage for all aerospace export profiles.
-  Extended [aerospaceWeatherContext.ts](repo-root/app/client/src/features/inspector/aerospaceWeatherContext.ts) and [aerospaceAirportStatusContext.ts](repo-root/app/client/src/features/inspector/aerospaceAirportStatusContext.ts) with bounded timestamp fields needed for honest timeline entries rather than scraping display strings.
-  Added a focused static regression at [aerospaceEvidenceTimelineRegression.mjs](repo-root/app/client/scripts/aerospaceEvidenceTimelineRegression.mjs) and exposed it in [package.json](repo-root/app/client/package.json).
-  Extended prepared smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so aircraft and satellite metadata checks now require `aerospaceEvidenceTimelinePackage`, timeline entry arrays, missing-evidence rows, export-profile metadata-key coverage, and the explicit non-causation guardrail.
-  Updated [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) so the new package is documented as export/review accounting only.
+  Wired the package into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) as `aerospaceEvidenceTimelinePackage` and into [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) as a compact `evidence-timeline` footer section plus metadata-key coverage for all aerospace export profiles.
+  Extended [aerospaceWeatherContext.ts](../../client/src/features/inspector/aerospaceWeatherContext.ts) and [aerospaceAirportStatusContext.ts](../../client/src/features/inspector/aerospaceAirportStatusContext.ts) with bounded timestamp fields needed for honest timeline entries rather than scraping display strings.
+  Added a focused static regression at [aerospaceEvidenceTimelineRegression.mjs](../../client/scripts/aerospaceEvidenceTimelineRegression.mjs) and exposed it in [package.json](../../client/package.json).
+  Extended prepared smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so aircraft and satellite metadata checks now require `aerospaceEvidenceTimelinePackage`, timeline entry arrays, missing-evidence rows, export-profile metadata-key coverage, and the explicit non-causation guardrail.
+  Updated [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](../aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) so the new package is documented as export/review accounting only.
 - Files touched:
-  [aerospaceEvidenceTimelinePackage.ts](repo-root/app/client/src/features/inspector/aerospaceEvidenceTimelinePackage.ts)
-  [aerospaceWeatherContext.ts](repo-root/app/client/src/features/inspector/aerospaceWeatherContext.ts)
-  [aerospaceAirportStatusContext.ts](repo-root/app/client/src/features/inspector/aerospaceAirportStatusContext.ts)
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospaceEvidenceTimelineRegression.mjs](repo-root/app/client/scripts/aerospaceEvidenceTimelineRegression.mjs)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [package.json](repo-root/app/client/package.json)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceEvidenceTimelinePackage.ts](../../client/src/features/inspector/aerospaceEvidenceTimelinePackage.ts)
+  [aerospaceWeatherContext.ts](../../client/src/features/inspector/aerospaceWeatherContext.ts)
+  [aerospaceAirportStatusContext.ts](../../client/src/features/inspector/aerospaceAirportStatusContext.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospaceEvidenceTimelineRegression.mjs](../../client/scripts/aerospaceEvidenceTimelineRegression.mjs)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [package.json](../../client/package.json)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   From `app/client`, `node --experimental-strip-types --experimental-specifier-resolution=node scripts/aerospaceEvidenceTimelineRegression.mjs` passed.
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
@@ -745,18 +745,18 @@
   Align aerospace workflow-validation evidence docs and regression posture after the new snapshot, acknowledge the stale assignment-marker issue under the current wave, and prepare a clean validation rerun path without adding new aerospace sources.
 - What changed:
   Recorded the current assignment version under the active manager wave and explicitly noted that the prior `aerospaceWorkflowValidationEvidenceSnapshot` work was completed under a stale `2026-05-02 15:47 America/Chicago` assignment marker rather than under the current `2026-05-04 21:43 America/Chicago` wave.
-  Reviewed the bounded helper/export/inspector/smoke-prep chain around [aerospaceWorkflowValidationEvidenceSnapshot.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowValidationEvidenceSnapshot.ts) and confirmed the current gap was documentation/regression-posture clarity rather than missing source or UI semantics.
-  Updated [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) so the current local validation posture is explicit:
+  Reviewed the bounded helper/export/inspector/smoke-prep chain around [aerospaceWorkflowValidationEvidenceSnapshot.ts](../../client/src/features/inspector/aerospaceWorkflowValidationEvidenceSnapshot.ts) and confirmed the current gap was documentation/regression-posture clarity rather than missing source or UI semantics.
+  Updated [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](../aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) so the current local validation posture is explicit:
   backend contract tests passed,
   frontend build passed,
   frontend lint passed on the current rerun,
   and Playwright aerospace smoke remains blocked before app assertions by the Windows Chromium `spawn EPERM` launcher boundary.
   Added a focused docs-backed checklist/current-posture note instead of widening into new frontend churn or new source work.
 - Files touched:
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
@@ -783,7 +783,7 @@
 - What changed:
   First, backfilled the missing final report for assignment `2026-05-02 12:27 America/Chicago` in this progress doc.
   That prior assignment was already complete in code as the selected-target aerospace report package, and the missing issue was progress-doc truth rather than missing implementation.
-  Then added the new pure helper [aerospaceWorkflowValidationEvidenceSnapshot.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowValidationEvidenceSnapshot.ts).
+  Then added the new pure helper [aerospaceWorkflowValidationEvidenceSnapshot.ts](../../client/src/features/inspector/aerospaceWorkflowValidationEvidenceSnapshot.ts).
   The helper composes the existing selected-target report package, context review queue, context review export bundle, workflow readiness package, and OurAirports reference context into one compact validation-accounting snapshot.
   It preserves:
   validation posture,
@@ -797,26 +797,26 @@
   evidence bases,
   compact display/export lines,
   and explicit validation-accounting guardrail wording.
-  Wired the new snapshot into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) under `aerospaceWorkflowValidationEvidenceSnapshot`, added compact footer support in [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts), and added a compact `Aerospace Workflow Validation Evidence` inspector section in [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx).
-  Extended prepared smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so aircraft and satellite metadata checks now require `aerospaceWorkflowValidationEvidenceSnapshot`, require `sourceIds`, require export-profile metadata-key coverage, and require the validation-accounting guardrail wording.
-  Updated [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) so the new validation snapshot is documented with the same prepared-vs-executed smoke distinction as the rest of the aerospace workflow model.
+  Wired the new snapshot into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) under `aerospaceWorkflowValidationEvidenceSnapshot`, added compact footer support in [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts), and added a compact `Aerospace Workflow Validation Evidence` inspector section in [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx).
+  Extended prepared smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so aircraft and satellite metadata checks now require `aerospaceWorkflowValidationEvidenceSnapshot`, require `sourceIds`, require export-profile metadata-key coverage, and require the validation-accounting guardrail wording.
+  Updated [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](../aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) so the new validation snapshot is documented with the same prepared-vs-executed smoke distinction as the rest of the aerospace workflow model.
 - Files touched:
-  [aerospaceWorkflowValidationEvidenceSnapshot.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowValidationEvidenceSnapshot.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceWorkflowValidationEvidenceSnapshot.ts](../../client/src/features/inspector/aerospaceWorkflowValidationEvidenceSnapshot.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
   `python -m compileall app/server/src` passed.
   From `app/client`, `cmd /c npm.cmd run build` passed.
-  From `app/client`, `cmd /c npm.cmd run lint` failed, but not because of aerospace; current blocker is unrelated marine lint drift in [marineEvidenceSummary.ts](repo-root/app/client/src/features/marine/marineEvidenceSummary.ts): unused `MarineHydrologySourceHealthWorkflowSummary`.
+  From `app/client`, `cmd /c npm.cmd run lint` failed, but not because of aerospace; current blocker is unrelated marine lint drift in [marineEvidenceSummary.ts](../../client/src/features/marine/marineEvidenceSummary.ts): unused `MarineHydrologySourceHealthWorkflowSummary`.
   `python app/server/tests/run_playwright_smoke.py aerospace` failed before browser assertions with Playwright Chromium launch `spawn EPERM`; runner diagnosis remained `windows-playwright-launch-permission`.
 - Blockers or caveats:
   The prior `2026-05-02 12:27 America/Chicago` assignment was already complete in code and is now backfilled in this progress doc.
@@ -835,19 +835,19 @@
   Backfilled missing final report for the already-completed selected-target aerospace report package assignment.
 - What changed:
   Progress truth recovery only.
-  Manager AI's `2026-05-02 12:27 America/Chicago` assignment for Aerospace AI was `selected-target aerospace report package`, and the corresponding implementation was already present in the workspace as the bounded snapshot/report package helper [aerospaceContextSnapshotReport.ts](repo-root/app/client/src/features/inspector/aerospaceContextSnapshotReport.ts) plus its export wiring.
+  Manager AI's `2026-05-02 12:27 America/Chicago` assignment for Aerospace AI was `selected-target aerospace report package`, and the corresponding implementation was already present in the workspace as the bounded snapshot/report package helper [aerospaceContextSnapshotReport.ts](../../client/src/features/inspector/aerospaceContextSnapshotReport.ts) plus its export wiring.
   This entry backfills the missing final report so the aerospace progress doc matches the code and manager check-in history.
   That completed package composes the existing source-readiness bundle, context gap queue, current/archive separation, export coherence, and issue-export-bundle summaries into one compact report-facing metadata package.
   It preserves package profile, source ids, source modes, source health states, evidence bases, review lines, export lines, caveats, guardrail wording, missing metadata keys, missing footer sections, and banned operational-phrase findings without changing source semantics.
-  It was wired into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) under `aerospaceContextSnapshotReport`, integrated into [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) for compact footer prioritization, and documented in [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md) and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md).
+  It was wired into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) under `aerospaceContextSnapshotReport`, integrated into [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) for compact footer prioritization, and documented in [aerospace-workflow-validation.md](../aerospace-workflow-validation.md) and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md).
 - Files touched:
-  [aerospaceContextSnapshotReport.ts](repo-root/app/client/src/features/inspector/aerospaceContextSnapshotReport.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceContextSnapshotReport.ts](../../client/src/features/inspector/aerospaceContextSnapshotReport.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` had already passed for the completed package.
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` had already passed for the completed package.
@@ -869,27 +869,27 @@
 - Task:
   Add a client/backend-light aerospace context review queue and export bundle that prioritizes review gaps across existing aerospace context sources without changing source semantics or crossing no-inference guardrails.
 - What changed:
-  Added the pure helper [aerospaceContextReviewQueue.ts](repo-root/app/client/src/features/inspector/aerospaceContextReviewQueue.ts).
+  Added the pure helper [aerospaceContextReviewQueue.ts](../../client/src/features/inspector/aerospaceContextReviewQueue.ts).
   It composes existing context availability, source-readiness bundle posture, context-gap queue items, workflow-readiness missing-evidence rows, export-coherence findings, issue-export-bundle caveat reminders, OurAirports reference-only caveats, and active export-profile context into one prioritized aerospace review queue.
   The queue preserves source ids, source modes, source health states, evidence bases, review-safe lines, export-safe lines, caveats, and an explicit no-severity/no-consequence guardrail.
-  Added the pure helper [aerospaceContextReviewExportBundle.ts](repo-root/app/client/src/features/inspector/aerospaceContextReviewExportBundle.ts).
+  Added the pure helper [aerospaceContextReviewExportBundle.ts](../../client/src/features/inspector/aerospaceContextReviewExportBundle.ts).
   It converts the queue into compact export-safe lines while preserving active context-profile linkage, source ids, source modes, source health states, evidence bases, caveats, and explicit export-bundle guardrail wording.
-  Wired both helpers into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) so snapshot/export metadata now preserves `aerospaceContextReviewQueue` and `aerospaceContextReviewExportBundle`, and existing aerospace export profiles can prioritize their footer lines.
-  Added a compact `Aerospace Context Review Queue` inspector section in [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx) with the new queue plus a small export-bundle preview.
-  Updated [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts), [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts), and prepared smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so the new metadata keys, footer sections, and guardrail wording are tracked consistently.
-  Updated [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) to document the new queue/export bundle and keep prepared-vs-executed smoke truth explicit.
+  Wired both helpers into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) so snapshot/export metadata now preserves `aerospaceContextReviewQueue` and `aerospaceContextReviewExportBundle`, and existing aerospace export profiles can prioritize their footer lines.
+  Added a compact `Aerospace Context Review Queue` inspector section in [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx) with the new queue plus a small export-bundle preview.
+  Updated [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts), [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts), and prepared smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so the new metadata keys, footer sections, and guardrail wording are tracked consistently.
+  Updated [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md), [aerospace-workflow-validation.md](../aerospace-workflow-validation.md), and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) to document the new queue/export bundle and keep prepared-vs-executed smoke truth explicit.
 - Files touched:
-  [aerospaceContextReviewQueue.ts](repo-root/app/client/src/features/inspector/aerospaceContextReviewQueue.ts)
-  [aerospaceContextReviewExportBundle.ts](repo-root/app/client/src/features/inspector/aerospaceContextReviewExportBundle.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceContextReviewQueue.ts](../../client/src/features/inspector/aerospaceContextReviewQueue.ts)
+  [aerospaceContextReviewExportBundle.ts](../../client/src/features/inspector/aerospaceContextReviewExportBundle.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
@@ -911,24 +911,24 @@
 - Task:
   Add a compact aerospace workflow readiness and evidence export package that composes OurAirports context, workflow-evidence ledger state, availability/source-readiness posture, export-profile linkage, and prepared-vs-executed smoke status.
 - What changed:
-  Added the pure helper [aerospaceWorkflowReadinessPackage.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowReadinessPackage.ts).
+  Added the pure helper [aerospaceWorkflowReadinessPackage.ts](../../client/src/features/inspector/aerospaceWorkflowReadinessPackage.ts).
   The helper composes the existing workflow-evidence ledger, OurAirports reference context, aerospace context availability, aerospace source-readiness posture, and export-profile metadata into one compact evidence-accounting package.
   It preserves source ids, source modes, source health states, evidence bases, prepared/executed smoke status, validation rows, missing-evidence rows, guardrail wording, export lines, and caveats without changing source semantics.
-  Wired the new package into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) under snapshot/export metadata key `aerospaceWorkflowReadinessPackage` and added footer-priority support in [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts).
-  Added a compact `Aerospace Workflow Readiness` inspector section in [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx) that shows prepared-vs-executed smoke status, top validation rows, and missing-evidence rows while keeping the Windows Playwright launcher caveat explicit.
-  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so the aircraft workflow now requires the new inspector label and `aerospaceWorkflowReadinessPackage` metadata with validation rows, missing-evidence rows, prepared smoke status, and the evidence-accounting guardrail.
-  Updated [aerospace-ourairports-reference.md](repo-root/app/docs/aerospace-ourairports-reference.md), [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md), [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md), and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) so the package is documented with the same prepared-vs-executed distinction as the rest of the aerospace workflow evidence model.
+  Wired the new package into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) under snapshot/export metadata key `aerospaceWorkflowReadinessPackage` and added footer-priority support in [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts).
+  Added a compact `Aerospace Workflow Readiness` inspector section in [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx) that shows prepared-vs-executed smoke status, top validation rows, and missing-evidence rows while keeping the Windows Playwright launcher caveat explicit.
+  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so the aircraft workflow now requires the new inspector label and `aerospaceWorkflowReadinessPackage` metadata with validation rows, missing-evidence rows, prepared smoke status, and the evidence-accounting guardrail.
+  Updated [aerospace-ourairports-reference.md](../aerospace-ourairports-reference.md), [aerospace-workflow-validation.md](../aerospace-workflow-validation.md), [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md), and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) so the package is documented with the same prepared-vs-executed distinction as the rest of the aerospace workflow evidence model.
 - Files touched:
-  [aerospaceWorkflowReadinessPackage.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowReadinessPackage.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-ourairports-reference.md](repo-root/app/docs/aerospace-ourairports-reference.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceWorkflowReadinessPackage.ts](../../client/src/features/inspector/aerospaceWorkflowReadinessPackage.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-ourairports-reference.md](../aerospace-ourairports-reference.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
@@ -950,23 +950,23 @@
 - Task:
   Add deterministic OurAirports reference support to the aerospace smoke fixture lane and prepare aerospace smoke assertions for the OurAirports reference context.
 - What changed:
-  Added a deterministic aerospace smoke-fixture response path for `GET /api/aerospace/reference/ourairports` in [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py).
+  Added a deterministic aerospace smoke-fixture response path for `GET /api/aerospace/reference/ourairports` in [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py).
   The new fixture preserves bounded airport/runway reference rows, source mode, source health, export metadata, and explicit reference-only caveats without introducing airport-status or runway-availability semantics.
   Added `ourairports-reference` to the deterministic smoke `/api/status/sources` fixture so aerospace availability and source-health accounting can resolve the same source in smoke mode.
-  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so the aircraft workflow now requires:
+  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so the aircraft workflow now requires:
   the `OurAirports Reference Context` inspector section,
   `ourairportsReferenceContext` snapshot metadata,
   fixture source mode,
   recognized airport-match status,
   and explicit `doesNotProve` reference-only guardrails.
-  Updated [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md) and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) to remove the older “not yet prepared” wording and to record the actual state:
+  Updated [aerospace-workflow-validation.md](../aerospace-workflow-validation.md) and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) to remove the older “not yet prepared” wording and to record the actual state:
   deterministic smoke fixture support and prepared assertions now exist, while executed smoke evidence remains blocked locally by Playwright Chromium launch permission failure on this Windows host.
 - Files touched:
-  [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
@@ -988,30 +988,30 @@
 - Task:
   Add a bounded aerospace consumer for `ourairports-reference` that supports selected-target airport/reference comparison and export context while keeping reference data separate from live selected-target evidence.
 - What changed:
-  Added typed client contracts for the OurAirports aerospace route in [api.ts](repo-root/app/client/src/types/api.ts) and a narrow client query hook `useOurAirportsReferenceQuery(...)` in [queries.ts](repo-root/app/client/src/lib/queries.ts).
-  Added a new pure helper [aerospaceReferenceContext.ts](repo-root/app/client/src/features/inspector/aerospaceReferenceContext.ts) that builds a bounded selected-aircraft reference comparison summary from already-loaded airport/runway context and the new OurAirports response.
+  Added typed client contracts for the OurAirports aerospace route in [api.ts](../../client/src/types/api.ts) and a narrow client query hook `useOurAirportsReferenceQuery(...)` in [queries.ts](../../client/src/lib/queries.ts).
+  Added a new pure helper [aerospaceReferenceContext.ts](../../client/src/features/inspector/aerospaceReferenceContext.ts) that builds a bounded selected-aircraft reference comparison summary from already-loaded airport/runway context and the new OurAirports response.
   That helper preserves source mode, source health/state, bounded airport/runway counts, selected airport/runway basis, airport match status, runway match status, compact display/export lines, explicit caveats, and explicit `does not prove` lines.
   Wired the helper into existing aerospace context surfaces:
-  [aerospaceOperationalContext.ts](repo-root/app/client/src/features/inspector/aerospaceOperationalContext.ts),
-  [aerospaceContextAvailability.ts](repo-root/app/client/src/features/inspector/aerospaceContextAvailability.ts),
-  and [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts).
-  Added one compact inspector section, `OurAirports Reference Context`, in [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx) and preserved machine-readable snapshot/export metadata under `ourairportsReferenceContext` in [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx).
-  Updated aerospace docs in [aerospace-ourairports-reference.md](repo-root/app/docs/aerospace-ourairports-reference.md), [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md), [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md), and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md).
+  [aerospaceOperationalContext.ts](../../client/src/features/inspector/aerospaceOperationalContext.ts),
+  [aerospaceContextAvailability.ts](../../client/src/features/inspector/aerospaceContextAvailability.ts),
+  and [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts).
+  Added one compact inspector section, `OurAirports Reference Context`, in [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx) and preserved machine-readable snapshot/export metadata under `ourairportsReferenceContext` in [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx).
+  Updated aerospace docs in [aerospace-ourairports-reference.md](../aerospace-ourairports-reference.md), [aerospace-workflow-validation.md](../aerospace-workflow-validation.md), [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md), and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md).
   I intentionally deferred prepared Playwright assertions for this slice because the current aerospace smoke fixture lane does not yet expose a dedicated OurAirports reference endpoint; the docs now record that deferral explicitly instead of overstating coverage.
 - Files touched:
-  [api.ts](repo-root/app/client/src/types/api.ts)
-  [queries.ts](repo-root/app/client/src/lib/queries.ts)
-  [aerospaceReferenceContext.ts](repo-root/app/client/src/features/inspector/aerospaceReferenceContext.ts)
-  [aerospaceContextAvailability.ts](repo-root/app/client/src/features/inspector/aerospaceContextAvailability.ts)
-  [aerospaceOperationalContext.ts](repo-root/app/client/src/features/inspector/aerospaceOperationalContext.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospace-ourairports-reference.md](repo-root/app/docs/aerospace-ourairports-reference.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [api.ts](../../client/src/types/api.ts)
+  [queries.ts](../../client/src/lib/queries.ts)
+  [aerospaceReferenceContext.ts](../../client/src/features/inspector/aerospaceReferenceContext.ts)
+  [aerospaceContextAvailability.ts](../../client/src/features/inspector/aerospaceContextAvailability.ts)
+  [aerospaceOperationalContext.ts](../../client/src/features/inspector/aerospaceOperationalContext.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospace-ourairports-reference.md](../aerospace-ourairports-reference.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
@@ -1021,7 +1021,7 @@
   From `app/client`, `cmd /c npm.cmd run build` passed.
   `python app/server/tests/run_playwright_smoke.py aerospace` failed before app assertions with Playwright Chromium launch `spawn EPERM`; runner diagnosis remained `windows-playwright-launch-permission`.
 - Blockers or caveats:
-  This pass required narrow edits to shared aerospace-hosting frontend files [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx) and [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) because that is where aerospace inspector sections and snapshot/export metadata already live.
+  This pass required narrow edits to shared aerospace-hosting frontend files [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx) and [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) because that is where aerospace inspector sections and snapshot/export metadata already live.
   The new consumer is reference-only and comparison-only. It does not replace selected-target evidence, does not validate aircraft identity, and does not imply airport status, runway availability, flight intent, route impact, operational consequence, threat, causation, or action guidance.
   Executed aerospace smoke evidence for this new slice remains blocked locally by the known Windows Playwright launcher boundary. Prepared OurAirports smoke assertions were intentionally deferred rather than overstated.
 - Next recommended task:
@@ -1034,29 +1034,29 @@
 - Task:
   Implement a backend-first `ourairports-reference` slice for bounded public airport/runway reference context, fixture-first and caveat/export aware.
 - What changed:
-  Added a new backend-only aerospace route [ourairports_reference.py](repo-root/app/server/src/routes/ourairports_reference.py) at `GET /api/aerospace/reference/ourairports`.
-  Added typed contracts in [api.py](repo-root/app/server/src/types/api.py) for source health, airport records, runway records, backend export metadata, and the full response shape.
-  Added fixture-first source loading in [ourairports_reference.py](repo-root/app/server/src/adapters/ourairports_reference.py), reusing the existing OurAirports parser but keeping this slice separate from the shared reference database and shared reference route surface.
-  Added bounded response shaping and filtering in [ourairports_reference_service.py](repo-root/app/server/src/services/ourairports_reference_service.py) for `q`, `airport_code`, `country_code`, `region_code`, `airport_type`, `include_runways`, and `limit`.
-  Added deterministic CSV fixtures under [ourairports_reference_fixture](repo-root/app/server/data/ourairports_reference_fixture) and focused contract coverage in [test_ourairports_reference_contracts.py](repo-root/app/server/tests/test_ourairports_reference_contracts.py) for fixture serialization, filtering, source mode/health, explicit empty behavior, missing-coordinate handling, caveat preservation, and backend export metadata.
-  Registered the new route in [app.py](repo-root/app/server/src/app.py) and added runtime source-status exposure in [status_service.py](repo-root/app/server/src/services/status_service.py) as `ourairports-reference`.
-  Added aerospace docs in [aerospace-ourairports-reference.md](repo-root/app/docs/aerospace-ourairports-reference.md) and updated [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md), [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md), and [source-validation-status.md](repo-root/app/docs/source-validation-status.md).
+  Added a new backend-only aerospace route [ourairports_reference.py](../../server/src/routes/ourairports_reference.py) at `GET /api/aerospace/reference/ourairports`.
+  Added typed contracts in [api.py](../../server/src/types/api.py) for source health, airport records, runway records, backend export metadata, and the full response shape.
+  Added fixture-first source loading in [ourairports_reference.py](../../server/src/adapters/ourairports_reference.py), reusing the existing OurAirports parser but keeping this slice separate from the shared reference database and shared reference route surface.
+  Added bounded response shaping and filtering in [ourairports_reference_service.py](../../server/src/services/ourairports_reference_service.py) for `q`, `airport_code`, `country_code`, `region_code`, `airport_type`, `include_runways`, and `limit`.
+  Added deterministic CSV fixtures under [ourairports_reference_fixture](../../server/data/ourairports_reference_fixture) and focused contract coverage in [test_ourairports_reference_contracts.py](../../server/tests/test_ourairports_reference_contracts.py) for fixture serialization, filtering, source mode/health, explicit empty behavior, missing-coordinate handling, caveat preservation, and backend export metadata.
+  Registered the new route in [app.py](../../server/src/app.py) and added runtime source-status exposure in [status_service.py](../../server/src/services/status_service.py) as `ourairports-reference`.
+  Added aerospace docs in [aerospace-ourairports-reference.md](../aerospace-ourairports-reference.md) and updated [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md), [aerospace-workflow-validation.md](../aerospace-workflow-validation.md), and [source-validation-status.md](../source-validation-status.md).
 - Files touched:
-  [settings.py](repo-root/app/server/src/config/settings.py)
-  [api.py](repo-root/app/server/src/types/api.py)
-  [ourairports_reference.py](repo-root/app/server/src/adapters/ourairports_reference.py)
-  [ourairports_reference_service.py](repo-root/app/server/src/services/ourairports_reference_service.py)
-  [ourairports_reference.py](repo-root/app/server/src/routes/ourairports_reference.py)
-  [status_service.py](repo-root/app/server/src/services/status_service.py)
-  [app.py](repo-root/app/server/src/app.py)
-  [airports.csv](repo-root/app/server/data/ourairports_reference_fixture/airports.csv)
-  [runways.csv](repo-root/app/server/data/ourairports_reference_fixture/runways.csv)
-  [test_ourairports_reference_contracts.py](repo-root/app/server/tests/test_ourairports_reference_contracts.py)
-  [aerospace-ourairports-reference.md](repo-root/app/docs/aerospace-ourairports-reference.md)
-  [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [settings.py](../../server/src/config/settings.py)
+  [api.py](../../server/src/types/api.py)
+  [ourairports_reference.py](../../server/src/adapters/ourairports_reference.py)
+  [ourairports_reference_service.py](../../server/src/services/ourairports_reference_service.py)
+  [ourairports_reference.py](../../server/src/routes/ourairports_reference.py)
+  [status_service.py](../../server/src/services/status_service.py)
+  [app.py](../../server/src/app.py)
+  [airports.csv](../../server/data/ourairports_reference_fixture/airports.csv)
+  [runways.csv](../../server/data/ourairports_reference_fixture/runways.csv)
+  [test_ourairports_reference_contracts.py](../../server/tests/test_ourairports_reference_contracts.py)
+  [aerospace-ourairports-reference.md](../aerospace-ourairports-reference.md)
+  [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [source-validation-status.md](../source-validation-status.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ourairports_reference_contracts.py -q` passed (`6 passed`).
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
@@ -1076,18 +1076,18 @@
 - Task:
   Add an aerospace workflow evidence ledger/helper that distinguishes backend contract evidence, client lint/build evidence, prepared smoke assertions, and executed smoke evidence.
 - What changed:
-  Added a new pure helper [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts) that defines a compact aerospace workflow-evidence ledger with explicit row categories for implemented helper surfaces, snapshot/export metadata keys, backend contract suites, client validation, prepared smoke assertions, and executed smoke status.
+  Added a new pure helper [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts) that defines a compact aerospace workflow-evidence ledger with explicit row categories for implemented helper surfaces, snapshot/export metadata keys, backend contract suites, client validation, prepared smoke assertions, and executed smoke status.
   The helper preserves a compact ledger line, row statuses, coverage item lists, caveats, and a strict guardrail line that this is workflow-accounting only and not a severity, operational-consequence, failure-proof, threat, causation, or action-recommendation surface.
-  Added a dedicated docs-backed ledger in [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md) so future agents can see the current aerospace validation truth in one place without confusing prepared smoke assertions with executed smoke evidence.
-  Updated [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md) to point directly to the new ledger and to state explicitly that prepared smoke coverage must not be promoted while the local Playwright launcher remains blocked.
-  Updated [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) so the smoke checklist now defers the prepared-vs-executed distinction to the new ledger and repeats that the local `spawn EPERM` boundary is a machine-environment blocker rather than an aerospace assertion result.
+  Added a dedicated docs-backed ledger in [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md) so future agents can see the current aerospace validation truth in one place without confusing prepared smoke assertions with executed smoke evidence.
+  Updated [aerospace-workflow-validation.md](../aerospace-workflow-validation.md) to point directly to the new ledger and to state explicitly that prepared smoke coverage must not be promoted while the local Playwright launcher remains blocked.
+  Updated [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) so the smoke checklist now defers the prepared-vs-executed distinction to the new ledger and repeats that the local `spawn EPERM` boundary is a machine-environment blocker rather than an aerospace assertion result.
   I did not add frontend unit tests because there is no existing lightweight frontend helper-test harness in this assignment path, and the helper is docs/report-accounting only. The practical validation here is typechecked helper code plus explicit docs and the existing smoke-runner status.
 - Files touched:
-  [aerospaceWorkflowEvidenceLedger.ts](repo-root/app/client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
-  [aerospace-workflow-evidence-ledger.md](repo-root/app/docs/aerospace-workflow-evidence-ledger.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceWorkflowEvidenceLedger.ts](../../client/src/features/inspector/aerospaceWorkflowEvidenceLedger.ts)
+  [aerospace-workflow-evidence-ledger.md](../aerospace-workflow-evidence-ledger.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
@@ -1108,25 +1108,25 @@
 - Task:
   Add an aerospace context snapshot/report metadata package that composes readiness, gap queue, current/archive context, export coherence, and issue-export-bundle outputs into a compact report-facing export helper.
 - What changed:
-  Added a new pure helper [aerospaceContextSnapshotReport.ts](repo-root/app/client/src/features/inspector/aerospaceContextSnapshotReport.ts) that composes the existing source-readiness bundle, context gap queue, current/archive separation, export coherence, and issue-export-bundle summaries into one bounded snapshot/report metadata package.
+  Added a new pure helper [aerospaceContextSnapshotReport.ts](../../client/src/features/inspector/aerospaceContextSnapshotReport.ts) that composes the existing source-readiness bundle, context gap queue, current/archive separation, export coherence, and issue-export-bundle summaries into one bounded snapshot/report metadata package.
   The new helper preserves package profile, source ids, source modes, source health states, evidence bases, review lines, export lines, caveats, guardrail wording, missing metadata keys, and missing footer sections without re-implementing the underlying readiness/gap/current-archive/coherence logic.
   Added an internal bounded package-profile option:
   `default`,
   `source-health-review`,
   and `space-weather-context`.
-  This stays pure and is mapped from the existing aerospace export-profile selection inside [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx), so there is no new UI or store state.
-  Extended [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) so all aerospace export profiles now preserve the new `aerospaceContextSnapshotReport` machine metadata key and can prioritize compact `snapshot-report-package` footer lines.
-  Wired the new package narrowly into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) under `aerospaceContextSnapshotReport` plus export-footer shaping only.
-  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so aircraft and satellite metadata checks now require `aerospaceContextSnapshotReport`, require review lines and guardrail wording, require profile metadata coverage, and require zero unguarded operational-phrase findings.
-  Updated [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md) and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) to document the new snapshot/report package behavior and keep the local Playwright launcher limitation explicit.
+  This stays pure and is mapped from the existing aerospace export-profile selection inside [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx), so there is no new UI or store state.
+  Extended [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) so all aerospace export profiles now preserve the new `aerospaceContextSnapshotReport` machine metadata key and can prioritize compact `snapshot-report-package` footer lines.
+  Wired the new package narrowly into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) under `aerospaceContextSnapshotReport` plus export-footer shaping only.
+  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so aircraft and satellite metadata checks now require `aerospaceContextSnapshotReport`, require review lines and guardrail wording, require profile metadata coverage, and require zero unguarded operational-phrase findings.
+  Updated [aerospace-workflow-validation.md](../aerospace-workflow-validation.md) and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) to document the new snapshot/report package behavior and keep the local Playwright launcher limitation explicit.
 - Files touched:
-  [aerospaceContextSnapshotReport.ts](repo-root/app/client/src/features/inspector/aerospaceContextSnapshotReport.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceContextSnapshotReport.ts](../../client/src/features/inspector/aerospaceContextSnapshotReport.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
@@ -1147,21 +1147,21 @@
 - Task:
   Add an aerospace source-health/readiness issue export bundle that composes readiness bundle, context gap queue, current/archive separation, and export coherence into compact review-only export items.
 - What changed:
-  Added a new pure helper [aerospaceIssueExportBundle.ts](repo-root/app/client/src/features/inspector/aerospaceIssueExportBundle.ts) that builds a compact review-only issue export bundle from the existing source-readiness bundle, context gap queue, current/archive space-weather separation summary, and export-coherence summary.
+  Added a new pure helper [aerospaceIssueExportBundle.ts](../../client/src/features/inspector/aerospaceIssueExportBundle.ts) that builds a compact review-only issue export bundle from the existing source-readiness bundle, context gap queue, current/archive space-weather separation summary, and export-coherence summary.
   The new bundle preserves item category, source ids, source modes, source health states, evidence bases, caveats, guardrail lines, and any missing metadata-key or footer-section findings already surfaced by export coherence.
   Added explicit unguarded operational-phrase scanning for `operational consequence`, `severity`, `failure proof`, `route impact`, `target exposure`, `causation`, `threat`, and action-recommendation wording, while still allowing guarded caveat phrasing such as `does not imply severity`.
-  Extended [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) so aerospace export profiles can preserve the new machine metadata key and optionally prioritize compact issue-bundle footer lines without changing source semantics or adding new UI sections.
-  Wired the new bundle narrowly into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) under `aerospaceIssueExportBundle` and as an export-footer input only; no new inspector surface was added in this assignment.
-  Hardened the prepared aerospace smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so aircraft and satellite export metadata now require `aerospaceIssueExportBundle`, require current/archive separation coverage inside the bundle, require per-item review-only guardrails, and require zero unguarded operational-phrase findings.
-  Updated [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md) and [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md) to document the new issue-export-bundle behavior and keep the local Playwright launcher limitation explicit.
+  Extended [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) so aerospace export profiles can preserve the new machine metadata key and optionally prioritize compact issue-bundle footer lines without changing source semantics or adding new UI sections.
+  Wired the new bundle narrowly into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) under `aerospaceIssueExportBundle` and as an export-footer input only; no new inspector surface was added in this assignment.
+  Hardened the prepared aerospace smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so aircraft and satellite export metadata now require `aerospaceIssueExportBundle`, require current/archive separation coverage inside the bundle, require per-item review-only guardrails, and require zero unguarded operational-phrase findings.
+  Updated [aerospace-workflow-validation.md](../aerospace-workflow-validation.md) and [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md) to document the new issue-export-bundle behavior and keep the local Playwright launcher limitation explicit.
 - Files touched:
-  [aerospaceIssueExportBundle.ts](repo-root/app/client/src/features/inspector/aerospaceIssueExportBundle.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceIssueExportBundle.ts](../../client/src/features/inspector/aerospaceIssueExportBundle.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
@@ -1182,22 +1182,22 @@
 - Task:
   Add an aerospace export/coherence helper that checks source-readiness bundle, context gap queue, current/archive separation, and export profile metadata stay aligned without adding operational inference.
 - What changed:
-  Added a new pure helper [aerospaceExportCoherence.ts](repo-root/app/client/src/features/inspector/aerospaceExportCoherence.ts) that summarizes export coherence across the existing source-readiness bundle, context gap queue, current/archive separation helper, and export-profile metadata.
+  Added a new pure helper [aerospaceExportCoherence.ts](../../client/src/features/inspector/aerospaceExportCoherence.ts) that summarizes export coherence across the existing source-readiness bundle, context gap queue, current/archive separation helper, and export-profile metadata.
   The helper preserves source ids, source modes, source health states, evidence bases, guardrail lines, caveats, aligned metadata keys, missing metadata keys, missing footer sections, and any unguarded operational-phrase findings.
-  Tightened [aerospaceSourceReadiness.ts](repo-root/app/client/src/features/inspector/aerospaceSourceReadiness.ts) bundle metadata so coherence checks can see per-family source ids and evidence bases.
-  Extended [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts) metadata to preserve `includedMetadataKeys` and added an `export-coherence` footer section so the helper can measure alignment against the profile's declared export shape instead of inferring it indirectly.
-  Wired coherence narrowly into [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx) as snapshot/export metadata under `aerospaceExportCoherence` and as optional footer-line input. No new inspector UI section was added.
-  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs) so aircraft and satellite export metadata now require `aerospaceExportCoherence`, require an `aligned` coherence state under the default export profile, and require zero unguarded operational-phrase findings.
+  Tightened [aerospaceSourceReadiness.ts](../../client/src/features/inspector/aerospaceSourceReadiness.ts) bundle metadata so coherence checks can see per-family source ids and evidence bases.
+  Extended [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts) metadata to preserve `includedMetadataKeys` and added an `export-coherence` footer section so the helper can measure alignment against the profile's declared export shape instead of inferring it indirectly.
+  Wired coherence narrowly into [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx) as snapshot/export metadata under `aerospaceExportCoherence` and as optional footer-line input. No new inspector UI section was added.
+  Extended prepared aerospace smoke assertions in [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs) so aircraft and satellite export metadata now require `aerospaceExportCoherence`, require an `aligned` coherence state under the default export profile, and require zero unguarded operational-phrase findings.
   Updated aerospace workflow and smoke docs to document coherence behavior and the continuing local Playwright launcher limitation.
 - Files touched:
-  [aerospaceExportCoherence.ts](repo-root/app/client/src/features/inspector/aerospaceExportCoherence.ts)
-  [aerospaceSourceReadiness.ts](repo-root/app/client/src/features/inspector/aerospaceSourceReadiness.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceExportCoherence.ts](../../client/src/features/inspector/aerospaceExportCoherence.ts)
+  [aerospaceSourceReadiness.ts](../../client/src/features/inspector/aerospaceSourceReadiness.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
@@ -1218,20 +1218,20 @@
 - Task:
   Build an aerospace current-versus-archive context helper that keeps current NOAA SWPC advisory context separate from archival NOAA NCEI space-weather metadata in inspector/export summaries and smoke-prep coverage.
 - What changed:
-  Added a new pure helper [aerospaceCurrentArchiveContext.ts](repo-root/app/client/src/features/inspector/aerospaceCurrentArchiveContext.ts) that composes already-loaded SWPC and NCEI archive summaries without changing source semantics.
+  Added a new pure helper [aerospaceCurrentArchiveContext.ts](../../client/src/features/inspector/aerospaceCurrentArchiveContext.ts) that composes already-loaded SWPC and NCEI archive summaries without changing source semantics.
   The helper preserves separate current and archive source ids, source modes, source health states, evidence-basis labels, current advisory timing labels, archive temporal-coverage labels, bounded display/export lines, and an explicit guardrail line that archive metadata is not current warning truth and current advisories do not prove GPS, radio, satellite, or aircraft failure.
   Wired the helper narrowly into the aerospace inspector as a compact `Current vs Archive Space-Weather Context` section, into export footer shaping, and into snapshot/export metadata under `aerospaceCurrentArchiveContext`.
   Extended prepared aerospace smoke assertions so aircraft and satellite metadata checks now expect the new inspector label, metadata key, separation state, and guardrail wording when Playwright can launch.
   Updated aerospace workflow and smoke docs to document the new separation helper, metadata key, and no-inference boundaries.
 - Files touched:
-  [aerospaceCurrentArchiveContext.ts](repo-root/app/client/src/features/inspector/aerospaceCurrentArchiveContext.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceCurrentArchiveContext.ts](../../client/src/features/inspector/aerospaceCurrentArchiveContext.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
@@ -1255,15 +1255,15 @@
   Re-ran the aerospace backend contract suite, server compile, client lint, client build, and the aerospace Playwright smoke lane against the current tree.
   No aerospace code or doc semantics needed to change in this recovery pass because the source-readiness bundle and context gap queue assertions were already prepared correctly.
   Confirmed that the aerospace smoke lane still does not reach app assertions on this Windows host. It fails before browser launch with the known Playwright `spawn EPERM` / `windows-browser-launch-permission` boundary, so there is still no executed smoke evidence to promote in the docs.
-  A new non-aerospace client build blocker also surfaced during recovery: [marineContextHelperRegression.ts](repo-root/app/client/src/features/marine/marineContextHelperRegression.ts) is using `.ts` extension imports that TypeScript rejects under current settings. Per assignment, I did not touch marine files and am routing that blocker to Connect AI.
+  A new non-aerospace client build blocker also surfaced during recovery: [marineContextHelperRegression.ts](../../client/src/features/marine/marineContextHelperRegression.ts) is using `.ts` extension imports that TypeScript rejects under current settings. Per assignment, I did not touch marine files and am routing that blocker to Connect AI.
 - Files touched:
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
   `python -m compileall app/server/src` passed.
   `cmd /c npm.cmd run lint` passed from `app/client`.
-  `cmd /c npm.cmd run build` did not complete because of the unrelated marine TypeScript import-extension blocker in [marineContextHelperRegression.ts](repo-root/app/client/src/features/marine/marineContextHelperRegression.ts).
+  `cmd /c npm.cmd run build` did not complete because of the unrelated marine TypeScript import-extension blocker in [marineContextHelperRegression.ts](../../client/src/features/marine/marineContextHelperRegression.ts).
   `python app/server/tests/run_playwright_smoke.py aerospace` failed before browser assertions with Playwright Chromium launch `spawn EPERM`; runner diagnosis remained `windows-playwright-launch-permission`.
 - Blockers or caveats:
   Prepared aerospace smoke assertions for `aerospaceSourceReadinessBundle` and `aerospaceContextGapQueue` still exist, but there is still no executed smoke evidence on this Windows host because the browser cannot launch.
@@ -1285,20 +1285,20 @@
   Extended prepared aerospace smoke assertions so aircraft and satellite paths now expect the new inspector label, queue metadata, queue items, and guardrail line when Playwright can launch.
   Updated aerospace workflow and smoke docs to document the gap queue, its metadata key, and its no-inference boundaries.
 - Files touched:
-  [aerospaceContextGapQueue.ts](repo-root/app/client/src/features/inspector/aerospaceContextGapQueue.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceContextGapQueue.ts](../../client/src/features/inspector/aerospaceContextGapQueue.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
   `python -m compileall app/server/src` passed.
   `cmd /c npm.cmd run lint` passed from `app/client`.
-  `cmd /c npm.cmd run build` did not complete because of an unrelated marine-side TypeScript blocker in [MarineAnomalySection.tsx](repo-root/app/client/src/features/marine/MarineAnomalySection.tsx): missing required `contextIssueExportBundle` in a marine call site.
+  `cmd /c npm.cmd run build` did not complete because of an unrelated marine-side TypeScript blocker in [MarineAnomalySection.tsx](../../client/src/features/marine/MarineAnomalySection.tsx): missing required `contextIssueExportBundle` in a marine call site.
 - Blockers or caveats:
   Stopped after the unrelated marine build failure as required by the assignment. I did not modify marine files.
   Because build is currently blocked outside aerospace, I did not continue to the Playwright smoke step in this pass.
@@ -1320,15 +1320,15 @@
   Extended prepared aerospace smoke assertions so aircraft and satellite metadata checks now expect `aerospaceSourceReadinessBundle`, bundled family rows, and the bundle-specific guardrail wording.
   Updated aerospace workflow/smoke docs to document bundle behavior, preserved fields, and the no-severity/no-action boundary.
 - Files touched:
-  [store.ts](repo-root/app/client/src/lib/store.ts)
-  [aerospaceSourceReadiness.ts](repo-root/app/client/src/features/inspector/aerospaceSourceReadiness.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [store.ts](../../client/src/lib/store.ts)
+  [aerospaceSourceReadiness.ts](../../client/src/features/inspector/aerospaceSourceReadiness.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py -q` passed (`6 passed`).
@@ -1360,11 +1360,11 @@
   Hardened prepared smoke assertions so aerospace smoke now expects `aerospaceSourceReadiness.guardrailLine` to contain `review-oriented` and expects the source-readiness caveats to preserve the no-severity boundary.
   Updated aerospace workflow and smoke docs to record the new phrasing guardrails and smoke-prep evidence for the source-readiness federation.
 - Files touched:
-  [aerospaceSourceReadiness.ts](repo-root/app/client/src/features/inspector/aerospaceSourceReadiness.ts)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceSourceReadiness.ts](../../client/src/features/inspector/aerospaceSourceReadiness.ts)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py -q` passed (`6 passed`).
@@ -1395,14 +1395,14 @@
   Wired the new federation into the aerospace inspector as a compact `Aerospace Source Readiness` section, into export footer prioritization through `aerospaceExportProfiles.ts`, and into snapshot metadata as `aerospaceSourceReadiness`.
   Extended prepared aerospace smoke assertions to expect the new inspector label and metadata key when Playwright can launch, and updated aerospace workflow/smoke docs to describe the new family summary and its no-severity/no-inference boundaries.
 - Files touched:
-  [aerospaceSourceReadiness.ts](repo-root/app/client/src/features/inspector/aerospaceSourceReadiness.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceSourceReadiness.ts](../../client/src/features/inspector/aerospaceSourceReadiness.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py -q` passed (`6 passed`).
@@ -1434,21 +1434,21 @@
   Added deterministic smoke-fixture coverage for the NCEI archive route and `noaa-ncei-space-weather-portal` source status in `smoke_fixture_app.py`, then extended prepared aerospace smoke assertions to expect the new inspector label and metadata key when Playwright can launch.
   Updated aerospace docs and validation tracking to record the new consumer/export path, the prepared smoke coverage, and the explicit boundary that NOAA NCEI archive metadata is archival/contextual only and must not be treated as current SWPC warning truth or proof of GPS, radio, aircraft, or satellite failure.
 - Files touched:
-  [api.ts](repo-root/app/client/src/types/api.ts)
-  [queries.ts](repo-root/app/client/src/lib/queries.ts)
-  [aerospaceSpaceWeatherArchiveContext.ts](repo-root/app/client/src/features/inspector/aerospaceSpaceWeatherArchiveContext.ts)
-  [aerospaceOperationalContext.ts](repo-root/app/client/src/features/inspector/aerospaceOperationalContext.ts)
-  [aerospaceContextAvailability.ts](repo-root/app/client/src/features/inspector/aerospaceContextAvailability.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [api.ts](../../client/src/types/api.ts)
+  [queries.ts](../../client/src/lib/queries.ts)
+  [aerospaceSpaceWeatherArchiveContext.ts](../../client/src/features/inspector/aerospaceSpaceWeatherArchiveContext.ts)
+  [aerospaceOperationalContext.ts](../../client/src/features/inspector/aerospaceOperationalContext.ts)
+  [aerospaceContextAvailability.ts](../../client/src/features/inspector/aerospaceContextAvailability.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [source-validation-status.md](../source-validation-status.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py -q` passed (`6 passed`).
@@ -1479,19 +1479,19 @@
   Added deterministic XML fixture coverage, explicit empty-result handling, degraded source-status handling, missing optional-field handling, and untrusted free-text sanitization coverage for title and summary fields so archive metadata remains inert source text rather than executable instructions or UI markup.
   Updated aerospace contract/workflow docs and source-validation tracking to record that this slice is backend-only, contract-tested, separate from NOAA SWPC current advisories, and not yet a frontend/export consumer.
 - Files touched:
-  [settings.py](repo-root/app/server/src/config/settings.py)
-  [api.py](repo-root/app/server/src/types/api.py)
-  [ncei_space_weather_portal.py](repo-root/app/server/src/adapters/ncei_space_weather_portal.py)
-  [ncei_space_weather_portal_service.py](repo-root/app/server/src/services/ncei_space_weather_portal_service.py)
-  [ncei_space_weather_portal.py](repo-root/app/server/src/routes/ncei_space_weather_portal.py)
-  [status_service.py](repo-root/app/server/src/services/status_service.py)
-  [app.py](repo-root/app/server/src/app.py)
-  [ncei_space_weather_portal_fixture.xml](repo-root/app/server/data/ncei_space_weather_portal_fixture.xml)
-  [test_ncei_space_weather_portal_contracts.py](repo-root/app/server/tests/test_ncei_space_weather_portal_contracts.py)
-  [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [source-validation-status.md](repo-root/app/docs/source-validation-status.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [settings.py](../../server/src/config/settings.py)
+  [api.py](../../server/src/types/api.py)
+  [ncei_space_weather_portal.py](../../server/src/adapters/ncei_space_weather_portal.py)
+  [ncei_space_weather_portal_service.py](../../server/src/services/ncei_space_weather_portal_service.py)
+  [ncei_space_weather_portal.py](../../server/src/routes/ncei_space_weather_portal.py)
+  [status_service.py](../../server/src/services/status_service.py)
+  [app.py](../../server/src/app.py)
+  [ncei_space_weather_portal_fixture.xml](../../server/data/ncei_space_weather_portal_fixture.xml)
+  [test_ncei_space_weather_portal_contracts.py](../../server/tests/test_ncei_space_weather_portal_contracts.py)
+  [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [source-validation-status.md](../source-validation-status.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_ncei_space_weather_portal_contracts.py -q` passed (`5 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py -q` passed (`6 passed`).
@@ -1520,20 +1520,20 @@
   Added deterministic smoke-fixture support for the three VAAC routes and their source-status entries in `smoke_fixture_app.py`, then extended the aerospace smoke assertions to expect the new inspector label and `vaacContext` metadata when the browser can launch.
   Updated aerospace docs to reflect that the VAAC backend slices are now consumed in the client, export-aware, and still bounded to advisory/contextual volcanic-ash summaries only.
 - Files touched:
-  [api.ts](repo-root/app/client/src/types/api.ts)
-  [queries.ts](repo-root/app/client/src/lib/queries.ts)
-  [aerospaceVaacContext.ts](repo-root/app/client/src/features/inspector/aerospaceVaacContext.ts)
-  [aerospaceContextAvailability.ts](repo-root/app/client/src/features/inspector/aerospaceContextAvailability.ts)
-  [aerospaceOperationalContext.ts](repo-root/app/client/src/features/inspector/aerospaceOperationalContext.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py)
-  [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [api.ts](../../client/src/types/api.ts)
+  [queries.ts](../../client/src/lib/queries.ts)
+  [aerospaceVaacContext.ts](../../client/src/features/inspector/aerospaceVaacContext.ts)
+  [aerospaceContextAvailability.ts](../../client/src/features/inspector/aerospaceContextAvailability.ts)
+  [aerospaceOperationalContext.ts](../../client/src/features/inspector/aerospaceOperationalContext.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py)
+  [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_washington_vaac_contracts.py -q` passed (`6 passed`).
   `python -m pytest app/server/tests/test_anchorage_vaac_contracts.py -q` passed (`6 passed`).
@@ -1563,27 +1563,27 @@
   Both new slices preserve per-source mode, source health, advisory identifiers and timestamps where available, volcano identity, area/source text, per-record source URL, and explicit no-route-impact/no-aircraft-exposure caveats.
   Updated the aerospace contract/workflow docs and smoke checklist to record the new backend-only first-slice status and their bounded no-overclaim semantics.
 - Files touched:
-  [settings.py](repo-root/app/server/src/config/settings.py)
-  [api.py](repo-root/app/server/src/types/api.py)
-  [vaac_text_common.py](repo-root/app/server/src/adapters/vaac_text_common.py)
-  [anchorage_vaac.py](repo-root/app/server/src/adapters/anchorage_vaac.py)
-  [tokyo_vaac.py](repo-root/app/server/src/adapters/tokyo_vaac.py)
-  [anchorage_vaac_service.py](repo-root/app/server/src/services/anchorage_vaac_service.py)
-  [tokyo_vaac_service.py](repo-root/app/server/src/services/tokyo_vaac_service.py)
-  [anchorage_vaac.py](repo-root/app/server/src/routes/anchorage_vaac.py)
-  [tokyo_vaac.py](repo-root/app/server/src/routes/tokyo_vaac.py)
-  [status_service.py](repo-root/app/server/src/services/status_service.py)
-  [app.py](repo-root/app/server/src/app.py)
-  [anchorage_vaac_advisories_fixture.json](repo-root/app/server/data/anchorage_vaac_advisories_fixture.json)
-  [anchorage_vaac_advisories_empty_fixture.json](repo-root/app/server/data/anchorage_vaac_advisories_empty_fixture.json)
-  [tokyo_vaac_advisories_fixture.json](repo-root/app/server/data/tokyo_vaac_advisories_fixture.json)
-  [tokyo_vaac_advisories_empty_fixture.json](repo-root/app/server/data/tokyo_vaac_advisories_empty_fixture.json)
-  [test_anchorage_vaac_contracts.py](repo-root/app/server/tests/test_anchorage_vaac_contracts.py)
-  [test_tokyo_vaac_contracts.py](repo-root/app/server/tests/test_tokyo_vaac_contracts.py)
-  [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [settings.py](../../server/src/config/settings.py)
+  [api.py](../../server/src/types/api.py)
+  [vaac_text_common.py](../../server/src/adapters/vaac_text_common.py)
+  [anchorage_vaac.py](../../server/src/adapters/anchorage_vaac.py)
+  [tokyo_vaac.py](../../server/src/adapters/tokyo_vaac.py)
+  [anchorage_vaac_service.py](../../server/src/services/anchorage_vaac_service.py)
+  [tokyo_vaac_service.py](../../server/src/services/tokyo_vaac_service.py)
+  [anchorage_vaac.py](../../server/src/routes/anchorage_vaac.py)
+  [tokyo_vaac.py](../../server/src/routes/tokyo_vaac.py)
+  [status_service.py](../../server/src/services/status_service.py)
+  [app.py](../../server/src/app.py)
+  [anchorage_vaac_advisories_fixture.json](../../server/data/anchorage_vaac_advisories_fixture.json)
+  [anchorage_vaac_advisories_empty_fixture.json](../../server/data/anchorage_vaac_advisories_empty_fixture.json)
+  [tokyo_vaac_advisories_fixture.json](../../server/data/tokyo_vaac_advisories_fixture.json)
+  [tokyo_vaac_advisories_empty_fixture.json](../../server/data/tokyo_vaac_advisories_empty_fixture.json)
+  [test_anchorage_vaac_contracts.py](../../server/tests/test_anchorage_vaac_contracts.py)
+  [test_tokyo_vaac_contracts.py](../../server/tests/test_tokyo_vaac_contracts.py)
+  [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_anchorage_vaac_contracts.py -q` passed (`6 passed`).
   `python -m pytest app/server/tests/test_tokyo_vaac_contracts.py -q` passed (`6 passed`).
@@ -1617,20 +1617,20 @@
   and no-overclaim caveat/field guardrails.
   Updated aerospace contract/workflow docs and the smoke checklist to record the backend-only first-slice status and the preserved no-inference boundaries.
 - Files touched:
-  [settings.py](repo-root/app/server/src/config/settings.py)
-  [api.py](repo-root/app/server/src/types/api.py)
-  [washington_vaac.py](repo-root/app/server/src/adapters/washington_vaac.py)
-  [washington_vaac_service.py](repo-root/app/server/src/services/washington_vaac_service.py)
-  [washington_vaac.py](repo-root/app/server/src/routes/washington_vaac.py)
-  [status_service.py](repo-root/app/server/src/services/status_service.py)
-  [app.py](repo-root/app/server/src/app.py)
-  [washington_vaac_advisories_fixture.json](repo-root/app/server/data/washington_vaac_advisories_fixture.json)
-  [washington_vaac_advisories_empty_fixture.json](repo-root/app/server/data/washington_vaac_advisories_empty_fixture.json)
-  [test_washington_vaac_contracts.py](repo-root/app/server/tests/test_washington_vaac_contracts.py)
-  [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [settings.py](../../server/src/config/settings.py)
+  [api.py](../../server/src/types/api.py)
+  [washington_vaac.py](../../server/src/adapters/washington_vaac.py)
+  [washington_vaac_service.py](../../server/src/services/washington_vaac_service.py)
+  [washington_vaac.py](../../server/src/routes/washington_vaac.py)
+  [status_service.py](../../server/src/services/status_service.py)
+  [app.py](../../server/src/app.py)
+  [washington_vaac_advisories_fixture.json](../../server/data/washington_vaac_advisories_fixture.json)
+  [washington_vaac_advisories_empty_fixture.json](../../server/data/washington_vaac_advisories_empty_fixture.json)
+  [test_washington_vaac_contracts.py](../../server/tests/test_washington_vaac_contracts.py)
+  [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_washington_vaac_contracts.py -q` passed (`6 passed`).
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
@@ -1655,14 +1655,14 @@
   Extended deterministic aerospace smoke-prep assertions so aircraft and satellite paths now expect the new inspector label and `aerospaceContextReport` metadata when the browser can launch.
   Updated aerospace workflow/smoke docs to document the new metadata key, report semantics, and the explicit no-inference/no-action-recommendation boundary.
 - Files touched:
-  [aerospaceContextReport.ts](repo-root/app/client/src/features/inspector/aerospaceContextReport.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceContextReport.ts](../../client/src/features/inspector/aerospaceContextReport.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
   `python -m compileall app/server/src` passed.
@@ -1688,12 +1688,12 @@
   Extended the deterministic aerospace smoke-prep assertions so they now expect the `Aerospace Review Queue` inspector label plus `aerospaceReviewQueue` metadata keys when the browser can actually launch.
   During validation, fixed one local type mismatch by normalizing OpenSky comparison `source-reported` evidence basis into the queue's existing contextual badge vocabulary instead of widening shared frontend semantics.
 - Files touched:
-  [aerospaceReviewQueue.ts](repo-root/app/client/src/features/inspector/aerospaceReviewQueue.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceReviewQueue.ts](../../client/src/features/inspector/aerospaceReviewQueue.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
   `python -m compileall app/server/src` passed.
@@ -1726,14 +1726,14 @@
   Updated aerospace smoke-prep assertions to expect the new `aerospaceExportReadiness` metadata and inspector section labels when executed on a host where Playwright can launch.
   Updated aerospace workflow/smoke docs to describe the new readiness feature, its metadata key, and its no-inference boundaries.
 - Files touched:
-  [aerospaceExportReadiness.ts](repo-root/app/client/src/features/inspector/aerospaceExportReadiness.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceExportReadiness.ts](../../client/src/features/inspector/aerospaceExportReadiness.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
   `python -m compileall app/server/src` passed.
@@ -1757,12 +1757,12 @@
   Extended the aerospace Playwright smoke script to assert `aerospaceContextIssues` and `geomagnetismContext` in both the aircraft and satellite snapshot metadata paths, and to require the corresponding inspector section labels so the metadata assertions match visible aerospace surfaces.
   Updated aerospace validation docs and the source-contract matrix so they now explicitly say the geomagnetism and aerospace-context-review smoke assertions are prepared, while executed smoke evidence on this Windows host remains blocked by the Playwright Chromium `spawn EPERM` launcher boundary before browser assertions begin.
 - Files touched:
-  [smoke_fixture_app.py](repo-root/app/server/tests/smoke_fixture_app.py)
-  [playwright_smoke.mjs](repo-root/app/client/scripts/playwright_smoke.mjs)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [smoke_fixture_app.py](../../server/tests/smoke_fixture_app.py)
+  [playwright_smoke.mjs](../../client/scripts/playwright_smoke.mjs)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
   `python -m compileall app/server/src` passed.
@@ -1788,18 +1788,18 @@
   Integrated geomagnetism into aerospace operational-context and availability accounting so it is treated as optional global context rather than target-specific truth.
   Updated aerospace docs and source-contract docs to describe the new contextual consumer, export metadata, and no-inference caveats.
 - Files touched:
-  [api.ts](repo-root/app/client/src/types/api.ts)
-  [queries.ts](repo-root/app/client/src/lib/queries.ts)
-  [aerospaceGeomagnetismContext.ts](repo-root/app/client/src/features/inspector/aerospaceGeomagnetismContext.ts)
-  [aerospaceContextAvailability.ts](repo-root/app/client/src/features/inspector/aerospaceContextAvailability.ts)
-  [aerospaceOperationalContext.ts](repo-root/app/client/src/features/inspector/aerospaceOperationalContext.ts)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [api.ts](../../client/src/types/api.ts)
+  [queries.ts](../../client/src/lib/queries.ts)
+  [aerospaceGeomagnetismContext.ts](../../client/src/features/inspector/aerospaceGeomagnetismContext.ts)
+  [aerospaceContextAvailability.ts](../../client/src/features/inspector/aerospaceContextAvailability.ts)
+  [aerospaceOperationalContext.ts](../../client/src/features/inspector/aerospaceOperationalContext.ts)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
   `python -m compileall app/server/src` passed.
@@ -1824,13 +1824,13 @@
   Updated aerospace export-profile footer prioritization so existing export profiles can surface one or two compact review lines without discarding full machine-readable metadata.
   Updated aerospace validation/smoke docs to describe the new review summary, its meanings, and its no-inference guardrails.
 - Files touched:
-  [aerospaceContextIssues.ts](repo-root/app/client/src/features/inspector/aerospaceContextIssues.ts)
-  [aerospaceExportProfiles.ts](repo-root/app/client/src/features/inspector/aerospaceExportProfiles.ts)
-  [InspectorPanel.tsx](repo-root/app/client/src/features/inspector/InspectorPanel.tsx)
-  [AppShell.tsx](repo-root/app/client/src/features/app-shell/AppShell.tsx)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospaceContextIssues.ts](../../client/src/features/inspector/aerospaceContextIssues.ts)
+  [aerospaceExportProfiles.ts](../../client/src/features/inspector/aerospaceExportProfiles.ts)
+  [InspectorPanel.tsx](../../client/src/features/inspector/InspectorPanel.tsx)
+  [AppShell.tsx](../../client/src/features/app-shell/AppShell.tsx)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
   `python -m compileall app/server/src` passed.
@@ -1853,10 +1853,10 @@
   Confirmed the smoke harness did not reach browser assertions on this Windows host because Playwright Chromium launch failed up front with `spawn EPERM`, which the runner already classifies as a machine-environment launcher issue rather than an aerospace assertion failure.
   Updated the aerospace workflow-validation and source-contract docs to replace the stale Connect-owned build/smoke blocker wording with the current launcher-environment-specific blocker, and added the same local execution note to the aircraft/satellite smoke checklist.
 - Files touched:
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md)
-  [aircraft-satellite-smoke.md](repo-root/app/docs/aircraft-satellite-smoke.md)
-  [aerospace-ai.md](repo-root/app/docs/agent-progress/aerospace-ai.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md)
+  [aircraft-satellite-smoke.md](../aircraft-satellite-smoke.md)
+  [aerospace-ai.md](aerospace-ai.md)
 - Validation:
   `python app/server/tests/run_playwright_smoke.py aerospace` ran and failed before assertions with Playwright launch `spawn EPERM`; runner diagnosis: `windows-playwright-launch-permission`.
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
@@ -1876,13 +1876,13 @@
   Expanded the aerospace workflow validation doc with explicit backend contract coverage, required contract caveats, and the remaining workflow evidence that still depends on Connect-owned build/smoke health.
   Tightened backend contract coverage by asserting guardrail caveats directly in FAA NAS, AWC, CNEOS, SWPC, and OpenSky tests, plus explicit OpenSky empty-result and non-replacement coverage.
 - Files touched:
-  [aerospace-source-contract-matrix.md](repo-root/app/docs/aerospace-source-contract-matrix.md)
-  [aerospace-workflow-validation.md](repo-root/app/docs/aerospace-workflow-validation.md)
-  [test_aviation_weather_contracts.py](repo-root/app/server/tests/test_aviation_weather_contracts.py)
-  [test_faa_nas_status_contracts.py](repo-root/app/server/tests/test_faa_nas_status_contracts.py)
-  [test_cneos_contracts.py](repo-root/app/server/tests/test_cneos_contracts.py)
-  [test_swpc_contracts.py](repo-root/app/server/tests/test_swpc_contracts.py)
-  [test_opensky_contracts.py](repo-root/app/server/tests/test_opensky_contracts.py)
+  [aerospace-source-contract-matrix.md](../aerospace-source-contract-matrix.md)
+  [aerospace-workflow-validation.md](../aerospace-workflow-validation.md)
+  [test_aviation_weather_contracts.py](../../server/tests/test_aviation_weather_contracts.py)
+  [test_faa_nas_status_contracts.py](../../server/tests/test_faa_nas_status_contracts.py)
+  [test_cneos_contracts.py](../../server/tests/test_cneos_contracts.py)
+  [test_swpc_contracts.py](../../server/tests/test_swpc_contracts.py)
+  [test_opensky_contracts.py](../../server/tests/test_opensky_contracts.py)
 - Validation:
   `python -m pytest app/server/tests/test_swpc_contracts.py app/server/tests/test_cneos_contracts.py app/server/tests/test_opensky_contracts.py app/server/tests/test_aviation_weather_contracts.py app/server/tests/test_faa_nas_status_contracts.py -q` passed (`26 passed`).
   `python -m compileall app/server/src` passed.

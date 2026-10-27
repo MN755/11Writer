@@ -11,8 +11,8 @@ Route:
 - `GET /api/events/bmkg-earthquakes/recent`
 
 Client coverage:
-- client API types exist in [api.ts](repo-root/app/client/src/types/api.ts)
-- dedicated query hook exists in [queries.ts](repo-root/app/client/src/lib/queries.ts):
+- client API types exist in [api.ts](../client/src/types/api.ts)
+- dedicated query hook exists in [queries.ts](../client/src/lib/queries.ts):
   - `useBmkgEarthquakesQuery(...)`
 - the hook is intentionally input-based and does not depend on the shared environmental filter store
 - no globe layer, LayerPanel section, or snapshot/export shell wiring is added in this slice to avoid broad shared environmental UI churn
