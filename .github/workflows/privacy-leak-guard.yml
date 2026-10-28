@@ -91,8 +91,8 @@ jobs:
           assert identity_problem("MN755", "123+MN755@users.noreply.github.com") is None
           assert identity_problem("Example Author", "123+MN755@users.noreply.github.com")
           assert identity_problem("Someone", "example@" + "gmail.com")
-          assert not added_line_problems("Use C:/Users/REDACTED_USER/project")
-          assert added_line_problems("Use C:/Users/specific-person/project")
+          assert not added_line_problems("Use C:/Us" + "ers/REDACTED_USER/project")
+          assert added_line_problems("Use C:/Us" + "ers/specific-person/project")
           assert added_line_problems("Mail: example@" + "icloud.com")
           assert not added_line_problems("Pass --basic-auth" + "-username $env:USERNAME")
           assert added_line_problems("Pass --basic-auth" + "-username a-literal-user")
