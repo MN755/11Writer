@@ -10,96 +10,145 @@ permissions:
 
 jobs:
   privacy:
-    name: Check new commits and additions for privacy leaks
+    name: Check newly introduced privacy exposures
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: Checkout change history
+      - name: Checkout full commit range without credentials
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Scan newly introduced identifiers without echoing their values
+      - name: Inspect new commits and added lines; redact findings
         shell: bash
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+          REPO_OWNER: ${{ github.repository_owner }}
         run: |
           set -euo pipefail
           python3 - <<'PY'
-          import hashlib
           import os
           import re
           import subprocess
           import sys
 
-          def git(*args):
-              return subprocess.run(
-                  ["git", *args], text=True, encoding="utf-8",
-                  errors="replace", capture_output=True, check=True
-              ).stdout
-
-          base = (os.environ.get("BASE_SHA") or "").strip()
-          head = (os.environ.get("HEAD_SHA") or "").strip()
-          if not re.fullmatch(r"[0-9a-fA-F]{40}", head):
-              raise SystemExit("Privacy guard: unable to resolve commit SHA.")
-          if not base or base == "0" * 40:
-              base = git("hash-object", "-t", "tree", "--stdin").strip()
-          elif not re.fullmatch(r"[0-9a-fA-F]{40}", base):
-              raise SystemExit("Privacy guard: invalid base SHA.")
-          if subprocess.run(["git", "cat-file", "-e", head+"^{commit}"], capture_output=True).returncode:
-              raise SystemExit("Privacy guard: head commit object unavailable.")
-          try:
-              diff = git("diff", "--no-ext-diff", "--no-textconv", "--unified=0", base, head, "--")
-              commits = git("log", "--no-merges", "--format=%an%x1f%ae", base+".."+head).splitlines()
-          except subprocess.CalledProcessError:
-              raise SystemExit("Privacy guard: unable to compare Git revisions.")
-
-          owner_email_hash = "b2257d1578df68ddf362712ced958ae43088694f345bdd5686a275c8228d2ade"
-          owner_old_name_hash = "88d7941c734351b293b3e92415123d9262ded63b62820af569a206c79cc90516"
-          mail = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
-          segment = "Us" + "ers"
-          home = re.compile(
-              r"(?:[A-Za-z]:[/\\]+" + segment + r"[/\\]+|/" + segment + r"/)([^/\\\s]+)", re.I
-          )
-          auth = re.compile(re.escape("--basic-auth" + "-username") + r"\s+([^\s]+)", re.I)
+          personal_domains = {
+              "gmail.com", "googlemail.com", "outlook.com", "hotmail.com",
+              "live.com", "yahoo.com", "icloud.com", "me.com", "mac.com",
+              "protonmail.com", "proton.me", "aol.com"
+          }
           placeholders = {
               "redacted_user", "redacted", "user", "username", "you",
               "test", "tester", "example", "public", "shared", "runner",
-              "sample", "placeholder"
+              "sample", "placeholder", "currentuser"
           }
-          problems = set()
+          owner = (os.environ.get("REPO_OWNER") or "").strip().lower()
+          if not re.fullmatch(r"[a-z0-9-]{1,39}", owner):
+              raise SystemExit("Privacy check: repository owner unavailable.")
 
-          for line in commits:
-              if "\x1f" not in line:
+          email_pattern = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+          home_segment = "Us" + "ers"
+          home_pattern = re.compile(
+              r"(?:[A-Za-z]:[/\\]+" + home_segment + r"[/\\]+|/" +
+              home_segment + r"/)([^/\\\s]+)", re.I
+          )
+          auth_pattern = re.compile(re.escape("--basic-auth" + "-username") + r"\s+([^\s]+)", re.I)
+
+          def is_personal_mail(address):
+              return address.strip().lower().rsplit("@", 1)[-1] in personal_domains
+
+          def owner_noreply(address):
+              local, sep, domain = address.strip().lower().partition("@")
+              if not sep or domain != "users.noreply.github.com":
+                  return False
+              return local == owner or local.endswith("+" + owner) and local.split("+", 1)[0].isdigit()
+
+          def identity_problem(name, address):
+              if is_personal_mail(address):
+                  return "personal-mailbox address in new commit metadata"
+              if owner_noreply(address) and name.strip().lower() != owner:
+                  return "owner noreply commit has a non-pseudonymous display name"
+              return None
+
+          def added_line_problems(line):
+              issues = set()
+              for address in email_pattern.findall(line):
+                  if is_personal_mail(address):
+                      issues.add("personal-mailbox address introduced in file content")
+              for match in home_pattern.finditer(line):
+                  local_user = match.group(1).strip("[]{}$<>()" + chr(34) + chr(39) + chr(96)).lower()
+                  if local_user not in placeholders:
+                      issues.add("unmasked computer home directory introduced")
+              match = auth_pattern.search(line)
+              if match:
+                  value = match.group(1).strip(chr(34) + chr(39) + chr(96))
+                  if not value.startswith(("$", "<", "{", "[", "%")):
+                      issues.add("hardcoded Basic Auth username introduced")
+              return issues
+
+          # Non-sensitive regression samples. No user identifier is stored in this workflow.
+          assert identity_problem("MN755", "123+MN755@users.noreply.github.com") is None
+          assert identity_problem("Example Author", "123+MN755@users.noreply.github.com")
+          assert identity_problem("Someone", "example@" + "gmail.com")
+          assert not added_line_problems("Use C:/Users/REDACTED_USER/project")
+          assert added_line_problems("Use C:/Users/specific-person/project")
+          assert added_line_problems("Mail: example@" + "icloud.com")
+          assert not added_line_problems("Pass --basic-auth" + "-username $env:USERNAME")
+          assert added_line_problems("Pass --basic-auth" + "-username a-literal-user")
+
+          def git(*args):
+              result = subprocess.run(
+                  ["git", *args], capture_output=True, text=True,
+                  encoding="utf-8", errors="replace"
+              )
+              if result.returncode:
+                  raise RuntimeError("Required Git revision data unavailable.")
+              return result.stdout.strip()
+
+          base = (os.environ.get("BASE_SHA") or "").strip()
+          head = (os.environ.get("HEAD_SHA") or "").strip()
+          if not re.fullmatch(r"[0-9a-fA-F]{40,64}", head):
+              raise SystemExit("Privacy check: invalid target commit.")
+          try:
+              git("cat-file", "-e", head + "^{commit}")
+              if not base or set(base) == {"0"}:
+                  # For a genuinely new root, compare against Git's empty tree.
+                  empty = subprocess.run(
+                      ["git", "hash-object", "-w", "-t", "tree", "--stdin"],
+                      input="", text=True, capture_output=True, check=True
+                  ).stdout.strip()
+                  diff = git("diff", "--no-ext-diff", "--no-textconv", "--unified=0", empty, head)
+                  commits = git("log", "--format=%an%x1f%ae%x1f%cn%x1f%ce", head)
+              else:
+                  if not re.fullmatch(r"[0-9a-fA-F]{40,64}", base):
+                      raise RuntimeError("Invalid base SHA.")
+                  git("cat-file", "-e", base + "^{commit}")
+                  diff = git("diff", "--no-ext-diff", "--no-textconv", "--unified=0", base, head)
+                  commits = git("log", "--format=%an%x1f%ae%x1f%cn%x1f%ce", base + ".." + head)
+          except (RuntimeError, subprocess.CalledProcessError):
+              raise SystemExit("Privacy check: unable to compare full change range.")
+
+          findings = set()
+          for record in commits.splitlines():
+              fields = record.split("\x1f")
+              if len(fields) != 4:
                   continue
-              name, address = line.split("\x1f", 1)
-              if hashlib.sha256(address.strip().lower().encode()).hexdigest() == owner_email_hash:
-                  problems.add("new commit attributed to previously exposed personal email")
-              if hashlib.sha256(name.strip().encode()).hexdigest() == owner_old_name_hash:
-                  problems.add("new commit attributed to identifying author name")
+              for name, address in ((fields[0], fields[1]), (fields[2], fields[3])):
+                  issue = identity_problem(name, address)
+                  if issue:
+                      findings.add(issue)
 
           for line in diff.splitlines():
-              if not line.startswith("+") or line.startswith("+++"):
-                  continue
-              added = line[1:]
-              for match in mail.finditer(added):
-                  if hashlib.sha256(match.group().lower().encode()).hexdigest() == owner_email_hash:
-                      problems.add("previously exposed personal email added to files")
-              for match in home.finditer(added):
-                  directory = match.group(1).strip("[]{}$<>()" + chr(34) + chr(39) + chr(96)).lower()
-                  if directory not in placeholders:
-                      problems.add("non-generic local computer home path added")
-              m = auth.search(added)
-              if m and not m.group(1).startswith(("$", "<", "{", "[", "%")):
-                  problems.add("hardcoded Basic Auth username added")
+              if line.startswith("+") and not line.startswith("+++"):
+                  findings.update(added_line_problems(line[1:]))
 
-          if problems:
-              print("Privacy guard FAILED; sensitive match values are not printed.")
-              for category in sorted(problems):
-                  print("Finding category: " + category)
+          if findings:
+              print("Privacy check failed. Sensitive match values are intentionally not shown.")
+              for issue in sorted(findings):
+                  print("Finding category: " + issue)
               sys.exit(1)
 
-          print("Privacy guard passed for new changes.")
-          print("This is a limited metadata and PII check, not full secret scanning.")
+          print("Privacy check passed: no monitored exposure introduced in changed material.")
+          print("This is a limited preventative check, not comprehensive secret scanning.")
           PY
