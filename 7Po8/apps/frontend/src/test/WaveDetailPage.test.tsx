@@ -6,7 +6,7 @@ import { WaveDetailPage } from "../pages/WaveDetailPage";
 
 describe("WaveDetailPage", () => {
   it("renders connector and record sections", async () => {
-    vi.spyOn(global, "fetch").mockImplementation(async (input) => {
+    vi.spyOn(globalThis, "fetch").mockImplementation(async (input) => {
       const url = String(input);
       if (url.endsWith("/api/waves/1")) {
         return new Response(
