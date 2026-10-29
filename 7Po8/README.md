@@ -72,7 +72,7 @@ This first build delivers a working vertical slice centered on **Waves**.
 
 Prereqs:
 - Python 3.10+
-- Node.js 20+
+- Node.js 20.19+ or 22.12+ (required by the frontend build tools)
 
 ### Backend
 
