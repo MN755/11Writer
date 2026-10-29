@@ -50,7 +50,7 @@ function domainTrustPayload() {
 
 describe("Source Discovery", () => {
   it("renders discovered sources and updates status", async () => {
-    const fetchMock = vi.spyOn(global, "fetch");
+    const fetchMock = vi.spyOn(globalThis, "fetch");
     fetchMock.mockImplementation(async () => jsonResponse([]));
 
     fetchMock
@@ -180,7 +180,7 @@ describe("Source Discovery", () => {
   });
 
   it("shows trust and stability details and triggers source check", async () => {
-    const fetchMock = vi.spyOn(global, "fetch");
+    const fetchMock = vi.spyOn(globalThis, "fetch");
     fetchMock.mockImplementation(async () => jsonResponse([]));
 
     const discovered = [
@@ -280,7 +280,7 @@ describe("Source Discovery", () => {
   });
 
   it("creates a domain trust profile from the management panel", async () => {
-    const fetchMock = vi.spyOn(global, "fetch");
+    const fetchMock = vi.spyOn(globalThis, "fetch");
     fetchMock.mockImplementation(async () => jsonResponse([]));
 
     fetchMock
@@ -379,7 +379,7 @@ describe("Source Discovery", () => {
   });
 
   it("refreshes discovered source policy state after trust profile update", async () => {
-    const fetchMock = vi.spyOn(global, "fetch");
+    const fetchMock = vi.spyOn(globalThis, "fetch");
     fetchMock.mockImplementation(async () => jsonResponse([]));
 
     const initialSource = {

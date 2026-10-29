@@ -6,7 +6,7 @@ import { WavesPage } from "../pages/WavesPage";
 
 describe("WavesPage", () => {
   it("renders waves list and create form", async () => {
-    vi.spyOn(global, "fetch").mockResolvedValueOnce(
+    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(
       new Response(JSON.stringify([]), { status: 200, headers: { "Content-Type": "application/json" } })
     );
 

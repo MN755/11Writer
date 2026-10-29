@@ -13,7 +13,7 @@ function jsonResponse(payload: unknown, status = 200) {
 
 describe("Wave detail filters", () => {
   it("renders filters and sends record search query", async () => {
-    const fetchMock = vi.spyOn(global, "fetch").mockImplementation(async (input) => {
+    const fetchMock = vi.spyOn(globalThis, "fetch").mockImplementation(async (input) => {
       const url = String(input);
       if (url.endsWith("/api/waves/1")) {
         return jsonResponse({
