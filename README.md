@@ -51,7 +51,7 @@ third_party/ pinned reference material such as Code - OSS workbench sources
 
 ## Prerequisites
 
-- Node.js 20+ and npm
+- Node.js 22.12+ or 24+ and npm (required by the client build tools)
 - Python 3.10+ or 3.11+
 - A Python virtual environment for backend work is strongly recommended
 

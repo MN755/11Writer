@@ -9,7 +9,8 @@ export default defineConfig({
       targets: [
         {
           src: "node_modules/cesium/Build/Cesium/{Workers,ThirdParty,Assets,Widgets}",
-          dest: "cesium"
+          dest: "cesium",
+          rename: { stripBase: 4 }
         }
       ]
     })
